@@ -6,33 +6,30 @@
   <title>UITableView | Tech. Desi. Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="设置数据源 （UITableViewDataSource）需要数据源来展示数据，dataSource。会向数据源查询一共多少行数据以及每一行显示什么数据
-
 不论什么对象，只要其遵循 UITableViewDataSource 协议即可。
-
 UITableViewDataSource协议中有三个需要实现的函数
 
-- (NSInteger) numberOfSectionInTableView: (U">
+tableview 有几组（section）？
+1- (NSInteger) numberO">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UITableView">
 <meta property="og:url" content="http://blog.superyoung.win/2017/01/04/learning_iOS/UITableView/index.html">
 <meta property="og:site_name" content="Tech. Desi. Life">
 <meta property="og:description" content="设置数据源 （UITableViewDataSource）需要数据源来展示数据，dataSource。会向数据源查询一共多少行数据以及每一行显示什么数据
-
 不论什么对象，只要其遵循 UITableViewDataSource 协议即可。
-
 UITableViewDataSource协议中有三个需要实现的函数
 
-- (NSInteger) numberOfSectionInTableView: (U">
-<meta property="og:updated_time" content="2017-01-27T20:03:00.000Z">
+tableview 有几组（section）？
+1- (NSInteger) numberO">
+<meta property="og:updated_time" content="2017-01-27T20:36:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UITableView">
 <meta name="twitter:description" content="设置数据源 （UITableViewDataSource）需要数据源来展示数据，dataSource。会向数据源查询一共多少行数据以及每一行显示什么数据
-
 不论什么对象，只要其遵循 UITableViewDataSource 协议即可。
-
 UITableViewDataSource协议中有三个需要实现的函数
 
-- (NSInteger) numberOfSectionInTableView: (U">
+tableview 有几组（section）？
+1- (NSInteger) numberO">
   
     <link rel="alternate" href="/atom.xml" title="Tech. Desi. Life" type="application/atom+xml">
   
@@ -104,31 +101,22 @@ UITableViewDataSource协议中有三个需要实现的函数
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="设置数据源-（UITableViewDataSource）"><a href="#设置数据源-（UITableViewDataSource）" class="headerlink" title="设置数据源 （UITableViewDataSource）"></a>设置数据源 （UITableViewDataSource）</h2><p>需要<code>数据源</code>来展示数据，dataSource。会向数据源查询一共多少行数据以及每一行显示什么数据</p>
-<blockquote>
 <p>不论什么对象，只要其遵循 <code>UITableViewDataSource</code> 协议即可。</p>
-</blockquote>
 <p>UITableViewDataSource协议中有三个需要实现的函数</p>
 <ol>
-<li><code>- (NSInteger) numberOfSectionInTableView: (UITableView*) tableView;</code><blockquote>
-<p>有几组（section）？</p>
-</blockquote>
+<li><p>tableview 有几组（section）？</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSInteger</span>) numberOfSectionInTableView: (<span class="built_in">UITableView</span>*) tableView;</div></pre></td></tr></table></figure>
+</li>
+<li><p>每组（section）几行？</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSInteger</span>) tableView:(<span class="built_in">UITableView</span>*)tableView numberOfRowsInSection:(<span class="built_in">NSInteger</span>)section;</div></pre></td></tr></table></figure>
+</li>
+<li><p>每组每行分别显示什么内容（cell）？</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">UITableViewCell</span>*) tableView:(<span class="built_in">UITableView</span>*)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span>*)indexPath;</div></pre></td></tr></table></figure>
+</li>
+<li><p>每组的 titleForHeader 和 titleForFooter。这两个字体不可更改，如果有需要，使用自定义的 UILabel。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSString</span>*)tableView:(<span class="built_in">UITableView</span>*)tableView titleForHeaderInSection:(<span class="built_in">NSInteger</span>)section;</div><div class="line">- (<span class="built_in">NSString</span>*)tableView:(<span class="built_in">UITableView</span>*)tableView titleForFooterInSection:(<span class="built_in">NSInteger</span>)section;</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<ul>
-<li><code>- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section;</code><blockquote>
-<p>每组（section）几行？</p>
-</blockquote>
-</li>
-<li><code>(UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath;</code><blockquote>
-<p>每组每行分别显示什么内容（cell）？</p>
-</blockquote>
-</li>
-<li><code>(NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section;</code></li>
-<li><code>(NSString*)tableView:(UITableView*)tableView titleForFooterInSection:(NSInteger)section;</code><blockquote>
-<p>组的 titleForHeader 和 titleForFooter。这两个字体不可更改，如果有需要，使用自定义的 UILabel。</p>
-</blockquote>
-</li>
-</ul>
 <h3 id="怎么判断是哪一组哪一行呢？"><a href="#怎么判断是哪一组哪一行呢？" class="headerlink" title="怎么判断是哪一组哪一行呢？"></a>怎么判断是哪一组哪一行呢？</h3><p>看到上面的参数indexPath了吗？这样判断组：</p>
 <ul>
 <li><code>if(0 == indexPath.section){}</code></li>
@@ -161,12 +149,9 @@ UITableViewDataSource协议中有三个需要实现的函数
 <p>以上情况下，<code>对象B</code>都是<code>对象A</code>的代理。</p>
 <h3 id="如何设置代理对象"><a href="#如何设置代理对象" class="headerlink" title="如何设置代理对象"></a>如何设置代理对象</h3><ol>
 <li>在<code>Stroyboard</code>的<code>UIScrollView</code>上右键单击，拖<code>delegate</code>到<code>UIViewController</code>上。</li>
-<li>在方法<code>viewDidLoad</code>中添加<code>self.tableView.delegate = self;</code><h3 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h3><code>类名+Delegate</code><blockquote>
-<p>例如<code>UITableViewDelegate</code></p>
-<h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><p>如果是为一个类特别定义的协议，可以直接写在<code>.h</code>文件里，如果多个类使用同一个协议，建议建立一个<code>protocol</code>文件。</p>
-</blockquote>
-</li>
+<li>在方法<code>viewDidLoad</code>中添加<code>self.tableView.delegate = self;</code><h3 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h3><code>类名+Delegate</code><br><em>例如<code>UITableViewDelegate</code>就是<code>UITableView</code>+<code>Delegate</code></em></li>
 </ol>
+<h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><p>如果是为一个类特别定义的协议，可以直接写在<code>.h</code>文件里，如果多个类使用同一个协议，建议建立一个<code>protocol</code>文件。</p>
 <ul>
 <li>关于定义格式，举个例子：</li>
 </ul>
@@ -174,10 +159,7 @@ UITableViewDataSource协议中有三个需要实现的函数
 <p>默认是<code>@required</code>，但是这只能作为编译器检查的标准，使用时需要自己验证是否实现了具体的方法，验证方法如下：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>([<span class="keyword">self</span>.delegate respondsToSelector:<span class="keyword">@selector</span>(MethodName)])&#123;</div><div class="line">    MethodName</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="一个简单的例子"><a href="#一个简单的例子" class="headerlink" title="一个简单的例子"></a>一个简单的例子</h3><h4 id="首先定义一个-protocol"><a href="#首先定义一个-protocol" class="headerlink" title="首先定义一个@protocol"></a>首先定义一个<code>@protocol</code></h4><p>声明协议方法</p>
 <h4 id="定义一个委托-interface"><a href="#定义一个委托-interface" class="headerlink" title="定义一个委托@interface"></a>定义一个委托<code>@interface</code></h4><p>引入<code>protocol.h</code></p>
-<h4 id="定义一个代理-interface"><a href="#定义一个代理-interface" class="headerlink" title="定义一个代理@interface"></a>定义一个代理<code>@interface</code></h4><p>在<code>@interface</code>声明中声明遵守<code>@protocol</code>协议。例如：</p>
-<blockquote>
-<p><code>@interface viewController () &lt;protocolName&gt;</code></p>
-</blockquote>
+<h4 id="定义一个代理-interface"><a href="#定义一个代理-interface" class="headerlink" title="定义一个代理@interface"></a>定义一个代理<code>@interface</code></h4><p>在<code>@interface</code>声明中声明遵守<code>@protocol</code>协议。例如：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">viewController</span> () &lt;<span class="title">protocolName</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>然后在<code>@implementation</code>中实现具体的协议方法</p>
 <h2 id="单组数据和多组数据"><a href="#单组数据和多组数据" class="headerlink" title="单组数据和多组数据"></a>单组数据和多组数据</h2><p>其本质都是 <code>UITableVIew</code> ，具体的差别其实就是UITableView的属性 <code>UITableViewStylePlain</code> 和 <code>UITableViewStyleGrouped</code>的设置。</p>
 <h2 id="好，那么接下来梳理一下一个-UITableView-从初始化到展示的流程："><a href="#好，那么接下来梳理一下一个-UITableView-从初始化到展示的流程：" class="headerlink" title="好，那么接下来梳理一下一个 UITableView 从初始化到展示的流程："></a>好，那么接下来梳理一下一个 <code>UITableView</code> 从初始化到展示的流程：</h2><ol>
@@ -187,11 +169,12 @@ UITableViewDataSource协议中有三个需要实现的函数
 <li>设置数据源，数据源需要遵循协议至少实现如下三个方法 <code>numberOfSectionInTableView</code> <code>numberOfRowsInSection</code> <code>cellForRowAtIndexPath</code></li>
 <li>如有需要自行构造一个 <code>UITableViewCell</code> 并使用上面的第三个方法（<code>cellForRowAtIndexPath</code>）返回。</li>
 </ul>
-<h2 id="UITableViewCell常见属性"><a href="#UITableViewCell常见属性" class="headerlink" title="UITableViewCell常见属性"></a>UITableViewCell常见属性</h2><h2 id="自定义cell"><a href="#自定义cell" class="headerlink" title="自定义cell"></a>自定义cell</h2>
+<h2 id="自定义cell"><a href="#自定义cell" class="headerlink" title="自定义cell"></a>自定义cell</h2><p>Coming soon…</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/UITableView/" data-id="ciyg8qdwm000anm0gkus15xsg" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/UITableView/" data-id="ciyg9re160006a00g2ajoldtm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../../tags/iOS-programming-UITableView-ObjC-Delegate-DataSource/">iOS programming UITableView ObjC Delegate DataSource</a></li></ul>
@@ -233,7 +216,7 @@ UITableViewDataSource协议中有三个需要实现的函数
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Coming-soon/">Coming soon...</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Coordinate-System-iOS-programming-坐标系统/">Coordinate System iOS programming 坐标系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Swift-Programming-language-iOS-instance-type/">Swift Programming language iOS instance type</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iOS-programming-Block/">iOS programming Block</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iOS-programming-Sequence-type/">iOS programming Sequence type</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iOS-programming-UIAlertController-ObjC/">iOS programming UIAlertController ObjC</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iOS-programming-UITableView-ObjC-Delegate-DataSource/">iOS programming UITableView ObjC Delegate DataSource</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iOS-programming-keyboard-ObjC/">iOS programming keyboard ObjC</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Coming-soon/">Coming soon...</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Swift-Programming-language-iOS-instance-type/">Swift Programming language iOS instance type</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iOS-programming-Block/">iOS programming Block</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iOS-programming-Coordinate-System-坐标系统/">iOS programming Coordinate System 坐标系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iOS-programming-Sequence-type/">iOS programming Sequence type</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iOS-programming-UIAlertController-ObjC/">iOS programming UIAlertController ObjC</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iOS-programming-UITableView-ObjC-Delegate-DataSource/">iOS programming UITableView ObjC Delegate DataSource</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iOS-programming-keyboard-ObjC/">iOS programming keyboard ObjC</a></li></ul>
     </div>
   </div>
 
@@ -243,7 +226,7 @@ UITableViewDataSource协议中有三个需要实现的函数
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../../../../tags/Coming-soon/" style="font-size: 10px;">Coming soon...</a> <a href="../../../../../tags/Coordinate-System-iOS-programming-坐标系统/" style="font-size: 10px;">Coordinate System iOS programming 坐标系统</a> <a href="../../../../../tags/Swift-Programming-language-iOS-instance-type/" style="font-size: 10px;">Swift Programming language iOS instance type</a> <a href="../../../../../tags/iOS-programming-Block/" style="font-size: 10px;">iOS programming Block</a> <a href="../../../../../tags/iOS-programming-Sequence-type/" style="font-size: 10px;">iOS programming Sequence type</a> <a href="../../../../../tags/iOS-programming-UIAlertController-ObjC/" style="font-size: 10px;">iOS programming UIAlertController ObjC</a> <a href="../../../../../tags/iOS-programming-UITableView-ObjC-Delegate-DataSource/" style="font-size: 10px;">iOS programming UITableView ObjC Delegate DataSource</a> <a href="../../../../../tags/iOS-programming-keyboard-ObjC/" style="font-size: 10px;">iOS programming keyboard ObjC</a>
+      <a href="../../../../../tags/Coming-soon/" style="font-size: 10px;">Coming soon...</a> <a href="../../../../../tags/Swift-Programming-language-iOS-instance-type/" style="font-size: 10px;">Swift Programming language iOS instance type</a> <a href="../../../../../tags/iOS-programming-Block/" style="font-size: 10px;">iOS programming Block</a> <a href="../../../../../tags/iOS-programming-Coordinate-System-坐标系统/" style="font-size: 10px;">iOS programming Coordinate System 坐标系统</a> <a href="../../../../../tags/iOS-programming-Sequence-type/" style="font-size: 10px;">iOS programming Sequence type</a> <a href="../../../../../tags/iOS-programming-UIAlertController-ObjC/" style="font-size: 10px;">iOS programming UIAlertController ObjC</a> <a href="../../../../../tags/iOS-programming-UITableView-ObjC-Delegate-DataSource/" style="font-size: 10px;">iOS programming UITableView ObjC Delegate DataSource</a> <a href="../../../../../tags/iOS-programming-keyboard-ObjC/" style="font-size: 10px;">iOS programming keyboard ObjC</a>
     </div>
   </div>
 

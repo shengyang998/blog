@@ -104,7 +104,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/28/Meta/MetaLearning/" data-id="ciyg8qdvs0000nm0gvufuu73g" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/28/Meta/MetaLearning/" data-id="ciyg9re0l0000a00gj2xx6sa6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,7 +147,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/27/PictureProcessing/50gray_buffing/" data-id="ciyg8qdw00001nm0g989zk3p6" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/27/PictureProcessing/50gray_buffing/" data-id="ciyg9re29000qa00g8i2rk0la" class="article-share-link">Share</a>
       
       
     </footer>
@@ -183,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/" data-id="ciyg8qdw40002nm0gsvcyzkwf" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/" data-id="ciyg9re0y0002a00gc2ekshwu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/iOS-programming-Sequence-type/">iOS programming Sequence type</a></li></ul>
@@ -262,7 +262,7 @@
 <ol>
 <li>在 // MARK: Rx Setup 下面增加</li>
 </ol>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">setupCartObserver</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="type">ShoppingCart</span>.sharedCart.chocolates.asObservable()</div><div class="line">    .subscribe(onNext:&#123;</div><div class="line">        (chocolates) <span class="keyword">in</span></div><div class="line">        <span class="keyword">self</span>.cartButton.title = <span class="string">"<span class="subst">\(chocolates.<span class="built_in">count</span>)</span> \u&#123;1f36b&#125;"</span></div><div class="line">        &#125;)</div><div class="line">    .addDisposableTo(disposeBag)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">setupCartObserver</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="type">ShoppingCart</span>.sharedCart.chocolates.asObservable()</div><div class="line">    .subscribe(onNext:&#123;</div><div class="line">        (chocolates) <span class="keyword">in</span></div><div class="line">        <span class="keyword">self</span>.cartButton.title = <span class="string">"\(chocolates.count) \u&#123;1f36b&#125;"</span></div><div class="line">        &#125;)</div><div class="line">    .addDisposableTo(disposeBag)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这将会设置一个响应式的观察者去自动更新购物车。</p>
 <p>上面的代码具体做了什么？详述如下：</p>
 <ol>
@@ -335,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/" data-id="ciyg8qdwk0007nm0gai5dt2rw" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/" data-id="ciyg9re130004a00g47simqez" class="article-share-link">Share</a>
       
       
     </footer>
@@ -372,7 +372,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/15/learning_iOS/debugPrint/" data-id="ciyg8qdwi0006nm0gog53rd8u" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/15/learning_iOS/debugPrint/" data-id="ciyg9re1e000aa00gru1l5ojt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Coming-soon/">Coming soon...</a></li></ul>
@@ -410,9 +410,7 @@
 <h2 id="在-ObjC-中我们怎么做？"><a href="#在-ObjC-中我们怎么做？" class="headerlink" title="在 ObjC 中我们怎么做？"></a>在 ObjC 中我们怎么做？</h2><p>在 ObjC 中我们可以通过一个实例的 class 方法来获取其类型名<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSDate</span> *date = [<span class="built_in">NSDate</span> date];</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,<span class="built_in">NSStringFromClass</span>([date <span class="keyword">class</span>]));</div></pre></td></tr></table></figure></p>
 <h2 id="在-Swift-中没有实例的-class-方法"><a href="#在-Swift-中没有实例的-class-方法" class="headerlink" title="在 Swift 中没有实例的 class 方法"></a>在 Swift 中没有实例的 class 方法</h2><p>可以求助于 ObjC 运行时，调用 <code>object_getClass(AnyTypeInstance)</code>。例子如下：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> date = <span class="type">NSDate</span>()</div><div class="line"><span class="built_in">print</span>(object_getClass(date))</div></pre></td></tr></table></figure></p>
 <h2 id="object-getClass-方法返回类型是？"><a href="#object-getClass-方法返回类型是？" class="headerlink" title="object_getClass() 方法返回类型是？"></a><code>object_getClass()</code> 方法返回类型是？</h2><p>是 AnyClass! 可以通过 <code>debugPrint</code> 来验证，关于 <code>debugPrint</code>，参见<a href="../debugPrint/README.md">debugPrint()</a></p>
-<h2 id="更加符合-Swift-风格的做法"><a href="#更加符合-Swift-风格的做法" class="headerlink" title="更加符合 Swift 风格的做法"></a>更加符合 Swift 风格的做法</h2><blockquote>
-<p>Swift 2 以前的方法，已抛弃<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> date = <span class="type">NSDate</span>()</div><div class="line"><span class="built_in">print</span>(date.<span class="keyword">dynamicType</span>)</div></pre></td></tr></table></figure></p>
-</blockquote>
+<h2 id="更加符合-Swift-风格的做法"><a href="#更加符合-Swift-风格的做法" class="headerlink" title="更加符合 Swift 风格的做法"></a>更加符合 Swift 风格的做法</h2><p>Swift 2 以前的方法，已抛弃<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> date = <span class="type">NSDate</span>()</div><div class="line"><span class="built_in">print</span>(date.<span class="keyword">dynamicType</span>)</div></pre></td></tr></table></figure></p>
 <p>Swift 3.0 以后使用 <code>type(of:AnyTypeInstance)</code>方法<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> date = <span class="type">NSDate</span>()</div><div class="line"><span class="built_in">print</span>(type(of:date))</div></pre></td></tr></table></figure></p>
 <p><em>参考:</em></p>
 <ol>
@@ -423,7 +421,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/15/learning_iOS/get-type-of-instance/" data-id="ciyg8qdwp000fnm0gjznli7qd" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/15/learning_iOS/get-type-of-instance/" data-id="ciyg9re1f000ca00gml1ldfjt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Swift-Programming-language-iOS-instance-type/">Swift Programming language iOS instance type</a></li></ul>
@@ -458,30 +456,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>块可以实现闭包。块与函数类似，只不过是直接定义在另一个函数里。块可以访问、捕获它被声明的区域内的所有变量。而且因为有返回类型，块其实也可以作为个值来对待。</p>
-<h2 id="定义-Block-的语法结构如下"><a href="#定义-Block-的语法结构如下" class="headerlink" title="定义 Block 的语法结构如下"></a>定义 Block 的语法结构如下</h2><blockquote>
-<p><code>return_type (^block_name)(parameters){}</code></p>
-</blockquote>
+<h2 id="定义-Block-的语法结构如下"><a href="#定义-Block-的语法结构如下" class="headerlink" title="定义 Block 的语法结构如下"></a>定义 Block 的语法结构如下</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">return_type (^block_name)(parameters)&#123;&#125;</div></pre></td></tr></table></figure>
 <h2 id="Block-捕获的变量是不可以在-Block-中修改的"><a href="#Block-捕获的变量是不可以在-Block-中修改的" class="headerlink" title="Block 捕获的变量是不可以在 Block 中修改的"></a>Block 捕获的变量是不可以在 Block 中修改的</h2><p>若要修改，该变量需要在声明的时候加上 <code>__block</code> 修饰符。</p>
 <h2 id="Block-和-Grand-Central-Dispatch"><a href="#Block-和-Grand-Central-Dispatch" class="headerlink" title="Block 和 Grand Central Dispatch"></a>Block 和 Grand Central Dispatch</h2><p><code>Grand Central Dispatch</code> 是一种与 <code>Block</code> 有关的技术，它提供了对线程的抽象，这种抽象基于派发队列<code>dispatch queue</code>，开发者可以将 <code>Block</code> 排入队列中，由 <code>GCD</code> 负责调度。</p>
 <h2 id="小心保留环"><a href="#小心保留环" class="headerlink" title="小心保留环"></a>小心保留环</h2><p>若在类的实例方法中定义一个块，那么块会捕获 <code>self</code> 变量，如果 <code>self</code> 所指代的那个对象同时也保留了块，则会导致“保留环”。</p>
 <h2 id="解决保留环问题"><a href="#解决保留环问题" class="headerlink" title="解决保留环问题"></a>解决保留环问题</h2><p>一般来说，只要适时清理掉换中的某个引用，就不会有问题，然而未必总有机会。在块的最后令 <code>Handler = nil;</code> 即可。</p>
-<h2 id="全局快、栈块、堆块"><a href="#全局快、栈块、堆块" class="headerlink" title="全局快、栈块、堆块"></a>全局快、栈块、堆块</h2><p>栈块所占据的内存空间可能会被自动覆写，若被覆写，则运行时将会出错。解决此问题可以给块对象发送 <code>copy</code> 消息，示例如下：</p>
-<blockquote>
-<p><code>block = [^{codeInBlock} copy];</code></p>
-</blockquote>
-<h2 id="为常用块创建-typedef"><a href="#为常用块创建-typedef" class="headerlink" title="为常用块创建 typedef"></a>为常用块创建 typedef</h2><p>创建的语法规则：</p>
-<blockquote>
-<p><code>typedef int(^block_name)(parameters);</code></p>
-</blockquote>
-<p>调用的语法规则：</p>
-<blockquote>
-<p><code>block_name block = ^(parameters){}</code></p>
-</blockquote>
+<h2 id="全局快、栈块、堆块"><a href="#全局快、栈块、堆块" class="headerlink" title="全局快、栈块、堆块"></a>全局快、栈块、堆块</h2><p>栈块所占据的内存空间可能会被自动覆写，若被覆写，则运行时将会出错。解决此问题可以给块对象发送 <code>copy</code> 消息，示例如下：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">block = [^&#123;codeInBlock&#125; <span class="keyword">copy</span>];</div></pre></td></tr></table></figure></p>
+<h2 id="为常用块创建-typedef"><a href="#为常用块创建-typedef" class="headerlink" title="为常用块创建 typedef"></a>为常用块创建 typedef</h2><p>创建的语法规则：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">int</span>(^block_name)(parameters);</div></pre></td></tr></table></figure></p>
+<p>调用的语法规则：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">block_name block = ^(parameters)&#123;&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/Block-in-Objc/" data-id="ciyg8qdw70003nm0gkry2y53r" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/Block-in-Objc/" data-id="ciyg9re0u0001a00g69hh1ei6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/iOS-programming-Block/">iOS programming Block</a></li></ul>
@@ -515,18 +502,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>以下内容翻译自 <code>stackoverflow.com</code></p>
-</blockquote>
+        <p><em>以下内容翻译自 <code>stackoverflow.com</code></em></p>
 <p>每一个 view 都有它的 coordinate system。 原点在（0，0）， 拥有宽度和高度属性。<br>在 iOS 中使用 <code>bounds</code> 来描述 coordinate system。<br>iOS 中的 <code>frame</code> 的 <code>origin</code> 属性会含有相对于 superview 的 coordinate system 坐标。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/coordinate-system/" data-id="ciyg8qdwm000bnm0g6i7rsymm" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/coordinate-system/" data-id="ciyg9re1d0009a00g1gb6mzi3" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Coordinate-System-iOS-programming-坐标系统/">Coordinate System iOS programming 坐标系统</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/iOS-programming-Coordinate-System-坐标系统/">iOS programming Coordinate System 坐标系统</a></li></ul>
 
     </footer>
   </div>
@@ -568,7 +553,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/UIAlertController/" data-id="ciyg8qdwc0005nm0gpt538gl6" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/UIAlertController/" data-id="ciyg9re150005a00giq9sqvyz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/iOS-programming-UIAlertController-ObjC/">iOS programming UIAlertController ObjC</a></li></ul>
@@ -603,31 +588,22 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="设置数据源-（UITableViewDataSource）"><a href="#设置数据源-（UITableViewDataSource）" class="headerlink" title="设置数据源 （UITableViewDataSource）"></a>设置数据源 （UITableViewDataSource）</h2><p>需要<code>数据源</code>来展示数据，dataSource。会向数据源查询一共多少行数据以及每一行显示什么数据</p>
-<blockquote>
 <p>不论什么对象，只要其遵循 <code>UITableViewDataSource</code> 协议即可。</p>
-</blockquote>
 <p>UITableViewDataSource协议中有三个需要实现的函数</p>
 <ol>
-<li><code>- (NSInteger) numberOfSectionInTableView: (UITableView*) tableView;</code><blockquote>
-<p>有几组（section）？</p>
-</blockquote>
+<li><p>tableview 有几组（section）？</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSInteger</span>) numberOfSectionInTableView: (<span class="built_in">UITableView</span>*) tableView;</div></pre></td></tr></table></figure>
+</li>
+<li><p>每组（section）几行？</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSInteger</span>) tableView:(<span class="built_in">UITableView</span>*)tableView numberOfRowsInSection:(<span class="built_in">NSInteger</span>)section;</div></pre></td></tr></table></figure>
+</li>
+<li><p>每组每行分别显示什么内容（cell）？</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">UITableViewCell</span>*) tableView:(<span class="built_in">UITableView</span>*)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span>*)indexPath;</div></pre></td></tr></table></figure>
+</li>
+<li><p>每组的 titleForHeader 和 titleForFooter。这两个字体不可更改，如果有需要，使用自定义的 UILabel。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSString</span>*)tableView:(<span class="built_in">UITableView</span>*)tableView titleForHeaderInSection:(<span class="built_in">NSInteger</span>)section;</div><div class="line">- (<span class="built_in">NSString</span>*)tableView:(<span class="built_in">UITableView</span>*)tableView titleForFooterInSection:(<span class="built_in">NSInteger</span>)section;</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<ul>
-<li><code>- (NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section;</code><blockquote>
-<p>每组（section）几行？</p>
-</blockquote>
-</li>
-<li><code>(UITableViewCell*) tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath;</code><blockquote>
-<p>每组每行分别显示什么内容（cell）？</p>
-</blockquote>
-</li>
-<li><code>(NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section;</code></li>
-<li><code>(NSString*)tableView:(UITableView*)tableView titleForFooterInSection:(NSInteger)section;</code><blockquote>
-<p>组的 titleForHeader 和 titleForFooter。这两个字体不可更改，如果有需要，使用自定义的 UILabel。</p>
-</blockquote>
-</li>
-</ul>
 <h3 id="怎么判断是哪一组哪一行呢？"><a href="#怎么判断是哪一组哪一行呢？" class="headerlink" title="怎么判断是哪一组哪一行呢？"></a>怎么判断是哪一组哪一行呢？</h3><p>看到上面的参数indexPath了吗？这样判断组：</p>
 <ul>
 <li><code>if(0 == indexPath.section){}</code></li>
@@ -660,12 +636,9 @@
 <p>以上情况下，<code>对象B</code>都是<code>对象A</code>的代理。</p>
 <h3 id="如何设置代理对象"><a href="#如何设置代理对象" class="headerlink" title="如何设置代理对象"></a>如何设置代理对象</h3><ol>
 <li>在<code>Stroyboard</code>的<code>UIScrollView</code>上右键单击，拖<code>delegate</code>到<code>UIViewController</code>上。</li>
-<li>在方法<code>viewDidLoad</code>中添加<code>self.tableView.delegate = self;</code><h3 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h3><code>类名+Delegate</code><blockquote>
-<p>例如<code>UITableViewDelegate</code></p>
-<h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><p>如果是为一个类特别定义的协议，可以直接写在<code>.h</code>文件里，如果多个类使用同一个协议，建议建立一个<code>protocol</code>文件。</p>
-</blockquote>
-</li>
+<li>在方法<code>viewDidLoad</code>中添加<code>self.tableView.delegate = self;</code><h3 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h3><code>类名+Delegate</code><br><em>例如<code>UITableViewDelegate</code>就是<code>UITableView</code>+<code>Delegate</code></em></li>
 </ol>
+<h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><p>如果是为一个类特别定义的协议，可以直接写在<code>.h</code>文件里，如果多个类使用同一个协议，建议建立一个<code>protocol</code>文件。</p>
 <ul>
 <li>关于定义格式，举个例子：</li>
 </ul>
@@ -673,10 +646,7 @@
 <p>默认是<code>@required</code>，但是这只能作为编译器检查的标准，使用时需要自己验证是否实现了具体的方法，验证方法如下：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>([<span class="keyword">self</span>.delegate respondsToSelector:<span class="keyword">@selector</span>(MethodName)])&#123;</div><div class="line">    MethodName</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="一个简单的例子"><a href="#一个简单的例子" class="headerlink" title="一个简单的例子"></a>一个简单的例子</h3><h4 id="首先定义一个-protocol"><a href="#首先定义一个-protocol" class="headerlink" title="首先定义一个@protocol"></a>首先定义一个<code>@protocol</code></h4><p>声明协议方法</p>
 <h4 id="定义一个委托-interface"><a href="#定义一个委托-interface" class="headerlink" title="定义一个委托@interface"></a>定义一个委托<code>@interface</code></h4><p>引入<code>protocol.h</code></p>
-<h4 id="定义一个代理-interface"><a href="#定义一个代理-interface" class="headerlink" title="定义一个代理@interface"></a>定义一个代理<code>@interface</code></h4><p>在<code>@interface</code>声明中声明遵守<code>@protocol</code>协议。例如：</p>
-<blockquote>
-<p><code>@interface viewController () &lt;protocolName&gt;</code></p>
-</blockquote>
+<h4 id="定义一个代理-interface"><a href="#定义一个代理-interface" class="headerlink" title="定义一个代理@interface"></a>定义一个代理<code>@interface</code></h4><p>在<code>@interface</code>声明中声明遵守<code>@protocol</code>协议。例如：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">viewController</span> () &lt;<span class="title">protocolName</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>然后在<code>@implementation</code>中实现具体的协议方法</p>
 <h2 id="单组数据和多组数据"><a href="#单组数据和多组数据" class="headerlink" title="单组数据和多组数据"></a>单组数据和多组数据</h2><p>其本质都是 <code>UITableVIew</code> ，具体的差别其实就是UITableView的属性 <code>UITableViewStylePlain</code> 和 <code>UITableViewStyleGrouped</code>的设置。</p>
 <h2 id="好，那么接下来梳理一下一个-UITableView-从初始化到展示的流程："><a href="#好，那么接下来梳理一下一个-UITableView-从初始化到展示的流程：" class="headerlink" title="好，那么接下来梳理一下一个 UITableView 从初始化到展示的流程："></a>好，那么接下来梳理一下一个 <code>UITableView</code> 从初始化到展示的流程：</h2><ol>
@@ -686,11 +656,12 @@
 <li>设置数据源，数据源需要遵循协议至少实现如下三个方法 <code>numberOfSectionInTableView</code> <code>numberOfRowsInSection</code> <code>cellForRowAtIndexPath</code></li>
 <li>如有需要自行构造一个 <code>UITableViewCell</code> 并使用上面的第三个方法（<code>cellForRowAtIndexPath</code>）返回。</li>
 </ul>
-<h2 id="UITableViewCell常见属性"><a href="#UITableViewCell常见属性" class="headerlink" title="UITableViewCell常见属性"></a>UITableViewCell常见属性</h2><h2 id="自定义cell"><a href="#自定义cell" class="headerlink" title="自定义cell"></a>自定义cell</h2>
+<h2 id="自定义cell"><a href="#自定义cell" class="headerlink" title="自定义cell"></a>自定义cell</h2><p>Coming soon…</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/UITableView/" data-id="ciyg8qdwm000anm0gkus15xsg" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/UITableView/" data-id="ciyg9re160006a00g2ajoldtm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/iOS-programming-UITableView-ObjC-Delegate-DataSource/">iOS programming UITableView ObjC Delegate DataSource</a></li></ul>
@@ -725,43 +696,22 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="收起键盘方法"><a href="#收起键盘方法" class="headerlink" title="收起键盘方法"></a>收起键盘方法</h2><ol>
-<li>点击<code>return</code>键收起，使用<code>UITextFieldDelegate</code>中的方法<blockquote>
-<p><code>- (BOOL)textFieldShouldReturn:(UITextField *)textField{return [textField resignFirstResponder]; return YES;}</code></p>
-</blockquote>
-</li>
+<li>点击<code>return</code>键收起，使用<code>UITextFieldDelegate</code>中的方法<br><code>- (BOOL)textFieldShouldReturn:(UITextField *)textField{return [textField resignFirstResponder]; return YES;}</code></li>
 </ol>
 <ul>
-<li><p>点击<code>done</code>键收起，先将<code>UITextField</code>对象的<code>Return Key</code>属性修改为<code>done</code>，再自定义一个方法并将其和 <code>done</code> 的 <code>Did End On Exit</code> 连接起来：</p>
-<blockquote>
-<ul>
-<li>(IBAction) textFieldDoneEditing:(id)sender{[sender resignFirstResponder];}</li>
-</ul>
-</blockquote>
+<li>点击<code>done</code>键收起，先将<code>UITextField</code>对象的<code>Return Key</code>属性修改为<code>done</code>，再自定义一个方法并将其和 <code>done</code> 的 <code>Did End On Exit</code> 连接起来：</li>
+<li><p>(IBAction) textFieldDoneEditing:(id)sender{[sender resignFirstResponder];}</p>
 </li>
-<li><p>在键盘外点击关闭键盘</p>
-<blockquote>
-<p>在<code>UITextField</code>对象外的视图控制器类的<code>viewDidLoad</code>方法中定义一个<code>UIGestureRecofnizer</code>对象（使用<code>[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKb)]</code>方法初始化，并且使用<code>[self.view addGestureRecognizer:tap];</code>加入视图。</p>
-</blockquote>
+<li><p>在键盘外点击关闭键盘<br>在<code>UITextField</code>对象外的视图控制器类的<code>viewDidLoad</code>方法中定义一个<code>UIGestureRecofnizer</code>对象（使用<code>[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKb)]</code>方法初始化，并且使用<code>[self.view addGestureRecognizer:tap];</code>加入视图。</p>
 </li>
 </ul>
-<blockquote>
 <p>然后记得实现<code>@selector()</code>中的方法：<code>- (void)dismissKb</code></p>
-</blockquote>
 <ul>
-<li><p>点击背景 View 收起键盘</p>
-<blockquote>
-<p><code>[self.view endEditing:YES];</code></p>
-</blockquote>
+<li><p>点击背景 View 收起键盘<br><code>[self.view endEditing:YES];</code></p>
 </li>
-<li><p>在任何地方加上这句话，统一收起键盘</p>
-<blockquote>
-<p><code>[[[UIApplication sharedApplication] keyWindow] endEditing:YES];</code></p>
-</blockquote>
+<li><p>在任何地方加上这句话，统一收起键盘<br><code>[[[UIApplication sharedApplication] keyWindow] endEditing:YES];</code></p>
 </li>
-<li><p>发送 <code>resignFirstResponder</code> 消息</p>
-<blockquote>
-<p><code>[[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];</code></p>
-</blockquote>
+<li><p>发送 <code>resignFirstResponder</code> 消息<br><code>[[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];</code></p>
 </li>
 </ul>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
@@ -774,7 +724,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/keyboard-dissmissing/" data-id="ciyg8qdwn000dnm0gv3bb426j" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/04/learning_iOS/keyboard-dissmissing/" data-id="ciyg9re1g000ea00gudalpxjr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/iOS-programming-keyboard-ObjC/">iOS programming keyboard ObjC</a></li></ul>
@@ -798,7 +748,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="tags/Coming-soon/">Coming soon...</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/Coordinate-System-iOS-programming-坐标系统/">Coordinate System iOS programming 坐标系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/Swift-Programming-language-iOS-instance-type/">Swift Programming language iOS instance type</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/iOS-programming-Block/">iOS programming Block</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/iOS-programming-Sequence-type/">iOS programming Sequence type</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/iOS-programming-UIAlertController-ObjC/">iOS programming UIAlertController ObjC</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/iOS-programming-UITableView-ObjC-Delegate-DataSource/">iOS programming UITableView ObjC Delegate DataSource</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/iOS-programming-keyboard-ObjC/">iOS programming keyboard ObjC</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="tags/Coming-soon/">Coming soon...</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/Swift-Programming-language-iOS-instance-type/">Swift Programming language iOS instance type</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/iOS-programming-Block/">iOS programming Block</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/iOS-programming-Coordinate-System-坐标系统/">iOS programming Coordinate System 坐标系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/iOS-programming-Sequence-type/">iOS programming Sequence type</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/iOS-programming-UIAlertController-ObjC/">iOS programming UIAlertController ObjC</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/iOS-programming-UITableView-ObjC-Delegate-DataSource/">iOS programming UITableView ObjC Delegate DataSource</a></li><li class="tag-list-item"><a class="tag-list-link" href="tags/iOS-programming-keyboard-ObjC/">iOS programming keyboard ObjC</a></li></ul>
     </div>
   </div>
 
@@ -808,7 +758,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="tags/Coming-soon/" style="font-size: 10px;">Coming soon...</a> <a href="tags/Coordinate-System-iOS-programming-坐标系统/" style="font-size: 10px;">Coordinate System iOS programming 坐标系统</a> <a href="tags/Swift-Programming-language-iOS-instance-type/" style="font-size: 10px;">Swift Programming language iOS instance type</a> <a href="tags/iOS-programming-Block/" style="font-size: 10px;">iOS programming Block</a> <a href="tags/iOS-programming-Sequence-type/" style="font-size: 10px;">iOS programming Sequence type</a> <a href="tags/iOS-programming-UIAlertController-ObjC/" style="font-size: 10px;">iOS programming UIAlertController ObjC</a> <a href="tags/iOS-programming-UITableView-ObjC-Delegate-DataSource/" style="font-size: 10px;">iOS programming UITableView ObjC Delegate DataSource</a> <a href="tags/iOS-programming-keyboard-ObjC/" style="font-size: 10px;">iOS programming keyboard ObjC</a>
+      <a href="tags/Coming-soon/" style="font-size: 10px;">Coming soon...</a> <a href="tags/Swift-Programming-language-iOS-instance-type/" style="font-size: 10px;">Swift Programming language iOS instance type</a> <a href="tags/iOS-programming-Block/" style="font-size: 10px;">iOS programming Block</a> <a href="tags/iOS-programming-Coordinate-System-坐标系统/" style="font-size: 10px;">iOS programming Coordinate System 坐标系统</a> <a href="tags/iOS-programming-Sequence-type/" style="font-size: 10px;">iOS programming Sequence type</a> <a href="tags/iOS-programming-UIAlertController-ObjC/" style="font-size: 10px;">iOS programming UIAlertController ObjC</a> <a href="tags/iOS-programming-UITableView-ObjC-Delegate-DataSource/" style="font-size: 10px;">iOS programming UITableView ObjC Delegate DataSource</a> <a href="tags/iOS-programming-keyboard-ObjC/" style="font-size: 10px;">iOS programming keyboard ObjC</a>
     </div>
   </div>
 
