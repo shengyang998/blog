@@ -1,7 +1,6 @@
----
-title: This is the blog of ysy
+# This is the blog of ysy
 description: if you like it, just star it（づ￣3￣）づ╭❤～
----
+
 ## Here I will
 post whatever I think is worth remembering and sharing
 about programming or designing or life purpose and so forth
