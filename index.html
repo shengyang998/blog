@@ -5,12 +5,15 @@
   
   <title>Tech. Desi. Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="iOS, Programming, Code, Technology, Design, Life,">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Tech. Desi. Life">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://blog.superyoung.win/index.html">
 <meta property="og:site_name" content="Tech. Desi. Life">
+<meta property="og:description" content="iOS, Programming, Code, Technology, Design, Life,">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tech. Desi. Life">
+<meta name="twitter:description" content="iOS, Programming, Code, Technology, Design, Life,">
   
     <link rel="alternate" href="/atom.xml" title="Tech. Desi. Life" type="application/atom+xml">
   
@@ -53,7 +56,7 @@
         <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.superyoung.win"></form>
       </div>
     </div>
   </div>
@@ -101,7 +104,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/28/MetaLearning/" data-id="ciyg7fqv10002ub0gkixz3dss" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/28/MetaLearning/" data-id="ciyg7rvit0001200g3o0efl9t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -144,7 +147,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/27/50gray_buffing/" data-id="ciyg7fqun0000ub0gkkk1xx1s" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/27/50gray_buffing/" data-id="ciyg7rvik0000200gd8evspc4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -201,7 +204,7 @@
 </ol>
 <p>所以，一定要记得在设置观察者对象的时候增加 DisposeBag。</p>
 <hr>
-<h2 id="0x04-接下来举个例子：购买巧克力"><a href="#0x04-接下来举个例子：购买巧克力" class="headerlink" title="0x04 接下来举个例子：购买巧克力"></a>0x04 接下来举个例子：购买巧克力</h2><p><em>项目文件：<a href="./Chocotastic-starter.zip">传送门</a></em></p>
+<h2 id="0x04-接下来举个例子：购买巧克力"><a href="#0x04-接下来举个例子：购买巧克力" class="headerlink" title="0x04 接下来举个例子：购买巧克力"></a>0x04 接下来举个例子：购买巧克力</h2><p><em>项目文件：<a href="https://github.com/shengyang998/Chocolates-starter" target="_blank" rel="external">传送门</a></em></p>
 <p>Build 并且运行项目，现在这个 demo 还是没有使用响应式的，接下来的教程中，将会展示如何使用响应式来完成这个 demo。</p>
 <h2 id="0x05-响应式操作购物车数量"><a href="#0x05-响应式操作购物车数量" class="headerlink" title="0x05 响应式操作购物车数量"></a>0x05 响应式操作购物车数量</h2><p>打开 <code>ShoppingCart.swift</code>，找到购物车内数组的声明<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> chocolates = [<span class="type">Chocolate</span>]()</div></pre></td></tr></table></figure></p>
 <p>现在还不是响应式的，要想响应式，将其改成<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> chocolates: <span class="type">Variable</span>&lt;[<span class="type">Chocolate</span>]&gt; = <span class="type">Variable</span>([])</div></pre></td></tr></table></figure></p>
@@ -215,13 +218,13 @@
 </ol>
 <p>修复 Xcode 当前提示的所有错误，然后继续下面的操作：</p>
 <ol>
-<li><p>在文件 <code>ChocolatesOfTheWorldViewController.swift</code> 中增加</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> disposeBag = <span class="type">DisposeBag</span>()</div></pre></td></tr></table></figure>
-</li>
-<li><p>在 // MARK: Rx Setup 下面增加</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">setupCartObserver</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="type">ShoppingCart</span>.sharedCart.chocolates.asObservable()</div><div class="line">    .subscribe(onNext:&#123;</div><div class="line">        (chocolates) <span class="keyword">in</span></div><div class="line">        <span class="keyword">self</span>.cartButton.title = <span class="string">"<span class="subst">\(chocolates.<span class="built_in">count</span>)</span> \u&#123;1f36b&#125;"</span></div><div class="line">        &#125;)</div><div class="line">    .addDisposableTo(disposeBag)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<li>在文件 <code>ChocolatesOfTheWorldViewController.swift</code> 中增加</li>
 </ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> disposeBag = <span class="type">DisposeBag</span>()</div></pre></td></tr></table></figure>
+<ol>
+<li>在 // MARK: Rx Setup 下面增加</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">setupCartObserver</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="type">ShoppingCart</span>.sharedCart.chocolates.asObservable()</div><div class="line">    .subscribe(onNext:&#123;</div><div class="line">        (chocolates) <span class="keyword">in</span></div><div class="line">        <span class="keyword">self</span>.cartButton.title = <span class="string">"<span class="subst">\(chocolates.<span class="built_in">count</span>)</span> \u&#123;1f36b&#125;"</span></div><div class="line">        &#125;)</div><div class="line">    .addDisposableTo(disposeBag)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这将会设置一个响应式的观察者去自动更新购物车。</p>
 <p>上面的代码具体做了什么？详述如下：</p>
 <ol>
@@ -294,7 +297,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/27/how_to_program_reactively_with_RxSwift/" data-id="ciyg7fquv0001ub0gg47kbxdi" class="article-share-link">Share</a>
+      <a data-url="http://blog.superyoung.win/2017/01/27/how_to_program_reactively_with_RxSwift/" data-id="ciyg7rviw0002200g94c7y2ey" class="article-share-link">Share</a>
       
       
     </footer>
