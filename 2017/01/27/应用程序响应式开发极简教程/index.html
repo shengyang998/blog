@@ -5,28 +5,19 @@
   
   <title>【搬运】手把手教你Rx响应式开发 - 响应式开发极简入门教程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原文在此：Getting Started With RxSwift and RxCocoa by Ellen Shapiro on October 17, 2016
-
-0x00 序很多面向对象的开发人员都遇到过这样的问题：软件开发过程中，需要开发人员主动地告诉系统什么东西改变了，以此来触发响应。
-通常来说这样并没有什么坏处，但是如果有一个办法可以让系统自动发现状态的改变，是不是更好呢？
-这就引出">
+  <meta name="description" content="原文在此：[Getting Started With RxSwift and RxCocoa by Ellen Shapiro on October 17, 2016](https://www.raywenderlich.com/138547/getting-started-with-rxswift-and-rxcocoa)
+0x00 序很多面向对象的开发人员都遇到过这样的问题：软件开发过程中，需">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【搬运】手把手教你Rx响应式开发 - 响应式开发极简入门教程">
 <meta property="og:url" content="http://yoursite.com/2017/01/27/应用程序响应式开发极简教程/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="原文在此：Getting Started With RxSwift and RxCocoa by Ellen Shapiro on October 17, 2016
-
-0x00 序很多面向对象的开发人员都遇到过这样的问题：软件开发过程中，需要开发人员主动地告诉系统什么东西改变了，以此来触发响应。
-通常来说这样并没有什么坏处，但是如果有一个办法可以让系统自动发现状态的改变，是不是更好呢？
-这就引出">
-<meta property="og:updated_time" content="2017-01-27T18:30:32.000Z">
+<meta property="og:description" content="原文在此：[Getting Started With RxSwift and RxCocoa by Ellen Shapiro on October 17, 2016](https://www.raywenderlich.com/138547/getting-started-with-rxswift-and-rxcocoa)
+0x00 序很多面向对象的开发人员都遇到过这样的问题：软件开发过程中，需">
+<meta property="og:updated_time" content="2017-01-27T19:09:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【搬运】手把手教你Rx响应式开发 - 响应式开发极简入门教程">
-<meta name="twitter:description" content="原文在此：Getting Started With RxSwift and RxCocoa by Ellen Shapiro on October 17, 2016
-
-0x00 序很多面向对象的开发人员都遇到过这样的问题：软件开发过程中，需要开发人员主动地告诉系统什么东西改变了，以此来触发响应。
-通常来说这样并没有什么坏处，但是如果有一个办法可以让系统自动发现状态的改变，是不是更好呢？
-这就引出">
+<meta name="twitter:description" content="原文在此：[Getting Started With RxSwift and RxCocoa by Ellen Shapiro on October 17, 2016](https://www.raywenderlich.com/138547/getting-started-with-rxswift-and-rxcocoa)
+0x00 序很多面向对象的开发人员都遇到过这样的问题：软件开发过程中，需">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -66,7 +57,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -97,9 +88,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>原文在此：<a href="https://www.raywenderlich.com/138547/getting-started-with-rxswift-and-rxcocoa" target="_blank" rel="external">Getting Started With RxSwift and RxCocoa <em>by Ellen Shapiro on October 17, 2016</em></a></p>
-</blockquote>
+        <p><em>原文在此：[Getting Started With RxSwift and RxCocoa </em>by Ellen Shapiro on October 17, 2016<em>](<a href="https://www.raywenderlich.com/138547/getting-started-with-rxswift-and-rxcocoa" target="_blank" rel="external">https://www.raywenderlich.com/138547/getting-started-with-rxswift-and-rxcocoa</a>)</em></p>
 <h2 id="0x00-序"><a href="#0x00-序" class="headerlink" title="0x00 序"></a>0x00 序</h2><p>很多面向对象的开发人员都遇到过这样的问题：软件开发过程中，需要开发人员主动地告诉系统什么东西改变了，以此来触发响应。</p>
 <p>通常来说这样并没有什么坏处，但是如果有一个办法可以让系统自动发现状态的改变，是不是更好呢？</p>
 <p>这就引出了响应式开发最基本的概念：你的应用可以对状态直接进行响应而不需要开发人员参与。这种开发方式可以让开发人员更加专注于逻辑的表达而不是如何对状态进行保存。</p>
@@ -124,9 +113,7 @@
 </ol>
 <p>所以，一定要记得在设置观察者对象的时候增加 DisposeBag。</p>
 <hr>
-<h2 id="0x04-接下来举个例子：购买巧克力"><a href="#0x04-接下来举个例子：购买巧克力" class="headerlink" title="0x04 接下来举个例子：购买巧克力"></a>0x04 接下来举个例子：购买巧克力</h2><blockquote>
-<p>项目文件：<a href="/Chocotastic-starter.zip">传送门</a></p>
-</blockquote>
+<h2 id="0x04-接下来举个例子：购买巧克力"><a href="#0x04-接下来举个例子：购买巧克力" class="headerlink" title="0x04 接下来举个例子：购买巧克力"></a>0x04 接下来举个例子：购买巧克力</h2><p><em>项目文件：<a href="/Chocotastic-starter.zip">传送门</a></em></p>
 <p>Build 并且运行项目，现在这个 demo 还是没有使用响应式的，接下来的教程中，将会展示如何使用响应式来完成这个 demo。</p>
 <h2 id="0x05-响应式操作购物车数量"><a href="#0x05-响应式操作购物车数量" class="headerlink" title="0x05 响应式操作购物车数量"></a>0x05 响应式操作购物车数量</h2><p>打开 <code>ShoppingCart.swift</code>，找到购物车内数组的声明<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> chocolates = [<span class="type">Chocolate</span>]()</div></pre></td></tr></table></figure></p>
 <p>现在还不是响应式的，要想响应式，将其改成<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> chocolates: <span class="type">Variable</span>&lt;[<span class="type">Chocolate</span>]&gt; = <span class="type">Variable</span>([])</div></pre></td></tr></table></figure></p>
@@ -159,10 +146,7 @@
 <p>RxCocoa 包含一些 UI 控件的响应式的 API，这使得你可以控制像 UITableView 等控件而不需要 override 代理和数据源方法</p>
 <p>为了演示怎么做，删除整个 UITableViewDataSource 和 UITableViewDelegate 扩展，然后删除 viewDidLoad 方法里注册 dataSource 和 delegate 的语句。</p>
 <p>编译并且运行一下，你将会发现整个 TableView 都空了，那么好，接下来你需要使 TableView 中的一些东西响应化，首先，在文件 <code>ChocolatesOfTheWorldViewController.swift</code> 中，把属性<code>europeanChocolates</code>改成一个可观察的：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> europeanChocolates = <span class="type">Observable</span>.just(<span class="type">Chocolate</span>.ofEurope)</div></pre></td></tr></table></figure></p>
-<p><code>可观察的值</code>不会有任何改变，但是当你仍然想要像一个可观察的值一样访问它的时候，使用<code>just(_:)</code>方法。</p>
-<blockquote>
-<p>Sometimes, calling <code>just(_:)</code> is an indication that using Reactive programming might be overkill—after all, if a value never changes, why use a programming technique designed to react to changes? In this example, you’re using it to set up reactions of table view cells which will change, but it’s always a good idea to look carefully at how you’re using Rx. Just because you have a hammer doesn’t mean every problem is a nail.</p>
-</blockquote>
+<p><code>可观察的值</code>不会有任何改变，但是当你仍然想要像一个可观察的值一样访问它的时候，使用<code>just(_:)</code>方法。<br><em>Sometimes, calling <code>just(_:)</code> is an indication that using Reactive programming might be overkill—after all, if a value never changes, why use a programming technique designed to react to changes? In this example, you’re using it to set up reactions of table view cells which will change, but it’s always a good idea to look carefully at how you’re using Rx. Just because you have a hammer doesn’t mean every problem is a nail.</em></p>
 <p>现在你已经让 europeanChocolates 变成可观察的了，那么接下来增加下面的函数：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">setupCellConfig</span><span class="params">()</span></span>&#123;</div><div class="line">    europeanChocolates.bindTo(tableView</div><div class="line">        .rx.items(cellIdentifier: <span class="type">ChocolateCell</span>.<span class="type">Identifier</span>, cellType: <span class="type">ChocolateCell</span>.<span class="keyword">self</span>))&#123;</div><div class="line">            (row, chocolate, cell) <span class="keyword">in</span></div><div class="line">            cell.configureWithChocolate(chocolate: chocolate)</div><div class="line">        &#125;.addDisposableTo(disposeBag)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>这里做的事是：</p>
 <ol>
@@ -192,9 +176,7 @@
 <p>首先，在<code>BillingInfoViewController</code>中增加如下代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">let</span> throttleInterVal = <span class="number">0.1</span></div></pre></td></tr></table></figure></p>
 <p>这里以秒为单位定义了 throttle length 的常数。</p>
 <p>然后再增加如下代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">setupTextChangeHandling</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">let</span> creditCardValid = creditCardNumberTextField</div><div class="line">    .rx.text.throttle(throttleInterVal, scheduler: <span class="type">MainScheduler</span>.instance) <span class="comment">//1</span></div><div class="line">    .<span class="built_in">map</span>&#123; <span class="keyword">self</span>.validate(cardText: $<span class="number">0</span>) &#125; <span class="comment">//2</span></div><div class="line"></div><div class="line">    creditCardValid.subscribe(onNext:&#123;</div><div class="line">        <span class="keyword">self</span>.creditCardNumberTextField.valid = $<span class="number">0</span> <span class="comment">//3</span></div><div class="line">        &#125;).addDisposableTo(disposeBag) <span class="comment">//4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>Note:如果你在设置 creditCardValid 的时候得到一个“<em>Generic parameter R could not be inferred</em>”错误，你可以显式地指明 creditCardValid 的类型：<code>let creditCardValid: Observable</code>。理论上编译器应该能够自动推断出这个类型，但是有时候它可能需要一点动力🙂</p>
-</blockquote>
+<p><strong>Note:如果你在设置 creditCardValid 的时候得到一个“<em>Generic parameter R could not be inferred</em>”错误，你可以显式地指明 creditCardValid 的类型：<code>let creditCardValid: Observable</code>。理论上编译器应该能够自动推断出这个类型，但是有时候它可能需要一点动力🙂</strong></p>
 <p>好，那么这些代码做了什么呢？我们继续一步步分析：</p>
 <ol>
 <li>你对输入进行了 <code>throttle</code> 操作，所以验证逻辑只会根据你在上面设置的时间来执行。<code>scheduler</code>参数是一个更高级的概念，简单来说它是用来绑定一个线程的，如果你要使用主线程的话，则设置为<code>MainScheduler</code>（UI 操作都需要主线程）</li>
@@ -224,7 +206,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/27/应用程序响应式开发极简教程/" data-id="ciyg6j8dn0002sr0g42ynujhy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/27/应用程序响应式开发极简教程/" data-id="ciyg6n93x0000vl0gqmpw0v9s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -233,15 +215,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/01/27/中性灰磨皮以及细节增强/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/01/28/MetaLearning/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          中性灰磨皮以及细节增强
+          Meta Learning 元学习
         
       </div>
     </a>
   
+  
+    <a href="/2017/01/27/中性灰磨皮以及细节增强/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">中性灰磨皮以及细节增强</div>
+    </a>
   
 </nav>
 
@@ -262,7 +249,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Arkiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li></ul>
     </div>
@@ -272,7 +259,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Siste innlegg</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -281,11 +268,11 @@
           </li>
         
           <li>
-            <a href="/2017/01/27/中性灰磨皮以及细节增强/">中性灰磨皮以及细节增强</a>
+            <a href="/2017/01/27/应用程序响应式开发极简教程/">【搬运】手把手教你Rx响应式开发 - 响应式开发极简入门教程</a>
           </li>
         
           <li>
-            <a href="/2017/01/27/应用程序响应式开发极简教程/">【搬运】手把手教你Rx响应式开发 - 响应式开发极简入门教程</a>
+            <a href="/2017/01/27/中性灰磨皮以及细节增强/">中性灰磨皮以及细节增强</a>
           </li>
         
       </ul>
