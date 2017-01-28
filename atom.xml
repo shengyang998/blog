@@ -64,6 +64,32 @@
   </entry>
   
   <entry>
+    <title>关于 SequenceType</title>
+    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
+    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
+    <published>2017-01-25T07:47:23.000Z</published>
+    <updated>2017-01-28T16:20:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p><h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Coming soon…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
+      <category term="programming" scheme="http://blog.superyoung.win/tags/programming/"/>
+    
+      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
+    
+      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
+    
+  </entry>
+  
+  <entry>
     <title>手把手教你Rx响应式开发 - 响应式应用开发极简入门教程</title>
     <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/"/>
     <id>http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/</id>
@@ -92,32 +118,6 @@
       <category term="开发" scheme="http://blog.superyoung.win/tags/%E5%BC%80%E5%8F%91/"/>
     
       <category term="入门" scheme="http://blog.superyoung.win/tags/%E5%85%A5%E9%97%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于 SequenceType</title>
-    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
-    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
-    <published>2017-01-25T07:47:23.000Z</published>
-    <updated>2017-01-28T16:20:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p><h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Coming soon…&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="programming" scheme="http://blog.superyoung.win/tags/programming/"/>
-    
-      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
-    
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
     
   </entry>
   
@@ -159,9 +159,9 @@
     
       <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
-      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
-    
       <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
+    
+      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
     
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
@@ -176,13 +176,13 @@
     <link href="http://blog.superyoung.win/2017/01/04/learning_iOS/Block-in-Objc/"/>
     <id>http://blog.superyoung.win/2017/01/04/learning_iOS/Block-in-Objc/</id>
     <published>2017-01-03T17:13:54.000Z</published>
-    <updated>2017-01-27T21:23:40.000Z</updated>
+    <updated>2017-01-28T16:41:42.000Z</updated>
     
-    <content type="html"><![CDATA[<p>块可以实现闭包。块与函数类似，只不过是直接定义在另一个函数里。块可以访问、捕获它被声明的区域内的所有变量。而且因为有返回类型，块其实也可以作为个值来对待。</p><h2 id="定义-Block-的语法结构如下"><a href="#定义-Block-的语法结构如下" class="headerlink" title="定义 Block 的语法结构如下"></a>定义 Block 的语法结构如下</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">return_type (^block_name)(parameters)&#123;&#125;</div></pre></td></tr></table></figure><h2 id="Block-捕获的变量是不可以在-Block-中修改的"><a href="#Block-捕获的变量是不可以在-Block-中修改的" class="headerlink" title="Block 捕获的变量是不可以在 Block 中修改的"></a>Block 捕获的变量是不可以在 Block 中修改的</h2><p>若要修改，该变量需要在声明的时候加上 <code>__block</code> 修饰符。</p><h2 id="Block-和-Grand-Central-Dispatch"><a href="#Block-和-Grand-Central-Dispatch" class="headerlink" title="Block 和 Grand Central Dispatch"></a>Block 和 Grand Central Dispatch</h2><p><code>Grand Central Dispatch</code> 是一种与 <code>Block</code> 有关的技术，它提供了对线程的抽象，这种抽象基于派发队列<code>dispatch queue</code>，开发者可以将 <code>Block</code> 排入队列中，由 <code>GCD</code> 负责调度。</p><h2 id="小心保留环"><a href="#小心保留环" class="headerlink" title="小心保留环"></a>小心保留环</h2><p>若在类的实例方法中定义一个块，那么块会捕获 <code>self</code> 变量，如果 <code>self</code> 所指代的那个对象同时也保留了块，则会导致“保留环”。</p><h2 id="解决保留环问题"><a href="#解决保留环问题" class="headerlink" title="解决保留环问题"></a>解决保留环问题</h2><p>一般来说，只要适时清理掉换中的某个引用，就不会有问题，然而未必总有机会。在块的最后令 <code>Handler = nil;</code> 即可。</p><h2 id="全局快、栈块、堆块"><a href="#全局快、栈块、堆块" class="headerlink" title="全局快、栈块、堆块"></a>全局快、栈块、堆块</h2><p>栈块所占据的内存空间可能会被自动覆写，若被覆写，则运行时将会出错。解决此问题可以给块对象发送 <code>copy</code> 消息，示例如下：<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">block = [^&#123;codeInBlock&#125; <span class="keyword">copy</span>];</div></pre></td></tr></table></figure><p></p><h2 id="为常用块创建-typedef"><a href="#为常用块创建-typedef" class="headerlink" title="为常用块创建 typedef"></a>为常用块创建 typedef</h2><p>创建的语法规则：<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">int</span>(^block_name)(parameters);</div></pre></td></tr></table></figure><p></p><p>调用的语法规则：<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">block_name block = ^(parameters)&#123;&#125;</div></pre></td></tr></table></figure><p></p>]]></content>
+    <content type="html"><![CDATA[<p>什么是 Block？Block 可以实现闭包。Block 与函数类似，只不过是直接定义在另一个函数里。Block 也可以访问、捕获它被声明的区域内的所有变量。而且 Block 因为有返回类型，它其实也可以作为个值来对待。<br><a id="more"></a></p><h2 id="定义-Block-的语法结构如下"><a href="#定义-Block-的语法结构如下" class="headerlink" title="定义 Block 的语法结构如下"></a>定义 Block 的语法结构如下</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">return_type (^block_name)(parameters)&#123;&#125;</div></pre></td></tr></table></figure><h2 id="Block-捕获的变量是不可以在-Block-中修改的"><a href="#Block-捕获的变量是不可以在-Block-中修改的" class="headerlink" title="Block 捕获的变量是不可以在 Block 中修改的"></a>Block 捕获的变量是不可以在 Block 中修改的</h2><p>若要修改，该变量需要在声明的时候加上 <code>__block</code> 修饰符。</p><h2 id="Block-和-Grand-Central-Dispatch"><a href="#Block-和-Grand-Central-Dispatch" class="headerlink" title="Block 和 Grand Central Dispatch"></a>Block 和 Grand Central Dispatch</h2><p><code>Grand Central Dispatch</code> 是一种与 <code>Block</code> 有关的技术，它提供了对线程的抽象，这种抽象基于派发队列<code>dispatch queue</code>，开发者可以将 <code>Block</code> 排入队列中，由 <code>GCD</code> 负责调度。</p><h2 id="小心保留环"><a href="#小心保留环" class="headerlink" title="小心保留环"></a>小心保留环</h2><p>若在类的实例方法中定义一个块，那么块会捕获 <code>self</code> 变量，如果 <code>self</code> 所指代的那个对象同时也保留了块，则会导致“保留环”。</p><h2 id="解决保留环问题"><a href="#解决保留环问题" class="headerlink" title="解决保留环问题"></a>解决保留环问题</h2><p>一般来说，只要适时清理掉环中的某个引用，就不会有问题。对于块来说的话，在块的最后令 <code>Handler = nil;</code> 即可解决保留环问题。</p><h2 id="全局快、栈块、堆块"><a href="#全局快、栈块、堆块" class="headerlink" title="全局快、栈块、堆块"></a>全局快、栈块、堆块</h2><p>栈块所占据的内存空间可能会被自动覆写，若被覆写，则运行时将会出错。解决此问题可以给块对象发送 <code>copy</code> 消息，示例如下：<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">block = [^&#123;codeInBlock&#125; <span class="keyword">copy</span>];</div></pre></td></tr></table></figure><p></p><h2 id="为常用块创建-typedef"><a href="#为常用块创建-typedef" class="headerlink" title="为常用块创建 typedef"></a>为常用块创建 typedef</h2><p>创建的语法规则：<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">int</span>(^block_name)(parameters);</div></pre></td></tr></table></figure><p></p><p>调用的语法规则：<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">block_name block = ^(parameters)&#123;&#125;</div></pre></td></tr></table></figure><p></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;块可以实现闭包。块与函数类似，只不过是直接定义在另一个函数里。块可以访问、捕获它被声明的区域内的所有变量。而且因为有返回类型，块其实也可以作为个值来对待。&lt;/p&gt;&lt;h2 id=&quot;定义-Block-的语法结构如下&quot;&gt;&lt;a href=&quot;#定义-Block-的语法结构如下&quot; cl
+      &lt;p&gt;什么是 Block？Block 可以实现闭包。Block 与函数类似，只不过是直接定义在另一个函数里。Block 也可以访问、捕获它被声明的区域内的所有变量。而且 Block 因为有返回类型，它其实也可以作为个值来对待。&lt;br&gt;
     
     </summary>
     
