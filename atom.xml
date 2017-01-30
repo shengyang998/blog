@@ -211,31 +211,32 @@
   </entry>
   
   <entry>
-    <title>关于 SequenceType</title>
-    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
-    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
-    <published>2017-01-25T07:47:23.000Z</published>
-    <updated>2017-01-29T02:27:33.000Z</updated>
+    <title>中性灰磨皮以及细节增强</title>
+    <link href="http://blog.superyoung.win/2017/01/27/PictureProcessing/50gray_buffing/"/>
+    <id>http://blog.superyoung.win/2017/01/27/PictureProcessing/50gray_buffing/</id>
+    <published>2017-01-27T14:32:36.000Z</published>
+    <updated>2017-01-28T16:22:39.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p>
-<h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
+    <content type="html"><![CDATA[<p>中性灰磨皮的基本步骤，其思路，还是 <code>D&amp;B</code><br><a id="more"></a></p>
+<ol>
+<li>使用图章等工具进行斑点的消除</li>
+<li>新建一个颜色填充图层，填充50%灰色，设置图层混合模式为柔光</li>
+<li>新建一个颜色填充图层，填充黑色，设置图层混合模式为颜色</li>
+<li>新建一个颜色填充图层，填充黑色，设置图层混合模式为柔光</li>
+<li>使用笔刷在中性灰图层更改高光和阴影，重绘所有需要重绘的地方</li>
+</ol>
+]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Coming soon…&lt;br&gt;
+      &lt;p&gt;中性灰磨皮的基本步骤，其思路，还是 &lt;code&gt;D&amp;amp;B&lt;/code&gt;&lt;br&gt;
     
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+      <category term="Photoshop" scheme="http://blog.superyoung.win/tags/Photoshop/"/>
     
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
-    
-      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
-    
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
+      <category term="修图" scheme="http://blog.superyoung.win/tags/%E4%BF%AE%E5%9B%BE/"/>
     
   </entry>
   
@@ -388,6 +389,35 @@
       <category term="开发" scheme="http://blog.superyoung.win/tags/%E5%BC%80%E5%8F%91/"/>
     
       <category term="入门" scheme="http://blog.superyoung.win/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于 SequenceType</title>
+    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
+    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
+    <published>2017-01-25T07:47:23.000Z</published>
+    <updated>2017-01-29T02:27:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p>
+<h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Coming soon…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
+      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
+    
+      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
+    
+      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
     
   </entry>
   
