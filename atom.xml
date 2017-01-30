@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.superyoung.win/"/>
-  <updated>2017-01-30T05:01:34.000Z</updated>
+  <updated>2017-01-30T08:47:34.000Z</updated>
   <id>http://blog.superyoung.win/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://blog.superyoung.win/2017/01/29/learning_swift/autoclosure/"/>
     <id>http://blog.superyoung.win/2017/01/29/learning_swift/autoclosure/</id>
     <published>2017-01-29T12:18:31.000Z</published>
-    <updated>2017-01-30T05:01:34.000Z</updated>
+    <updated>2017-01-30T08:47:34.000Z</updated>
     
-    <content type="html"><![CDATA[<p>A note about how to use <code>@autoclosure</code> in Swift programming language</p><a id="more"></a><h2 id="A-short-explain-to-autoclosure"><a href="#A-short-explain-to-autoclosure" class="headerlink" title="A short explain to @autoclosure"></a>A short explain to <code>@autoclosure</code></h2><p>What <code>@autoclosure</code> have done is to wrap a expressionn to a closure.</p><h2 id="for-example"><a href="#for-example" class="headerlink" title="for example"></a>for example</h2><p>We define a function as follow:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">printIfTrue</span><span class="params">(<span class="number">_</span> clo: <span class="params">()</span></span></span>-&gt;<span class="type">Bool</span> )&#123;</div><div class="line">    <span class="built_in">print</span>(clo())</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>Then we can call the function like this:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue( &#123; <span class="keyword">return</span> <span class="number">2</span>&gt;<span class="number">1</span> &#125; )</div></pre></td></tr></table></figure><p></p><p>OR like this:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue&#123; <span class="keyword">return</span> <span class="number">2</span>&gt;<span class="number">1</span> &#125;</div></pre></td></tr></table></figure><p></p><p>OR even ignore the key word <code>return</code>:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue&#123; <span class="number">2</span>&gt;<span class="number">1</span> &#125;</div></pre></td></tr></table></figure><p></p><p>But if you want a clearer syntax like:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue( <span class="number">2</span>&gt;<span class="number">1</span> )</div></pre></td></tr></table></figure><p></p><p>Then you must use <code>@autoclosure</code>,like:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">printIfTrue</span><span class="params">(<span class="number">_</span> clo: @autoclosure <span class="params">()</span></span></span>-&gt;<span class="type">Bool</span>)&#123;</div><div class="line">    <span class="built_in">print</span>(clo())</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><h2 id="One-more-thing"><a href="#One-more-thing" class="headerlink" title="One more thing"></a>One more thing</h2><p>Let’s define two similar function and try to compare their speed:<br>The first function:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">logicalAnd</span><span class="params">(<span class="number">_</span> <span class="keyword">left</span>: @autoclosure <span class="params">()</span></span></span> -&gt; <span class="type">Bool</span>, <span class="number">_</span> <span class="keyword">right</span>: <span class="meta">@autoclosure</span> () -&gt; <span class="type">Bool</span>) -&gt; <span class="type">Bool</span>&#123;</div><div class="line">    <span class="keyword">if</span> <span class="keyword">left</span>()&#123;</div><div class="line">        <span class="keyword">if</span> <span class="keyword">right</span>()&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>The second function:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">logicalAnd</span><span class="params">(<span class="number">_</span> <span class="keyword">left</span>: Bool, <span class="number">_</span> <span class="keyword">right</span>: Bool)</span></span> -&gt; <span class="type">Bool</span>&#123;</div><div class="line">    <span class="keyword">if</span> <span class="keyword">left</span>&#123;</div><div class="line">        <span class="keyword">if</span> <span class="keyword">right</span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>It’s same to call these two functions:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">logicalAnd(<span class="literal">true</span>, <span class="literal">true</span>)      <span class="comment">//return true</span></div><div class="line">logicalAnd(<span class="number">2</span>&gt;<span class="number">1</span>, <span class="number">2</span>&gt;<span class="number">1</span>)        <span class="comment">//return true</span></div></pre></td></tr></table></figure><p></p><p>You might already have noticed that the difference between them is only the type of parameter.</p><p>And because of that, the first function is faster than the second one.</p><p>The first one can do <code>lazy caculation</code> to right parameter, and if the parameter needs long time caculation, its advantage will show.</p><p>While the second one? It must determine the parameter before the function is called, in other way, it cannot do <code>lazy caculation</code> and will cost longer time.</p><p>So that is what most interesting thing of <code>@autoclosure</code>.</p><p>And the operator <code>??</code>, <code>&amp;&amp;</code>, <code>||</code> in standard lib of Swift is also do the same.</p>]]></content>
+    <content type="html"><![CDATA[<p>A note about how to use <code>@autoclosure</code> in Swift programming language</p><a id="more"></a><h2 id="A-short-explain-to-autoclosure"><a href="#A-short-explain-to-autoclosure" class="headerlink" title="A short explain to @autoclosure"></a>A short explain to <code>@autoclosure</code></h2><p>What <code>@autoclosure</code> have done is to wrap a expressionn to a closure.</p><h2 id="for-example"><a href="#for-example" class="headerlink" title="for example"></a>for example</h2><p>We define a function as below:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">printIfTrue</span><span class="params">(<span class="number">_</span> clo: <span class="params">()</span></span></span>-&gt;<span class="type">Bool</span> )&#123;</div><div class="line">    <span class="built_in">print</span>(clo())</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>We can call the function like this:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue( &#123; <span class="keyword">return</span> <span class="number">2</span>&gt;<span class="number">1</span> &#125; )</div></pre></td></tr></table></figure><p></p><p>OR like this:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue&#123; <span class="keyword">return</span> <span class="number">2</span>&gt;<span class="number">1</span> &#125;</div></pre></td></tr></table></figure><p></p><p>OR even ignore the key word <code>return</code>:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue&#123; <span class="number">2</span>&gt;<span class="number">1</span> &#125;</div></pre></td></tr></table></figure><p></p><p>But if you want a clearer syntax like:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue( <span class="number">2</span>&gt;<span class="number">1</span> )</div></pre></td></tr></table></figure><p></p><p>Then you must use <code>@autoclosure</code>, like:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">printIfTrue</span><span class="params">(<span class="number">_</span> clo: @autoclosure <span class="params">()</span></span></span>-&gt;<span class="type">Bool</span>)&#123;</div><div class="line">    <span class="built_in">print</span>(clo())</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>Is these all it can do? Well, Yes, and No. What it can do depends on you, just go on and have a look:</p><h2 id="Lazy-Caculation"><a href="#Lazy-Caculation" class="headerlink" title="Lazy Caculation"></a>Lazy Caculation</h2><p>Let’s define two similar function and try to compare their speed:<br>The first function:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">logicalAnd</span><span class="params">(<span class="number">_</span> <span class="keyword">left</span>: @autoclosure <span class="params">()</span></span></span> -&gt; <span class="type">Bool</span>, <span class="number">_</span> <span class="keyword">right</span>: <span class="meta">@autoclosure</span> () -&gt; <span class="type">Bool</span>) -&gt; <span class="type">Bool</span>&#123;</div><div class="line">    <span class="keyword">if</span> <span class="keyword">left</span>()&#123;</div><div class="line">        <span class="keyword">if</span> <span class="keyword">right</span>()&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>The second function:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">logicalAnd</span><span class="params">(<span class="number">_</span> <span class="keyword">left</span>: Bool, <span class="number">_</span> <span class="keyword">right</span>: Bool)</span></span> -&gt; <span class="type">Bool</span>&#123;</div><div class="line">    <span class="keyword">if</span> <span class="keyword">left</span>&#123;</div><div class="line">        <span class="keyword">if</span> <span class="keyword">right</span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>It’s same to call these two functions:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">logicalAnd(<span class="literal">true</span>, <span class="literal">true</span>)      <span class="comment">//return true</span></div><div class="line">logicalAnd(<span class="number">2</span>&gt;<span class="number">1</span>, <span class="number">2</span>&gt;<span class="number">1</span>)        <span class="comment">//return true</span></div></pre></td></tr></table></figure><p></p><p>You might already have noticed that the difference between them is only the type of parameter.</p><p>And because of that, the first function is faster than the second one.</p><p>The first one can do <code>lazy caculation</code> to right parameter, and if the parameter needs long time caculation, its advantage will show.</p><p>While the second one? It must determine the parameter before the function is called, in other way, it cannot do <code>lazy caculation</code> and will cost longer time.</p><p>So that is what most interesting thing of <code>@autoclosure</code>.</p><p>And the operator <code>??</code>, <code>&amp;&amp;</code>, <code>||</code> in standard lib of Swift is also do the same.</p>]]></content>
     
     <summary type="html">
     
@@ -122,34 +122,6 @@
   </entry>
   
   <entry>
-    <title>关于 SequenceType</title>
-    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
-    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
-    <published>2017-01-25T07:47:23.000Z</published>
-    <updated>2017-01-29T02:27:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p><h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Coming soon…&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
-    
-      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
-    
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
-    
-  </entry>
-  
-  <entry>
     <title>手把手教你Rx响应式开发 - 响应式应用开发极简入门教程</title>
     <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/"/>
     <id>http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/</id>
@@ -178,6 +150,34 @@
       <category term="开发" scheme="http://blog.superyoung.win/tags/%E5%BC%80%E5%8F%91/"/>
     
       <category term="入门" scheme="http://blog.superyoung.win/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于 SequenceType</title>
+    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
+    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
+    <published>2017-01-25T07:47:23.000Z</published>
+    <updated>2017-01-29T02:27:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p><h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Coming soon…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
+      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
+    
+      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
+    
+      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
     
   </entry>
   
@@ -221,9 +221,9 @@
     
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
-    
       <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
+    
+      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
     
       <category term="language" scheme="http://blog.superyoung.win/tags/language/"/>
     
