@@ -100,28 +100,6 @@
   </entry>
   
   <entry>
-    <title>中性灰磨皮以及细节增强</title>
-    <link href="http://blog.superyoung.win/2017/01/27/PictureProcessing/50gray_buffing/"/>
-    <id>http://blog.superyoung.win/2017/01/27/PictureProcessing/50gray_buffing/</id>
-    <published>2017-01-27T14:32:36.000Z</published>
-    <updated>2017-01-28T16:22:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>中性灰磨皮的基本步骤，其思路，还是 <code>D&amp;B</code><br><a id="more"></a></p><ol><li>使用图章等工具进行斑点的消除</li><li>新建一个颜色填充图层，填充50%灰色，设置图层混合模式为柔光</li><li>新建一个颜色填充图层，填充黑色，设置图层混合模式为颜色</li><li>新建一个颜色填充图层，填充黑色，设置图层混合模式为柔光</li><li>使用笔刷在中性灰图层更改高光和阴影，重绘所有需要重绘的地方</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;中性灰磨皮的基本步骤，其思路，还是 &lt;code&gt;D&amp;amp;B&lt;/code&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Photoshop" scheme="http://blog.superyoung.win/tags/Photoshop/"/>
-    
-      <category term="修图" scheme="http://blog.superyoung.win/tags/%E4%BF%AE%E5%9B%BE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>关于 SequenceType</title>
     <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
     <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
