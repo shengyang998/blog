@@ -50,13 +50,13 @@
     </summary>
     
     
-      <category term="autoclosure" scheme="http://blog.superyoung.win/tags/autoclosure/"/>
-    
-      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
+    
+      <category term="autoclosure" scheme="http://blog.superyoung.win/tags/autoclosure/"/>
     
       <category term="lazy caculation" scheme="http://blog.superyoung.win/tags/lazy-caculation/"/>
     
@@ -102,15 +102,15 @@
     </summary>
     
     
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+      <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
     
       <category term="ARC" scheme="http://blog.superyoung.win/tags/ARC/"/>
     
       <category term="Rules" scheme="http://blog.superyoung.win/tags/Rules/"/>
-    
-      <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
     
       <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
     
@@ -211,65 +211,6 @@
   </entry>
   
   <entry>
-    <title>中性灰磨皮以及细节增强</title>
-    <link href="http://blog.superyoung.win/2017/01/27/PictureProcessing/50gray_buffing/"/>
-    <id>http://blog.superyoung.win/2017/01/27/PictureProcessing/50gray_buffing/</id>
-    <published>2017-01-27T14:32:36.000Z</published>
-    <updated>2017-01-28T16:22:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>中性灰磨皮的基本步骤，其思路，还是 <code>D&amp;B</code><br><a id="more"></a></p>
-<ol>
-<li>使用图章等工具进行斑点的消除</li>
-<li>新建一个颜色填充图层，填充50%灰色，设置图层混合模式为柔光</li>
-<li>新建一个颜色填充图层，填充黑色，设置图层混合模式为颜色</li>
-<li>新建一个颜色填充图层，填充黑色，设置图层混合模式为柔光</li>
-<li>使用笔刷在中性灰图层更改高光和阴影，重绘所有需要重绘的地方</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;中性灰磨皮的基本步骤，其思路，还是 &lt;code&gt;D&amp;amp;B&lt;/code&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Photoshop" scheme="http://blog.superyoung.win/tags/Photoshop/"/>
-    
-      <category term="修图" scheme="http://blog.superyoung.win/tags/%E4%BF%AE%E5%9B%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于 SequenceType</title>
-    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
-    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
-    <published>2017-01-25T07:47:23.000Z</published>
-    <updated>2017-01-29T02:27:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p>
-<h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Coming soon…&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
-    
-      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
-    
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
-    
-  </entry>
-  
-  <entry>
     <title>手把手教你Rx响应式开发 - 响应式应用开发极简入门教程</title>
     <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/"/>
     <id>http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/</id>
@@ -325,7 +266,7 @@
 <ol>
 <li>在 // MARK: Rx Setup 下面增加</li>
 </ol>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">setupCartObserver</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="type">ShoppingCart</span>.sharedCart.chocolates.asObservable()</div><div class="line">    .subscribe(onNext:&#123;</div><div class="line">        (chocolates) <span class="keyword">in</span></div><div class="line">        <span class="keyword">self</span>.cartButton.title = <span class="string">"<span class="subst">\(chocolates.<span class="built_in">count</span>)</span> \u&#123;1f36b&#125;"</span></div><div class="line">        &#125;)</div><div class="line">    .addDisposableTo(disposeBag)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">setupCartObserver</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="type">ShoppingCart</span>.sharedCart.chocolates.asObservable()</div><div class="line">    .subscribe(onNext:&#123;</div><div class="line">        (chocolates) <span class="keyword">in</span></div><div class="line">        <span class="keyword">self</span>.cartButton.title = <span class="string">"\(chocolates.count) \u&#123;1f36b&#125;"</span></div><div class="line">        &#125;)</div><div class="line">    .addDisposableTo(disposeBag)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这将会设置一个响应式的观察者去自动更新购物车。</p>
 <p>上面的代码具体做了什么？详述如下：</p>
 <ol>
@@ -405,11 +346,11 @@
     </summary>
     
     
-      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
     
       <category term="RxSwift" scheme="http://blog.superyoung.win/tags/RxSwift/"/>
     
@@ -418,6 +359,35 @@
       <category term="开发" scheme="http://blog.superyoung.win/tags/%E5%BC%80%E5%8F%91/"/>
     
       <category term="入门" scheme="http://blog.superyoung.win/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于 SequenceType</title>
+    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
+    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
+    <published>2017-01-25T07:47:23.000Z</published>
+    <updated>2017-01-29T02:27:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p>
+<h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Coming soon…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
+      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
+    
+      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
+    
+      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
     
   </entry>
   
@@ -470,11 +440,11 @@
     </summary>
     
     
-      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
     
       <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
     
@@ -509,13 +479,13 @@
     </summary>
     
     
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
       <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
-      <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
+      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
       <category term="Block" scheme="http://blog.superyoung.win/tags/Block/"/>
+    
+      <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
     
   </entry>
   
@@ -536,9 +506,9 @@
     </summary>
     
     
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
       <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
+      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
       <category term="Coordinate" scheme="http://blog.superyoung.win/tags/Coordinate/"/>
     
@@ -571,9 +541,9 @@
     </summary>
     
     
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
       <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
+      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
       <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
     
@@ -668,9 +638,9 @@
     </summary>
     
     
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
       <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
+      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
       <category term="UITableView" scheme="http://blog.superyoung.win/tags/UITableView/"/>
     
@@ -724,9 +694,9 @@
     </summary>
     
     
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
       <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
+      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
       <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
     
