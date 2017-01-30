@@ -122,34 +122,6 @@
   </entry>
   
   <entry>
-    <title>关于 SequenceType</title>
-    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
-    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
-    <published>2017-01-25T07:47:23.000Z</published>
-    <updated>2017-01-29T02:27:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p><h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Coming soon…&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
-    
-      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
-    
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
-    
-  </entry>
-  
-  <entry>
     <title>手把手教你Rx响应式开发 - 响应式应用开发极简入门教程</title>
     <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/"/>
     <id>http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/</id>
@@ -178,6 +150,34 @@
       <category term="开发" scheme="http://blog.superyoung.win/tags/%E5%BC%80%E5%8F%91/"/>
     
       <category term="入门" scheme="http://blog.superyoung.win/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于 SequenceType</title>
+    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
+    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
+    <published>2017-01-25T07:47:23.000Z</published>
+    <updated>2017-01-29T02:27:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p><h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Coming soon…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
+      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
+    
+      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
+    
+      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
     
   </entry>
   
@@ -221,9 +221,9 @@
     
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
-    
       <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
+    
+      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
     
       <category term="language" scheme="http://blog.superyoung.win/tags/language/"/>
     
