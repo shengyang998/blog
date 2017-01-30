@@ -136,11 +136,11 @@
     
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
-      <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
-    
       <category term="ARC" scheme="http://blog.superyoung.win/tags/ARC/"/>
     
       <category term="Rules" scheme="http://blog.superyoung.win/tags/Rules/"/>
+    
+      <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
     
       <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
     
@@ -474,9 +474,9 @@
     
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
-      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
-    
       <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
+    
+      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
     
       <category term="language" scheme="http://blog.superyoung.win/tags/language/"/>
     
@@ -513,9 +513,9 @@
     
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
-      <category term="Block" scheme="http://blog.superyoung.win/tags/Block/"/>
-    
       <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
+    
+      <category term="Block" scheme="http://blog.superyoung.win/tags/Block/"/>
     
   </entry>
   
