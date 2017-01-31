@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.superyoung.win/"/>
-  <updated>2017-01-31T01:31:15.000Z</updated>
+  <updated>2017-01-31T14:07:07.000Z</updated>
   <id>http://blog.superyoung.win/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LLDB Tutorial</title>
+    <link href="http://blog.superyoung.win/2017/01/31/learning_swift/LLDB_Usage/"/>
+    <id>http://blog.superyoung.win/2017/01/31/learning_swift/LLDB_Usage/</id>
+    <published>2017-01-31T12:02:09.000Z</published>
+    <updated>2017-01-31T14:07:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>According to <a href="https://lldb.llvm.org" target="_blank" rel="external">The LLDB Debuger</a>:</p><blockquote><p>LLDB is a next generation, high-performance debugger. It is built as a set of reusable components which highly leverage existing libraries in the larger LLVM Project, such as the Clang expression parser and LLVM disassembler.<br>LLDB is the default debugger in Xcode on Mac OS X and supports debugging C, Objective-C and C++ on the desktop and iOS devices and simulator.</p></blockquote><p>So, we can assume LLDB a the advanced version of the gdb debuger. And it’s almost backword compatible.<br><a id="more"></a></p><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>First of all, you will need a compiler, such as <code>gnu g++</code> <code>visual c++</code> <code>clang</code> and so forth.</p><p>Particularly, if you are a macOS user, just download Xcode from App Store and install <code>Xcode command line tools</code> from Xcode’s menu and everything will be ok.</p><p>If you are using Linux, please download <a href="http://apt.llvm.org" target="_blank" rel="external">LLVM Debian/Ubuntu nightly packages</a></p><blockquote><p>The packages provide <code>LLVM</code> + <code>Clang</code> + <code>compiler-rt</code> + <code>polly</code> + <code>LLDB</code> + <code>LLD</code></p></blockquote><h2 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h2><p>After you installed, you can use lldb to debug a binary file that compiled with <code>g++ -g</code> or <code>clang -g</code> like this:<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">## compile with:</div><div class="line">    g++ a.cpp -o a -g --std=c++11;</div><div class="line">## debug with:</div><div class="line">    lldb a</div></pre></td></tr></table></figure><p></p><p>After start debugging, you can do:</p><ul><li>Set breakpoint with <code>b (line number)</code></li><li>Run program with command <code>r</code></li><li>Source level single step in the currently selected thread <code>step</code> or <code>s</code></li><li>Source level single step over in the currently selected thread <code>next</code> or <code>n</code></li><li>Set a breakpoint at all functions named main <code>breakpoint set --name main</code> or <code>b main</code></li><li>Set a breakpoint in file test.c at line 12 <code>break test.c:12</code> or <code>b test.c:12</code></li><li>List all breakpoints <code>breakpoint list</code> or <code>br l</code></li><li>Delete a breakpoint <code>breakpoint delete 1</code> or <code>br del 1</code></li><li>Print expr <code>p (obj name)</code></li><li>Print the ObjC “description” of an object <code>po (obj name)</code></li><li>Print local variable and its address <code>fr v -R (obj name)</code></li><li>Quit <code>quit</code> or <code>q</code></li></ul><blockquote><p>The difference (as I understand it) is that frame variable is only for printing the contents of variables, whereas print is a shortcut for expression – and can evaluate arbitrary C and Objective-C expressions.<br>To summarize: <code>frame variable</code> is for variables and <code>print</code> (or expr) is for expressions. In the case of one variable they both work equally well. via <a href="http://stackoverflow.com/questions/17656071/lldb-command-fr-v-var-vs-p-var" target="_blank" rel="external">Martin R stackOverFlow</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;According to &lt;a href=&quot;https://lldb.llvm.org&quot;&gt;The LLDB Debuger&lt;/a&gt;:&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;LLDB is a next generation, high-performance debugger. It is built as a set of reusable components which highly leverage existing libraries in the larger LLVM Project, such as the Clang expression parser and LLVM disassembler.&lt;br&gt;LLDB is the default debugger in Xcode on Mac OS X and supports debugging C, Objective-C and C++ on the desktop and iOS devices and simulator.&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;So, we can assume LLDB a the advanced version of the gdb debuger. And it’s almost backword compatible.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="LLDB" scheme="http://blog.superyoung.win/tags/LLDB/"/>
+    
+      <category term="GDB" scheme="http://blog.superyoung.win/tags/GDB/"/>
+    
+      <category term="Debug" scheme="http://blog.superyoung.win/tags/Debug/"/>
+    
+  </entry>
   
   <entry>
     <title>Autoclosure and Lazy Calculation</title>
@@ -122,34 +146,6 @@
   </entry>
   
   <entry>
-    <title>关于 SequenceType</title>
-    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
-    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
-    <published>2017-01-25T07:47:23.000Z</published>
-    <updated>2017-01-29T02:27:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p><h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Coming soon…&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
-    
-      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
-    
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
-    
-  </entry>
-  
-  <entry>
     <title>手把手教你Rx响应式开发 - 响应式应用开发极简入门教程</title>
     <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/"/>
     <id>http://blog.superyoung.win/2017/01/25/learning_iOS/Reactive-Programming/</id>
@@ -178,6 +174,34 @@
       <category term="开发" scheme="http://blog.superyoung.win/tags/%E5%BC%80%E5%8F%91/"/>
     
       <category term="入门" scheme="http://blog.superyoung.win/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于 SequenceType</title>
+    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
+    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
+    <published>2017-01-25T07:47:23.000Z</published>
+    <updated>2017-01-29T02:27:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p><h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Coming soon…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
+      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
+    
+      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
+    
+      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
     
   </entry>
   
