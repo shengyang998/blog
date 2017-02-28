@@ -1,0 +1,1 @@
+var SlideManager=Class.create({initialize:function(i){this.header=i.header;this.slides={};for(var e=0,s=this.header.slideList.length;e

@@ -1,0 +1,1 @@
+var NarrationManager=Class.create({initialize:function(e){this.movieSegments=e.movieSegments;this.duration=e.duration;this.eventTracks=e.eventTracks;this.currentNavigationEventIndex=0;this.lastSceneIndex=0;for(var t=0,n=this.eventTracks.length;t
