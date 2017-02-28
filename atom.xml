@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.superyoung.win/"/>
-  <updated>2017-02-28T10:55:33.000Z</updated>
+  <updated>2017-02-28T11:50:19.000Z</updated>
   <id>http://blog.superyoung.win/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://blog.superyoung.win/2017/02/28/git/setup_git_server/"/>
     <id>http://blog.superyoung.win/2017/02/28/git/setup_git_server/</id>
     <published>2017-02-28T10:37:41.000Z</published>
-    <updated>2017-02-28T10:55:33.000Z</updated>
+    <updated>2017-02-28T11:50:19.000Z</updated>
     
-    <content type="html"><![CDATA[<p>本教程是关于如何配置 Git 服务器的，使用 Keynote 制作<br><a id="more"></a></p><p>废话不多说，教程在此：<a href="/images/set_up_git_server/index.html">传送门</a></p>]]></content>
+    <content type="html"><![CDATA[<p>本教程关于如何配置 Git 服务器，使用 Keynote 制作<br><a id="more"></a></p><p>废话不多说，教程在此：<a href="/images/set_up_git_server/index.html">传送门</a></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;本教程是关于如何配置 Git 服务器的，使用 Keynote 制作&lt;br&gt;
+      &lt;p&gt;本教程关于如何配置 Git 服务器，使用 Keynote 制作&lt;br&gt;
     
     </summary>
     
@@ -83,9 +83,9 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
     
@@ -117,9 +117,9 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
     
@@ -187,13 +187,13 @@
     
       <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
     
+      <category term="Language" scheme="http://blog.superyoung.win/tags/Language/"/>
+    
       <category term="map" scheme="http://blog.superyoung.win/tags/map/"/>
     
       <category term="reduce" scheme="http://blog.superyoung.win/tags/reduce/"/>
     
       <category term="filter" scheme="http://blog.superyoung.win/tags/filter/"/>
-    
-      <category term="Language" scheme="http://blog.superyoung.win/tags/Language/"/>
     
   </entry>
   
@@ -237,9 +237,9 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
     
@@ -265,9 +265,9 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="ARC" scheme="http://blog.superyoung.win/tags/ARC/"/>
     
@@ -328,34 +328,6 @@
   </entry>
   
   <entry>
-    <title>关于 SequenceType</title>
-    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
-    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
-    <published>2017-01-25T07:47:23.000Z</published>
-    <updated>2017-01-29T02:27:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p><h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Coming soon…&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
-    
-      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
-    
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
-    
-  </entry>
-  
-  <entry>
     <title>手把手教你Rx响应式开发 - 响应式应用开发极简入门教程</title>
     <link href="http://blog.superyoung.win/2017/01/25/learning_Rx/Reactive-Programming/"/>
     <id>http://blog.superyoung.win/2017/01/25/learning_Rx/Reactive-Programming/</id>
@@ -371,9 +343,9 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
     
@@ -384,6 +356,34 @@
       <category term="开发" scheme="http://blog.superyoung.win/tags/%E5%BC%80%E5%8F%91/"/>
     
       <category term="入门" scheme="http://blog.superyoung.win/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于 SequenceType</title>
+    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
+    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
+    <published>2017-01-25T07:47:23.000Z</published>
+    <updated>2017-01-29T02:27:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p><h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Coming soon…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
+    
+      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
+    
+      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
+    
+      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
     
   </entry>
   
@@ -423,13 +423,13 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
     
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
+    
+      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
     
       <category term="language" scheme="http://blog.superyoung.win/tags/language/"/>
     
@@ -453,9 +453,9 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
     
@@ -479,9 +479,9 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Coordinate" scheme="http://blog.superyoung.win/tags/Coordinate/"/>
     
@@ -507,9 +507,9 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
     
@@ -533,9 +533,9 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="UITableView" scheme="http://blog.superyoung.win/tags/UITableView/"/>
     
@@ -563,9 +563,9 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
       <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
+    
+      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
     
       <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
     
