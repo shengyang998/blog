@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.superyoung.win/"/>
-  <updated>2017-03-01T07:14:43.000Z</updated>
+  <updated>2017-03-02T02:11:58.000Z</updated>
   <id>http://blog.superyoung.win/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>建立你自己的 Matlab 远程计算服务器</title>
+    <link href="http://blog.superyoung.win/2017/03/02/matlab/setup_yourself_a_remote_matlab_computation_server/"/>
+    <id>http://blog.superyoung.win/2017/03/02/matlab/setup_yourself_a_remote_matlab_computation_server/</id>
+    <published>2017-03-02T01:44:40.000Z</published>
+    <updated>2017-03-02T02:11:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>其实原理很简单，借助 ssh 服务和 Matlab 应用的二进制可执行文件即可。</p><a id="more"></a><h2 id="0x00-Requirement"><a href="#0x00-Requirement" class="headerlink" title="0x00 Requirement"></a>0x00 Requirement</h2><ol><li>你需要一台能够直接访问互联网的服务器或者个人电脑</li><li>这台电脑上必须安装有 Matlab 应用和 ssh 服务。</li></ol><h2 id="0x01-Add-Matlab-Binary-to-your-PATH"><a href="#0x01-Add-Matlab-Binary-to-your-PATH" class="headerlink" title="0x01 Add Matlab Binary to your PATH"></a>0x01 Add Matlab Binary to your PATH</h2><ol><li>找到你 Matlab 的安装路径，比如我这里是 <code>/Applications/MATLAB_R2016a.app</code></li><li>找到其中的 <code>bin</code> 文件夹，记录下其路劲，比如我的是 <code>/Applications/MATLAB_R2016a.app/bin</code></li><li><p>将路径加入系统环境变量的 <code>PATH</code> 中</p><ol><li><p>Unix 下可以编辑 <code>~/.bash_profile</code> 文件（自行替换为终端启动时加载的文件），加入以下内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># Setup Matlab2016a Environment</div><div class="line">export PATH=&quot;$PATH:/Applications/MATLAB_R2016a.app/bin&quot;</div><div class="line">alias matlab=&apos;matlab -nojvm -nodisplay -nosplash&apos;</div></pre></td></tr></table></figure><p>然后 <code>source ~/.bash_profile</code> 即可。</p></li><li>Windows 下请自行搜索关键字 <code>系统环境变量</code>，找到 PATH 变量并 <code>加入</code> 上面的路劲，用分号隔开不同路径。</li></ol></li></ol><h2 id="0x02-ALL-Done-login-to-your-ssh-server-and-run-matlab"><a href="#0x02-ALL-Done-login-to-your-ssh-server-and-run-matlab" class="headerlink" title="0x02 ALL Done, login to your ssh server and run matlab"></a>0x02 ALL Done, login to your ssh server and run <code>matlab</code></h2><p>完成了。登录你的 ssh 服务器即可远程使用 <code>matlab</code> 命令执行科学计算。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其实原理很简单，借助 ssh 服务和 Matlab 应用的二进制可执行文件即可。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Server" scheme="http://blog.superyoung.win/tags/Server/"/>
+    
+      <category term="Matlab" scheme="http://blog.superyoung.win/tags/Matlab/"/>
+    
+      <category term="Science" scheme="http://blog.superyoung.win/tags/Science/"/>
+    
+      <category term="Computation" scheme="http://blog.superyoung.win/tags/Computation/"/>
+    
+  </entry>
   
   <entry>
     <title>配置自己的 Git 服务器</title>
@@ -544,32 +570,6 @@
       <category term="Delegate" scheme="http://blog.superyoung.win/tags/Delegate/"/>
     
       <category term="DataSource" scheme="http://blog.superyoung.win/tags/DataSource/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS 关闭键盘方式的小结</title>
-    <link href="http://blog.superyoung.win/2017/01/04/learning_iOS/keyboard-dissmissing/"/>
-    <id>http://blog.superyoung.win/2017/01/04/learning_iOS/keyboard-dissmissing/</id>
-    <published>2017-01-03T17:04:40.000Z</published>
-    <updated>2017-01-29T02:27:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>如何优雅的关闭 iOS 键盘，Objective C 语言。<br><a id="more"></a></p><h2 id="收起键盘方法"><a href="#收起键盘方法" class="headerlink" title="收起键盘方法"></a>收起键盘方法</h2><ol><li>点击<code>return</code>键收起，使用<code>UITextFieldDelegate</code>中的方法<br><code>- (BOOL)textFieldShouldReturn:(UITextField *)textField{return [textField resignFirstResponder]; return YES;}</code></li></ol><ul><li>点击<code>done</code>键收起，先将<code>UITextField</code>对象的<code>Return Key</code>属性修改为<code>done</code>，再自定义一个方法并将其和 <code>done</code> 的 <code>Did End On Exit</code> 连接起来：</li><li><p>(IBAction) textFieldDoneEditing:(id)sender{[sender resignFirstResponder];}</p></li><li><p>在键盘外点击关闭键盘<br>在<code>UITextField</code>对象外的视图控制器类的<code>viewDidLoad</code>方法中定义一个<code>UIGestureRecofnizer</code>对象（使用<code>[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKb)]</code>方法初始化，并且使用<code>[self.view addGestureRecognizer:tap];</code>加入视图。</p></li></ul><p>然后记得实现<code>@selector()</code>中的方法：<code>- (void)dismissKb</code></p><ul><li><p>点击背景 View 收起键盘<br><code>[self.view endEditing:YES];</code></p></li><li><p>在任何地方加上这句话，统一收起键盘<br><code>[[[UIApplication sharedApplication] keyWindow] endEditing:YES];</code></p></li><li><p>发送 <code>resignFirstResponder</code> 消息<br><code>[[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];</code></p></li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>当你能获取 <code>UITextField</code> 对象时，最好使用 <code>[obj resignFirstResponder]</code> 方法</li></ol><ul><li>如果有很多 <code>UITextField</code> 对象，而且可以获取到 <code>viewController</code> 的 <code>view</code> 时，可以使用 <code>[self.view endEditing:YES]</code> 方法</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如何优雅的关闭 iOS 键盘，Objective C 语言。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
-    
-      <category term="keyboard" scheme="http://blog.superyoung.win/tags/keyboard/"/>
     
   </entry>
   
