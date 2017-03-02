@@ -98,13 +98,13 @@
     <link href="http://blog.superyoung.win/2017/02/14/learning_Rx/driver/"/>
     <id>http://blog.superyoung.win/2017/02/14/learning_Rx/driver/</id>
     <published>2017-02-14T08:16:48.000Z</published>
-    <updated>2017-02-14T08:17:48.000Z</updated>
+    <updated>2017-03-02T02:48:30.000Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<p>Driver 是 RxSwift 中的一个 Unit，专门设计用于控制界面操作——驱动界面。</p><a id="more"></a><h2 id="为什么这个-Unit-叫做-Driver？"><a href="#为什么这个-Unit-叫做-Driver？" class="headerlink" title="为什么这个 Unit 叫做 Driver？"></a>为什么这个 Unit 叫做 Driver？</h2><p>Driver 是为了：</p><ul><li>通过数据模型驱动 UI</li><li>通过另一个 UI 元素的改变来驱动 UI</li></ul><p>bindTo 也可以驱动 UI，但是 Driver 和 bindTo 不同，不同之处是以下三点：</p><ol><li>Driver 默认主线程执行，不需要每次通过 bindTo 手动控制线程</li><li>Driver 容易进行出错控制</li><li>Driver 默认 <code>shareReplay(1)</code><br>以上，让 Driver 控制 UI 事件更容易，而我们使用 Rx 主要也是对 UI 进行操作，所以 Driver 也属于 Rx 中比较重要的知识点。<br>具体的例子还是参考官方文档：<a href="https://github.com/ReactiveX/RxSwift/blob/master/Documentation/Units.md#driver" target="_blank" rel="external">点击这里</a></li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+      &lt;p&gt;Driver 是 RxSwift 中的一个 Unit，专门设计用于控制界面操作——驱动界面。&lt;/p&gt;
     
     </summary>
     
@@ -132,13 +132,13 @@
     <link href="http://blog.superyoung.win/2017/02/14/learning_Rx/units-concept-in-rxswift/"/>
     <id>http://blog.superyoung.win/2017/02/14/learning_Rx/units-concept-in-rxswift/</id>
     <published>2017-02-14T08:11:40.000Z</published>
-    <updated>2017-02-14T08:19:53.000Z</updated>
+    <updated>2017-03-02T02:40:54.000Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a><p>本文翻译自<a href="https://github.com/ReactiveX/RxSwift/blob/master/Documentation/Units.md" target="_blank" rel="external">RxSwift 官方文档</a></p><p>请看下一篇：<a href="">Unit - Driver 的介绍</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Unit 单元，从根本上来说，只是一个封装后的结构体。该结构体仅有一个指向可观察序列的只读属性。</p><a id="more"></a><p>本文翻译自<a href="https://github.com/ReactiveX/RxSwift/blob/master/Documentation/Units.md" target="_blank" rel="external">RxSwift 官方文档</a></p><p>观念性的东西请参考官方文档，这里就不重复了。</p>]]></content>
     
     <summary type="html">
     
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;p&gt;本文翻译自&lt;a href=&quot;https://github.com/ReactiveX/RxSwift/blob/master/Documentation/Units.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Rx
+      &lt;p&gt;Unit 单元，从根本上来说，只是一个封装后的结构体。该结构体仅有一个指向可观察序列的只读属性。&lt;/p&gt;
     
     </summary>
     
