@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.superyoung.win/"/>
-  <updated>2017-03-02T02:11:58.000Z</updated>
+  <updated>2017-03-04T11:07:20.000Z</updated>
   <id>http://blog.superyoung.win/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建你自己的 SVN 服务器教程</title>
+    <link href="http://blog.superyoung.win/2017/03/03/version_controller/setup_svn_server/"/>
+    <id>http://blog.superyoung.win/2017/03/03/version_controller/setup_svn_server/</id>
+    <published>2017-03-03T15:00:39.000Z</published>
+    <updated>2017-03-04T11:07:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>SVN 全称：<a href="https://subversion.apache.org" target="_blank" rel="external">Apache™ Subversion®</a> ，是一个开源的 <code>Enterprise-class centralized version control for the masses</code> 企业级中心化版本控制器。区分于 Git，它不是分布式的而是中心化的，在过去十年中也挺成功。但是在 Git 出现之后，它的光环就有点暗淡了。</p><p>好，闲话不多说，本教程将会教你如何搭建自己的 SVN 服务器</p><a id="more"></a><h2 id="0x00-准备"><a href="#0x00-准备" class="headerlink" title="0x00 准备"></a>0x00 准备</h2><ol><li>因为 SVN</li><li>你需要一台运行 Linux 或者 Unix 系列系统的计算机，并且你有其管理员权限</li><li>你需要有一个正常的网络连接</li><li>macOS 系统中请先安装 brew 包管理器</li></ol><p>本教程将以 macOS 为示例。</p><h2 id="0x01-安装-SVN"><a href="#0x01-安装-SVN" class="headerlink" title="0x01 安装 SVN"></a>0x01 安装 SVN</h2><ol><li>执行下述命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># CentOS</div><div class="line">sudo yum install svn</div><div class="line"># Ubuntu</div><div class="line">sudo apt-get install svn</div><div class="line"># macOS</div><div class="line">brew install svn</div></pre></td></tr></table></figure></li></ol><p>结果如下图：<br><img src="/images/01.png" alt="图1"></p><h2 id="0x02-建立-Repository"><a href="#0x02-建立-Repository" class="headerlink" title="0x02 建立 Repository"></a>0x02 建立 Repository</h2><p>执行下述命令：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 这条命令进入一个目录</div><div class="line">cd ~/testsvn/</div><div class="line"># 这条命令将会在当前目录下新建一个 Repository</div><div class="line">svnadmin create test</div></pre></td></tr></table></figure><p></p><p>结果如下图：<br><img src="/images/02.png" alt="图2"></p><h1 id="0x03-配置-Repository"><a href="#0x03-配置-Repository" class="headerlink" title="0x03 配置 Repository"></a>0x03 配置 Repository</h1><p>键入以下命令：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 修改 conf 路径下的 svnserve.conf 文件</div><div class="line">vi conf/svnserve.conf</div></pre></td></tr></table></figure><p></p><p>此时就通过 vi 打开你的<code>svnserve.conf</code>配置文件了，找到 [general] 块，你将会看到整个 general 都被注释掉了，<code>###</code> 的是介绍，<code>#</code>的是被注释掉的配置项，可以作为例子。</p><p>这里用中文翻译一下介绍吧：<br>|字段|解释|可选值|<br>|—|—|—|<br>|anon-access|控制未授权用户的权限|write、read、none|<br>|auth-access|控制已授权用户的权限|write、read、none|<br>|password-db|控制密码数据库的位置（以<code>/</code>开头为绝对路径，否则是相对路径）；<br>如果 SASL 被启用，这个文件将不会被使用。|passwd 代表默认数据库|<br>|authz-db|控制“基于路径的访问控制”数据库的位置；<br>指定的路径可能是一个与 repository 相对路径 URL <code>^/</code> 或者是一个绝对路径 URL <code>file://</code> 指向一个在 Subversion Repository 中的文本文件；<br>如果不指定，则不会有基于路径的访问控制。|authz 代表默认数据库|<br>|groups-db|控制“群组定义和每个群组的权限”文件的位置；<br>groups-db 文件和 authz-db 文件格式相同，并且groups-db应该包含一个[groups]块；<br>不过如果开启了这个选项，authzdb 文件中奖不能包含 [groups] 块。|<br>|realm|指定存储库的认证领域，他们应该有同一个密码数据库，反之亦然；<br>默认的 realm 是 repository 的 uuid|<br>|force-username-case|控制SVNServer在按照authz-db指定的规则比较用户名之前转换大小写。|upper、lower、none|<br>|hooks-env|指定一个路径到 hood script 环境配置文件，这个选项会覆盖 per-repository 的默认值，并且可以用来在单个文件中配置有多个 repositories 情况下的 hood script 环境|</p><p>介绍完以后，我们这样修改一下svnserve.conf：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[general]</div><div class="line">anon-access = none</div><div class="line">auth-access = write</div><div class="line">password-db = passwd</div><div class="line">authz-db = authz</div></pre></td></tr></table></figure><p></p><p>接下来修改 conf 下的 passwd 文件，添加两个用户名和密码，在[users] 块中加入以下内容：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">root = root@Svnserver</div><div class="line">ysy = userysy</div></pre></td></tr></table></figure><p></p><p>然后修改 conf 下的 authz 文件：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[groups]</div><div class="line">admin = root # 注意这里的</div><div class="line">user = ysy</div><div class="line">[/]</div><div class="line">@admin = rw</div><div class="line">@user = r</div><div class="line">[test: /]</div><div class="line">@admin = rw</div><div class="line">@user = r</div></pre></td></tr></table></figure><p></p><p>这里首先定义了两个用户组，一个是 root，另一个是 user。</p><p>admin 中有 root 这个用户；user 中有 ysy 这个用户。然后分别给他们配置路径权限。</p><p>值得注意的是<code>[/]</code>指 testsvn 目录，而<code>[test: /]</code>指 test 目录。</p><p>基本的配置到这里已经完成，理论上我们可以启动我们的 SVN 服务器了。</p><p>但是为了安全起见，还有些事情可以做，比如说使用 <code>chown -R</code> / <code>chmod -R</code> 命令控制一下 svntest 目录的所有者和权限之类的，</p><h2 id="0x04-启动服务器"><a href="#0x04-启动服务器" class="headerlink" title="0x04 启动服务器"></a>0x04 启动服务器</h2><p>执行以下命令：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 注意：下面的 --log-file=不能使用`~`来指定当前用户的 home 目录</div><div class="line">sudo svnserve -d -r ~/testsvn --log-file=./log/svn.log</div></pre></td></tr></table></figure><p></p><p>SVN 默认使用的端口是3690，如果没冲突，这样 SVN 服务器就成功启动了。</p><p>可以用 less 命令查看上面命令指定的 log 文件，也可以像这样测试是否启动成功：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 1. 使用 ps 命令查看进程</div><div class="line">ps aux | grep svnserve</div><div class="line"># 2. 使用 Telnet 测试连接</div><div class="line">telnet localhost 3690</div><div class="line"># 3. 使用 svn 客户端测试连接</div></pre></td></tr></table></figure><p></p><h2 id="0x05-创建目录结构并导入到-SVN-Repository-中"><a href="#0x05-创建目录结构并导入到-SVN-Repository-中" class="headerlink" title="0x05 创建目录结构并导入到 SVN Repository 中"></a>0x05 创建目录结构并导入到 SVN Repository 中</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mkdir -p ~/tmp/svntmp/;</div><div class="line">cd ~/tmp/svntmp/;</div><div class="line">mkdir master dev ysy;</div><div class="line">cd ../../;</div><div class="line">svn import --username root -m &apos;init repo&apos; ~/tmp/svntmp/ svn://localhost/test</div></pre></td></tr></table></figure><p>输入用户名密码，大功告成！</p><h2 id="0x06-最后推荐几款-GUI-的-SVN-客户端"><a href="#0x06-最后推荐几款-GUI-的-SVN-客户端" class="headerlink" title="0x06 最后推荐几款 GUI 的 SVN 客户端"></a>0x06 最后推荐几款 GUI 的 SVN 客户端</h2><ol><li>首先肯定是是跨平台的开源的 TortoiseSVN</li><li>如果在 macOS 下想有更好的体验，特别是在处理冲突或者合并源码的时候，强烈推荐 Cornerstone。</li></ol><p><img src="/images/03.png" alt="图3"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SVN 全称：&lt;a href=&quot;https://subversion.apache.org&quot;&gt;Apache™ Subversion®&lt;/a&gt; ，是一个开源的 &lt;code&gt;Enterprise-class centralized version control for the masses&lt;/code&gt; 企业级中心化版本控制器。区分于 Git，它不是分布式的而是中心化的，在过去十年中也挺成功。但是在 Git 出现之后，它的光环就有点暗淡了。&lt;/p&gt;&lt;p&gt;好，闲话不多说，本教程将会教你如何搭建自己的 SVN 服务器&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Server" scheme="http://blog.superyoung.win/tags/Server/"/>
+    
+      <category term="Tutorial" scheme="http://blog.superyoung.win/tags/Tutorial/"/>
+    
+      <category term="Guide" scheme="http://blog.superyoung.win/tags/Guide/"/>
+    
+      <category term="服务器" scheme="http://blog.superyoung.win/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="教程" scheme="http://blog.superyoung.win/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="配置" scheme="http://blog.superyoung.win/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="SVN" scheme="http://blog.superyoung.win/tags/SVN/"/>
+    
+  </entry>
   
   <entry>
     <title>建立你自己的 Matlab 远程计算服务器</title>
@@ -42,17 +74,17 @@
   </entry>
   
   <entry>
-    <title>配置自己的 Git 服务器</title>
-    <link href="http://blog.superyoung.win/2017/02/28/git/setup_git_server/"/>
-    <id>http://blog.superyoung.win/2017/02/28/git/setup_git_server/</id>
+    <title>搭建自己的 Git 服务器教程</title>
+    <link href="http://blog.superyoung.win/2017/02/28/version_controller/setup_git_server/"/>
+    <id>http://blog.superyoung.win/2017/02/28/version_controller/setup_git_server/</id>
     <published>2017-02-28T10:37:41.000Z</published>
-    <updated>2017-03-01T07:14:43.000Z</updated>
+    <updated>2017-03-03T15:01:38.000Z</updated>
     
-    <content type="html"><![CDATA[<p>本教程关于如何配置 Git 服务器，使用 Keynote 制作<br><a id="more"></a></p><p>废话不多说，教程在此：<a href="/images/set_up_git_server/index.html">传送门</a></p><p><img src="/images/setup_git_server/00.png" alt="图1"><br><img src="/images/setup_git_server/01.png" alt="图2"><br><img src="/images/setup_git_server/02.png" alt="图3"><br><img src="/images/setup_git_server/03.png" alt="图4"><br><img src="/images/setup_git_server/04.png" alt="图5"><br><img src="/images/setup_git_server/05.png" alt="图6"><br><img src="/images/setup_git_server/06.png" alt="图7"><br><img src="/images/setup_git_server/07.png" alt="图8"><br><img src="/images/setup_git_server/08.png" alt="图9"><br><img src="/images/setup_git_server/09.png" alt="图10"><br><img src="/images/setup_git_server/10.png" alt="图10"></p>]]></content>
+    <content type="html"><![CDATA[<p>本教程关于如何搭建自己的 Git 服务器，使用 Keynote 制作<br><a id="more"></a></p><p>废话不多说，教程在此：<a href="/images/set_up_git_server/index.html">传送门</a></p><p><img src="/images/setup_git_server/00.png" alt="图1"><br><img src="/images/setup_git_server/01.png" alt="图2"><br><img src="/images/setup_git_server/02.png" alt="图3"><br><img src="/images/setup_git_server/03.png" alt="图4"><br><img src="/images/setup_git_server/04.png" alt="图5"><br><img src="/images/setup_git_server/05.png" alt="图6"><br><img src="/images/setup_git_server/06.png" alt="图7"><br><img src="/images/setup_git_server/07.png" alt="图8"><br><img src="/images/setup_git_server/08.png" alt="图9"><br><img src="/images/setup_git_server/09.png" alt="图10"><br><img src="/images/setup_git_server/10.png" alt="图10"></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;本教程关于如何配置 Git 服务器，使用 Keynote 制作&lt;br&gt;
+      &lt;p&gt;本教程关于如何搭建自己的 Git 服务器，使用 Keynote 制作&lt;br&gt;
     
     </summary>
     
@@ -542,36 +574,6 @@
       <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
     
       <category term="UIAlertController" scheme="http://blog.superyoung.win/tags/UIAlertController/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UITableView</title>
-    <link href="http://blog.superyoung.win/2017/01/04/learning_iOS/UITableView/"/>
-    <id>http://blog.superyoung.win/2017/01/04/learning_iOS/UITableView/</id>
-    <published>2017-01-03T17:07:32.000Z</published>
-    <updated>2017-01-29T02:27:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>个人学习使用 UITableView 的时候的总结<br><a id="more"></a></p><h2 id="设置数据源-（UITableViewDataSource）"><a href="#设置数据源-（UITableViewDataSource）" class="headerlink" title="设置数据源 （UITableViewDataSource）"></a>设置数据源 （UITableViewDataSource）</h2><p>需要<code>数据源</code>来展示数据，dataSource。会向数据源查询一共多少行数据以及每一行显示什么数据</p><p>不论什么对象，只要其遵循 <code>UITableViewDataSource</code> 协议即可。</p><p>UITableViewDataSource协议中有三个需要实现的函数</p><ol><li><p>tableview 有几组（section）？</p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSInteger</span>) numberOfSectionInTableView: (<span class="built_in">UITableView</span>*) tableView;</div></pre></td></tr></table></figure></li><li><p>每组（section）几行？</p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSInteger</span>) tableView:(<span class="built_in">UITableView</span>*)tableView numberOfRowsInSection:(<span class="built_in">NSInteger</span>)section;</div></pre></td></tr></table></figure></li><li><p>每组每行分别显示什么内容（cell）？</p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">UITableViewCell</span>*) tableView:(<span class="built_in">UITableView</span>*)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span>*)indexPath;</div></pre></td></tr></table></figure></li><li><p>每组的 titleForHeader 和 titleForFooter。这两个字体不可更改，如果有需要，使用自定义的 UILabel。</p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSString</span>*)tableView:(<span class="built_in">UITableView</span>*)tableView titleForHeaderInSection:(<span class="built_in">NSInteger</span>)section;</div><div class="line">- (<span class="built_in">NSString</span>*)tableView:(<span class="built_in">UITableView</span>*)tableView titleForFooterInSection:(<span class="built_in">NSInteger</span>)section;</div></pre></td></tr></table></figure></li></ol><h3 id="怎么判断是哪一组哪一行呢？"><a href="#怎么判断是哪一组哪一行呢？" class="headerlink" title="怎么判断是哪一组哪一行呢？"></a>怎么判断是哪一组哪一行呢？</h3><p>看到上面的参数indexPath了吗？这样判断组：</p><ul><li><code>if(0 == indexPath.section){}</code></li></ul><p>这样判断行：</p><ul><li><code>if(0 == indexPath.row){}</code></li></ul><h3 id="关于UITableViewCell"><a href="#关于UITableViewCell" class="headerlink" title="关于UITableViewCell"></a>关于UITableViewCell</h3><p>初始化方法：<br><code>UITableViewCell* cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];</code></p><h4 id="contentView是什么？"><a href="#contentView是什么？" class="headerlink" title="contentView是什么？"></a>contentView是什么？</h4><p><code>UITableViewCell</code>中有个默认的子视图<code>contentView</code>， <code>contentView</code>是所有其他内容的父视图。<br>可以通过其下的<code>accessoryType</code>来显示辅助指示视图。</p><h4 id="UITableViewCellStyle-类型"><a href="#UITableViewCellStyle-类型" class="headerlink" title="UITableViewCellStyle 类型"></a>UITableViewCellStyle 类型</h4><ul><li>UITableViewCellStyleDefault</li><li>UITableViewCellStyleSubtitle</li><li>UITableViewCellStyleValue1</li><li>UITableViewCellStyleValue2</li></ul><h3 id="UITableViewCell-的结构"><a href="#UITableViewCell-的结构" class="headerlink" title="UITableViewCell 的结构"></a>UITableViewCell 的结构</h3><ul><li><code>UITableViewCell</code></li><li>-&gt;<code>.imageView</code></li><li>-&gt;<code>.textLabel</code></li><li>-&gt;<code>.detailTextLabel</code></li><li>-&gt;<code>.contentView</code></li></ul><p>cell 里面包含默认一些子控件，不过也可以自己用 xib 定义。</p><h2 id="设置代理-delegate"><a href="#设置代理-delegate" class="headerlink" title="设置代理(delegate)"></a>设置代理(delegate)</h2><h3 id="为什么要设置代理？"><a href="#为什么要设置代理？" class="headerlink" title="为什么要设置代理？"></a>为什么要设置代理？</h3><ul><li><code>对象A</code>内部发生了一些事情，想要通知<code>对象B</code></li><li><code>对象B</code>想监听<code>对象A</code>内部发生的事情</li><li><code>对象A</code>想在自己内部调用<code>对象B</code>的一些方法，而又不想有互相的耦合依赖</li></ul><p>以上情况下，<code>对象B</code>都是<code>对象A</code>的代理。</p><h3 id="如何设置代理对象"><a href="#如何设置代理对象" class="headerlink" title="如何设置代理对象"></a>如何设置代理对象</h3><ol><li>在<code>Stroyboard</code>的<code>UIScrollView</code>上右键单击，拖<code>delegate</code>到<code>UIViewController</code>上。</li><li>在方法<code>viewDidLoad</code>中添加<code>self.tableView.delegate = self;</code><h3 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h3><code>类名+Delegate</code><br><em>例如<code>UITableViewDelegate</code>就是<code>UITableView</code>+<code>Delegate</code></em></li></ol><h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><p>如果是为一个类特别定义的协议，可以直接写在<code>.h</code>文件里，如果多个类使用同一个协议，建议建立一个<code>protocol</code>文件。</p><ul><li>关于定义格式，举个例子：</li></ul><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@protocol</span> <span class="title">UITableView</span>&lt;<span class="title">NSObject</span>, <span class="title">UIScrollView</span>&gt;</span></div><div class="line"><span class="keyword">@required</span></div><div class="line">- (ReturnType) MethodName;</div><div class="line"><span class="keyword">@optional</span></div><div class="line">- (ReturnType) MethodName;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure><p>默认是<code>@required</code>，但是这只能作为编译器检查的标准，使用时需要自己验证是否实现了具体的方法，验证方法如下：<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>([<span class="keyword">self</span>.delegate respondsToSelector:<span class="keyword">@selector</span>(MethodName)])&#123;</div><div class="line">    MethodName</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><h3 id="一个简单的例子"><a href="#一个简单的例子" class="headerlink" title="一个简单的例子"></a>一个简单的例子</h3><h4 id="首先定义一个-protocol"><a href="#首先定义一个-protocol" class="headerlink" title="首先定义一个@protocol"></a>首先定义一个<code>@protocol</code></h4><p>声明协议方法</p><h4 id="定义一个委托-interface"><a href="#定义一个委托-interface" class="headerlink" title="定义一个委托@interface"></a>定义一个委托<code>@interface</code></h4><p>引入<code>protocol.h</code></p><h4 id="定义一个代理-interface"><a href="#定义一个代理-interface" class="headerlink" title="定义一个代理@interface"></a>定义一个代理<code>@interface</code></h4><p>在<code>@interface</code>声明中声明遵守<code>@protocol</code>协议。例如：<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">viewController</span> () &lt;<span class="title">protocolName</span>&gt;</span></div></pre></td></tr></table></figure><p></p><p>然后在<code>@implementation</code>中实现具体的协议方法</p><h2 id="单组数据和多组数据"><a href="#单组数据和多组数据" class="headerlink" title="单组数据和多组数据"></a>单组数据和多组数据</h2><p>其本质都是 <code>UITableVIew</code> ，具体的差别其实就是UITableView的属性 <code>UITableViewStylePlain</code> 和 <code>UITableViewStyleGrouped</code>的设置。</p><h2 id="好，那么接下来梳理一下一个-UITableView-从初始化到展示的流程："><a href="#好，那么接下来梳理一下一个-UITableView-从初始化到展示的流程：" class="headerlink" title="好，那么接下来梳理一下一个 UITableView 从初始化到展示的流程："></a>好，那么接下来梳理一下一个 <code>UITableView</code> 从初始化到展示的流程：</h2><ol><li>初始化一个 <code>UITableView</code> 对象</li></ol><ul><li>设置数据源，数据源需要遵循协议至少实现如下三个方法 <code>numberOfSectionInTableView</code> <code>numberOfRowsInSection</code> <code>cellForRowAtIndexPath</code></li><li>如有需要自行构造一个 <code>UITableViewCell</code> 并使用上面的第三个方法（<code>cellForRowAtIndexPath</code>）返回。</li></ul><h2 id="自定义cell"><a href="#自定义cell" class="headerlink" title="自定义cell"></a>自定义cell</h2><p>Coming soon…</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;个人学习使用 UITableView 的时候的总结&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="UITableView" scheme="http://blog.superyoung.win/tags/UITableView/"/>
-    
-      <category term="ObjC" scheme="http://blog.superyoung.win/tags/ObjC/"/>
-    
-      <category term="Delegate" scheme="http://blog.superyoung.win/tags/Delegate/"/>
-    
-      <category term="DataSource" scheme="http://blog.superyoung.win/tags/DataSource/"/>
     
   </entry>
   
