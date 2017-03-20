@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.superyoung.win/"/>
-  <updated>2017-03-11T05:17:49.000Z</updated>
+  <updated>2017-03-20T06:55:51.000Z</updated>
   <id>http://blog.superyoung.win/</id>
   
   <author>
@@ -14,6 +14,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL 中 DATE, DATETIME 和 TIMESTAMP 的异同</title>
+    <link href="http://blog.superyoung.win/2017/03/20/learning_mysql/difference_date_datetime_timestamp/"/>
+    <id>http://blog.superyoung.win/2017/03/20/learning_mysql/difference_date_datetime_timestamp/</id>
+    <published>2017-03-20T03:10:15.000Z</published>
+    <updated>2017-03-20T06:55:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这篇文章介绍了<code>DATE</code>, <code>DATETIME</code> 和 <code>TIMESTAMP</code> 的相似点和不同点。</p><a id="more"></a><p>For the DATE and DATETIME range descriptions, “supported” means that although earlier values might work, there is no guarantee.<br>对于 DATE 和 DATETIME 的范围描述，“suppored” 表示即使更早的值可能可以工作，但是不提供保证。</p><p><code>DATE</code> 类型被用作表示日期，而不包括时间部分。 MySQL 用’YYYY-MM-DD’格式检索和展示 DATE 值。支持范围从’1000-01-01’到’9999-12-31’</p><p><code>DATETIME</code> 类型用来保存日期和时间。MySQL 以’YYYY-MM-DD HH:MM:SS’ 格式处理DATETIME 类型。范围从’1000-01-01 00:00:00’ 到 ‘9999-12-31 23:59:59’</p><p><code>TIMESTAMP</code> 类型也用来表示时间和日期。 TIMESTAMP 表示范围是：‘1970-01-01 00:00:01’ 到 ‘2038-01-19 03:14:07’ UTC。</p><p>MySQL 在存储 TIMESTAMP 格式的值的时候，会把它从当前时区转换成 UTC 时区，然后在处理的时候把它从 UTC 时区转换回当前时区。而其他类型（比如 DATETIME）不会发生这样的转换。默认情况下，每个链接的当前时区是服务器所在的时区。但是每个链接可以自定义自己的时区。只要时区设置是同一个常数，你就可以获取到你存入的准确时间。所以如果你在存入 TIMESTAMP 值后更改了时区，再取回数据，这些被取回的数据将会和你存入的不同。详情参见 <a href="https://dev.mysql.com/doc/refman/5.5/en/time-zone-support.html" target="_blank" rel="external">Section 10.6, “MySQL Server Time Zone Support”</a></p><p><code>TIMESTAMP</code> 数据可以自动初始化和更新当前日期和时间。详情参见 <a href="https://dev.mysql.com/doc/refman/5.5/en/timestamp-initialization.html" target="_blank" rel="external">Section 11.3.5, “Automatic Initialization and Updating for TIMESTAMP”</a></p><p><code>DATETIME</code> 或者 <code>TIMESTAMP</code> 值可以在尾部包含小数形式的秒，精确到毫秒级（6位）。虽然这些小数部分可以被识别，但是在存储入 DATETIME 或者 TIMESTAMP 的字段中的时候会被丢弃。</p><p>无效的 DATE，DATETIME 或者 TIMESTAMP 值将会被转换成对应类型的 “零” （’0000-00-00’ or ‘0000-00-00 00:00:00’）。</p><p>注意这些特定的属性在 MySQL 中的解释：</p><ul><li><p>MySQL 支持一些 “便利格式”，也就是在把一个分隔符，有时候这些便利语法也可以被接受，比如，一个 <code>&#39;10:11:12</code> 可能因为 <code>:</code> 看起来像时间，但是如果被存入一个日期字段，它会被转换成对应的日期 <code>2010-11-12</code> 。而如果把值 <code>&#39;10:45:15&#39;</code> 存入日期字段，它将会被转换成 <code>&#39;0000-00-00&#39;</code> 再存入，因为 ‘45’ 不是一个有效的月份值。</p></li><li><p>服务器验证月份和日期的有效性的时候，不会仅仅验证1-12和1-31。在关闭严格模式（strict mode）的时候，不正确的值（’2004-04-31’）将会被转换成’0000-00-00’存入数据库，并伴随着一个警告。而当打开严格模式的时候，将不会存入，并产生一个错误。而如果你要让服务器接受这样不正确的值，你需要打开 <code>ALLOW_INVALID_DATES</code>。</p></li><li><p>MySQL 不接受包含 0 的或者无效的 TIMESTAMP 值。唯一的例外是 ‘0000-00-00 00:00:00’</p></li><li><p><code>CAST()</code> 会把 TIMESTAMP 转换成字符串。详情参见 <a href="https://dev.mysql.com/doc/refman/5.7/en/cast-functions.html" target="_blank" rel="external">Section 12.10, “Cast Functions and Operators”</a></p></li><li><p>Dates containing two-digit year values are ambiguous because the century is unknown. MySQL interprets two-digit year values using these rules:</p></li><li>当不指定年份的前两位的时候，为了避免二义性，MySQL 将会这样做：<ul><li>00-69 将会被转化为 2000-2069</li><li>70-99 将会被转化为 1970-1999</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇文章介绍了&lt;code&gt;DATE&lt;/code&gt;, &lt;code&gt;DATETIME&lt;/code&gt; 和 &lt;code&gt;TIMESTAMP&lt;/code&gt; 的相似点和不同点。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Difference" scheme="http://blog.superyoung.win/tags/Difference/"/>
+    
+      <category term="MySQL" scheme="http://blog.superyoung.win/tags/MySQL/"/>
+    
+      <category term="DATE" scheme="http://blog.superyoung.win/tags/DATE/"/>
+    
+      <category term="DATETIME" scheme="http://blog.superyoung.win/tags/DATETIME/"/>
+    
+      <category term="TIMESTAMP" scheme="http://blog.superyoung.win/tags/TIMESTAMP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Which 命令查看当前执行的命令所在路径</title>
+    <link href="http://blog.superyoung.win/2017/03/20/learning_linux_command/determined_which_command_your_are_running/"/>
+    <id>http://blog.superyoung.win/2017/03/20/learning_linux_command/determined_which_command_your_are_running/</id>
+    <published>2017-03-20T02:43:01.000Z</published>
+    <updated>2017-03-20T02:48:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Usage: <code>which [-as] program</code></p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">Ysys-MBA:~ yjm$ man which</div><div class="line"></div><div class="line">WHICH(1)             BSD General Commands Manual             WHICH(1)</div><div class="line"></div><div class="line">NAME</div><div class="line">     which -- locate a program file in the user&apos;s path</div><div class="line"></div><div class="line">SYNOPSIS</div><div class="line">     which [-as] program ...</div><div class="line"></div><div class="line">DESCRIPTION</div><div class="line">     The which utility takes a list of command names and searches the path for</div><div class="line">     each executable file that would be run had these commands actually been</div><div class="line">     invoked.</div><div class="line"></div><div class="line">     The following options are available:</div><div class="line"></div><div class="line">     -a      List all instances of executables found (instead of just the first one of each).</div><div class="line"></div><div class="line">     -s      No output, just return 0 if any of the executables are found, or 1 if none are found.</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Usage: &lt;code&gt;which [-as] program&lt;/code&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://blog.superyoung.win/tags/Linux/"/>
+    
+      <category term="Shell" scheme="http://blog.superyoung.win/tags/Shell/"/>
+    
+      <category term="Command" scheme="http://blog.superyoung.win/tags/Command/"/>
+    
+      <category term="Path" scheme="http://blog.superyoung.win/tags/Path/"/>
+    
+      <category term="which" scheme="http://blog.superyoung.win/tags/which/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 Matlab 高效计算位平面图</title>
@@ -526,60 +582,6 @@
       <category term="language" scheme="http://blog.superyoung.win/tags/language/"/>
     
       <category term="instance" scheme="http://blog.superyoung.win/tags/instance/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Block 简介</title>
-    <link href="http://blog.superyoung.win/2017/01/04/learning_iOS/Block-in-Objc/"/>
-    <id>http://blog.superyoung.win/2017/01/04/learning_iOS/Block-in-Objc/</id>
-    <published>2017-01-03T17:13:54.000Z</published>
-    <updated>2017-01-29T02:27:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>什么是 Block？Block 可以实现闭包。Block 与函数类似，只不过是直接定义在另一个函数里。Block 也可以访问、捕获它被声明的区域内的所有变量。而且 Block 因为有返回类型，它其实也可以作为个值来对待。<br><a id="more"></a></p><h2 id="定义-Block-的语法结构如下"><a href="#定义-Block-的语法结构如下" class="headerlink" title="定义 Block 的语法结构如下"></a>定义 Block 的语法结构如下</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">return_type (^block_name)(parameters)&#123;&#125;</div></pre></td></tr></table></figure><h2 id="Block-捕获的变量是不可以在-Block-中修改的"><a href="#Block-捕获的变量是不可以在-Block-中修改的" class="headerlink" title="Block 捕获的变量是不可以在 Block 中修改的"></a>Block 捕获的变量是不可以在 Block 中修改的</h2><p>若要修改，该变量需要在声明的时候加上 <code>__block</code> 修饰符。</p><h2 id="Block-和-Grand-Central-Dispatch"><a href="#Block-和-Grand-Central-Dispatch" class="headerlink" title="Block 和 Grand Central Dispatch"></a>Block 和 Grand Central Dispatch</h2><p><code>Grand Central Dispatch</code> 是一种与 <code>Block</code> 有关的技术，它提供了对线程的抽象，这种抽象基于派发队列<code>dispatch queue</code>，开发者可以将 <code>Block</code> 排入队列中，由 <code>GCD</code> 负责调度。</p><h2 id="小心保留环"><a href="#小心保留环" class="headerlink" title="小心保留环"></a>小心保留环</h2><p>若在类的实例方法中定义一个块，那么块会捕获 <code>self</code> 变量，如果 <code>self</code> 所指代的那个对象同时也保留了块，则会导致“保留环”。</p><h2 id="解决保留环问题"><a href="#解决保留环问题" class="headerlink" title="解决保留环问题"></a>解决保留环问题</h2><p>一般来说，只要适时清理掉环中的某个引用，就不会有问题。对于块来说的话，在块的最后令 <code>Handler = nil;</code> 即可解决保留环问题。</p><h2 id="全局快、栈块、堆块"><a href="#全局快、栈块、堆块" class="headerlink" title="全局快、栈块、堆块"></a>全局快、栈块、堆块</h2><p>栈块所占据的内存空间可能会被自动覆写，若被覆写，则运行时将会出错。解决此问题可以给块对象发送 <code>copy</code> 消息，示例如下：<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">block = [^&#123;codeInBlock&#125; <span class="keyword">copy</span>];</div></pre></td></tr></table></figure><p></p><h2 id="为常用块创建-typedef"><a href="#为常用块创建-typedef" class="headerlink" title="为常用块创建 typedef"></a>为常用块创建 typedef</h2><p>创建的语法规则：<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">int</span>(^block_name)(parameters);</div></pre></td></tr></table></figure><p></p><p>调用的语法规则：<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">block_name block = ^(parameters)&#123;&#125;</div></pre></td></tr></table></figure><p></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;什么是 Block？Block 可以实现闭包。Block 与函数类似，只不过是直接定义在另一个函数里。Block 也可以访问、捕获它被声明的区域内的所有变量。而且 Block 因为有返回类型，它其实也可以作为个值来对待。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="Objective C" scheme="http://blog.superyoung.win/tags/Objective-C/"/>
-    
-      <category term="Block" scheme="http://blog.superyoung.win/tags/Block/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Coordinate System</title>
-    <link href="http://blog.superyoung.win/2017/01/04/learning_iOS/coordinate-system/"/>
-    <id>http://blog.superyoung.win/2017/01/04/learning_iOS/coordinate-system/</id>
-    <published>2017-01-03T17:12:31.000Z</published>
-    <updated>2017-01-29T02:27:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>iOS 的坐标系统<br><a id="more"></a><br>每一个 view 都有它的 coordinate system。 原点在（0，0）， 拥有宽度和高度属性。<br>在 iOS 中使用 <code>bounds</code> 来描述 coordinate system。<br>iOS 中的 <code>frame</code> 的 <code>origin</code> 属性会含有相对于 superview 的 coordinate system 坐标。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;iOS 的坐标系统&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="Coordinate" scheme="http://blog.superyoung.win/tags/Coordinate/"/>
-    
-      <category term="System" scheme="http://blog.superyoung.win/tags/System/"/>
-    
-      <category term="坐标系统" scheme="http://blog.superyoung.win/tags/%E5%9D%90%E6%A0%87%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
