@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.superyoung.win/"/>
-  <updated>2017-03-20T08:15:40.000Z</updated>
+  <updated>2017-04-02T13:05:13.000Z</updated>
   <id>http://blog.superyoung.win/</id>
   
   <author>
@@ -14,6 +14,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于长时间伏案工作和学习的经验</title>
+    <link href="http://blog.superyoung.win/2017/04/02/notes/about_working/"/>
+    <id>http://blog.superyoung.win/2017/04/02/notes/about_working/</id>
+    <published>2017-04-02T12:37:00.000Z</published>
+    <updated>2017-04-02T13:05:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>多读书，多看报，少吃零食，多睡觉！</p><a id="more"></a><p>最近总是长时间对着电脑学习和工作，感觉皮肤和身体状况都差了好多。定期的运动呢是有的，但是这并不能解决工作时的状态不佳问题。有人建议说定时休息，去茶水间喝喝水或者跟别人聊聊天。但是我个人的工作习惯是解决一个问题才休息，毕竟重新集中精力很难、非常难。但是其实吧，这种态度完全是错误的，最优解还是定时休息，番茄工作法建议半个小时休息5分钟，而按照我个人的实践来说，一般以一到两个小时休息十五分钟到半个小时为最佳。因为</p><ol><li>半个小时往往并不能解决一个问题；</li><li>休息五分钟并不能放松；</li><li>重新进入状态花费的时间可能更长；</li><li>而休息十五分钟到半个小时的话，可以花费其中的一部分休息时间让自己做好工作准备；</li><li>况且工作时一旦进入心流状态，肯定会持续超过半个小时的，心流状态难得，实在不忍心打断；</li></ol><p>所以不管怎么说，定时休息是必须的。不要在一个问题上工作太长时间，如果长时间无法解决一个问题的话，说明思路不对，而且长时间面对一个问题很容易让自己钻牛角尖，放松的时候你的思路会更加扩散，反而更有利于解决问题，自己的压力也能减轻一点。</p><p>但是我这个人呢，习惯就是这样，坐下来就不想动，相信很多人也和我一样。那难道就没办法了吗？有的。有一个办法，也算是一个工作的时候能遵守的原则，就是：</p><blockquote><p>正常情况下，如果手边没有茶水，我是不会碰电脑/开始工作的<br>┑(￣Д ￣)┍</p></blockquote><p>原因嘛就是，边工作边喝茶，喝完茶过了一段时间自然而然想去上厕所。喝茶呢一个可以保护自己的皮肤状态和体液平衡，另一个原因呢尿意会自动逼你站起来走走，一旦站起来，自然就会放松一下，而且走走正好可以扩展一下思路。</p><p>以上，献给跟我一样工作起来就不能频繁走动的人。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;多读书，多看报，少吃零食，多睡觉！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Working" scheme="http://blog.superyoung.win/tags/Working/"/>
+    
+      <category term="Experience" scheme="http://blog.superyoung.win/tags/Experience/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关闭 macOS 的 Spotlight 功能</title>
+    <link href="http://blog.superyoung.win/2017/03/27/learning_linux_macos_command/disable_spotlight_in_macos/"/>
+    <id>http://blog.superyoung.win/2017/03/27/learning_linux_macos_command/disable_spotlight_in_macos/</id>
+    <published>2017-03-27T07:17:44.000Z</published>
+    <updated>2017-04-02T12:35:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>macOS 已经升级到 Sierra 了，但是 Spotlight 用起来还是没有 Alfred 顺手，而且不用还回占资源，于是就想着关闭它。<br>关闭 Spotlight 的方法有很多，这里比较推荐的方法是：……</p><a id="more"></a><p>执行命令：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># unload</div><div class="line">sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist</div><div class="line"># load</div><div class="line">sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist</div></pre></td></tr></table></figure><p></p><p>以上命令会 load 或者 unload 这个模块。</p><p>另一种方法是：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># turn off:</div><div class="line">sudo mdutil -a -i off</div><div class="line"># turn on</div><div class="line">sudo mdutil -a -i on</div></pre></td></tr></table></figure><p></p><p>以上命令只关闭了索引，这种方法不太推荐。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;macOS 已经升级到 Sierra 了，但是 Spotlight 用起来还是没有 Alfred 顺手，而且不用还回占资源，于是就想着关闭它。&lt;br&gt;关闭 Spotlight 的方法有很多，这里比较推荐的方法是：……&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="macOS" scheme="http://blog.superyoung.win/tags/macOS/"/>
+    
+      <category term="Spotlight" scheme="http://blog.superyoung.win/tags/Spotlight/"/>
+    
+      <category term="OS X" scheme="http://blog.superyoung.win/tags/OS-X/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>把 Gcc/g++ 的错误重定向输出到文件</title>
+    <link href="http://blog.superyoung.win/2017/03/23/learning_bash/redirect_gcc_error_output_to_file/"/>
+    <id>http://blog.superyoung.win/2017/03/23/learning_bash/redirect_gcc_error_output_to_file/</id>
+    <published>2017-03-23T05:19:34.000Z</published>
+    <updated>2017-03-23T05:21:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>通过管道，重定向 gcc 的错误输出到文件<br><a id="more"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># compile and output error messages to log file:</div><div class="line">    g++ -o a *.cpp 2&gt;build_err.log</div></pre></td></tr></table></figure><ul><li>因为 g++ 使用了错误流（而不是标准输出流）来输出错误信息，所以上面的<code>2</code>指的是 g++ 的错误流，若不指定，将会尝试重定向标准输出流。</li><li><code>&gt;</code> 是重定向符，借助它才能将向屏幕的输出流重定向到指定文件</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通过管道，重定向 gcc 的错误输出到文件&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://blog.superyoung.win/tags/Linux/"/>
+    
+      <category term="Shell" scheme="http://blog.superyoung.win/tags/Shell/"/>
+    
+      <category term="GNU" scheme="http://blog.superyoung.win/tags/GNU/"/>
+    
+      <category term="GCC" scheme="http://blog.superyoung.win/tags/GCC/"/>
+    
+      <category term="Redirect" scheme="http://blog.superyoung.win/tags/Redirect/"/>
+    
+      <category term="log" scheme="http://blog.superyoung.win/tags/log/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL 中 DATE, DATETIME 和 TIMESTAMP 的异同</title>
@@ -45,8 +121,8 @@
   
   <entry>
     <title>使用 Which 命令查看当前执行的命令所在路径</title>
-    <link href="http://blog.superyoung.win/2017/03/20/learning_linux_command/determined_which_command_your_are_running/"/>
-    <id>http://blog.superyoung.win/2017/03/20/learning_linux_command/determined_which_command_your_are_running/</id>
+    <link href="http://blog.superyoung.win/2017/03/20/learning_linux_macos_command/determined_which_command_your_are_running/"/>
+    <id>http://blog.superyoung.win/2017/03/20/learning_linux_macos_command/determined_which_command_your_are_running/</id>
     <published>2017-03-20T02:43:01.000Z</published>
     <updated>2017-03-20T08:24:05.000Z</updated>
     
@@ -476,34 +552,6 @@
   </entry>
   
   <entry>
-    <title>关于 SequenceType</title>
-    <link href="http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/"/>
-    <id>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</id>
-    <published>2017-01-25T07:47:23.000Z</published>
-    <updated>2017-01-29T02:27:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Coming soon…<br><a id="more"></a></p><h2 id="从-Array-开始"><a href="#从-Array-开始" class="headerlink" title="从 Array 开始"></a>从 Array 开始</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Coming soon…&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
-    
-      <category term="Sequence" scheme="http://blog.superyoung.win/tags/Sequence/"/>
-    
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
-    
-  </entry>
-  
-  <entry>
     <title>手把手教你Rx响应式开发 - 响应式应用开发极简入门教程</title>
     <link href="http://blog.superyoung.win/2017/01/25/learning_Rx/Reactive-Programming/"/>
     <id>http://blog.superyoung.win/2017/01/25/learning_Rx/Reactive-Programming/</id>
@@ -532,56 +580,6 @@
       <category term="开发" scheme="http://blog.superyoung.win/tags/%E5%BC%80%E5%8F%91/"/>
     
       <category term="入门" scheme="http://blog.superyoung.win/tags/%E5%85%A5%E9%97%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Debug Print in iOS Programming</title>
-    <link href="http://blog.superyoung.win/2017/01/15/learning_iOS/debugPrint/"/>
-    <id>http://blog.superyoung.win/2017/01/15/learning_iOS/debugPrint/</id>
-    <published>2017-01-15T02:29:44.000Z</published>
-    <updated>2017-01-29T02:27:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>自定义 print 输出<br><a id="more"></a></p><p><em>请先参考<a href="http://swifter.tips/print/" target="_blank" rel="external">王魏的博客 Swifter</a></em></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;自定义 print 输出&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Coming soon..." scheme="http://blog.superyoung.win/tags/Coming-soon/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Swift 中如何获取实例类型</title>
-    <link href="http://blog.superyoung.win/2017/01/15/learning_iOS/get-type-of-instance/"/>
-    <id>http://blog.superyoung.win/2017/01/15/learning_iOS/get-type-of-instance/</id>
-    <published>2017-01-15T02:17:03.000Z</published>
-    <updated>2017-01-29T02:27:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>一门编程语言的动态特性，最基础的就是获取一个实例的类型。<br><a id="more"></a></p><h2 id="在-ObjC-中我们怎么做？"><a href="#在-ObjC-中我们怎么做？" class="headerlink" title="在 ObjC 中我们怎么做？"></a>在 ObjC 中我们怎么做？</h2><p>在 ObjC 中我们可以通过一个实例的 class 方法来获取其类型名<br></p><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSDate</span> *date = [<span class="built_in">NSDate</span> date];</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,<span class="built_in">NSStringFromClass</span>([date <span class="keyword">class</span>]));</div></pre></td></tr></table></figure><p></p><h2 id="在-Swift-中没有实例的-class-方法"><a href="#在-Swift-中没有实例的-class-方法" class="headerlink" title="在 Swift 中没有实例的 class 方法"></a>在 Swift 中没有实例的 class 方法</h2><p>可以求助于 ObjC 运行时，调用 <code>object_getClass(AnyTypeInstance)</code>。例子如下：<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> date = <span class="type">NSDate</span>()</div><div class="line"><span class="built_in">print</span>(object_getClass(date))</div></pre></td></tr></table></figure><p></p><h2 id="object-getClass-方法返回类型是？"><a href="#object-getClass-方法返回类型是？" class="headerlink" title="object_getClass() 方法返回类型是？"></a><code>object_getClass()</code> 方法返回类型是？</h2><p>是 AnyClass! 可以通过 <code>debugPrint</code> 来验证，关于 <code>debugPrint</code>，参见<a href="../debugPrint/README.md">debugPrint()</a></p><h2 id="更加符合-Swift-风格的做法"><a href="#更加符合-Swift-风格的做法" class="headerlink" title="更加符合 Swift 风格的做法"></a>更加符合 Swift 风格的做法</h2><p>Swift 2 以前的方法，已抛弃<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> date = <span class="type">NSDate</span>()</div><div class="line"><span class="built_in">print</span>(date.<span class="keyword">dynamicType</span>)</div></pre></td></tr></table></figure><p></p><p>Swift 3.0 以后使用 <code>type(of:AnyTypeInstance)</code>方法<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> date = <span class="type">NSDate</span>()</div><div class="line"><span class="built_in">print</span>(type(of:date))</div></pre></td></tr></table></figure><p></p><p><em>参考:</em></p><ol><li><em><a href="http://swifter.tips/instance-type/" target="_blank" rel="external">王魏的博客 Swifter</a></em></li><li><em><a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Types.html" target="_blank" rel="external">Apple 官方文档关于 Metatype Type 的内容</a></em></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一门编程语言的动态特性，最基础的就是获取一个实例的类型。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
-    
-      <category term="type" scheme="http://blog.superyoung.win/tags/type/"/>
-    
-      <category term="language" scheme="http://blog.superyoung.win/tags/language/"/>
-    
-      <category term="instance" scheme="http://blog.superyoung.win/tags/instance/"/>
     
   </entry>
   
