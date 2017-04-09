@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.superyoung.win/2017/04/09/learning_data_analysis_with_python/about_data_preprocessing/</loc>
+    
+    <lastmod>2017-04-09T03:04:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.superyoung.win/2017/03/23/learning_bash/redirect_gcc_error_output_to_file/</loc>
     
     <lastmod>2017-04-05T06:54:42.000Z</lastmod>
