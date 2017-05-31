@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.superyoung.win/2017/04/09/learning_data_analysis_with_python/about_data_preprocessing/</loc>
+    
+    <lastmod>2017-05-31T01:00:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.superyoung.win/2017/05/09/learning_data_analysis_with_python/about_pandas/</loc>
     
-    <lastmod>2017-05-09T04:03:24.000Z</lastmod>
+    <lastmod>2017-05-31T00:48:20.000Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>http://blog.superyoung.win/2017/04/26/learning_data_analysis_with_python/about_ann/</loc>
     
     <lastmod>2017-05-09T03:15:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.superyoung.win/2017/04/09/learning_data_analysis_with_python/about_data_preprocessing/</loc>
-    
-    <lastmod>2017-05-02T06:40:24.000Z</lastmod>
     
   </url>
   
