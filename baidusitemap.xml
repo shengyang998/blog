@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/04/26/learning_data_analysis_with_python/about_ann/</loc>
+    <lastmod>2017-10-01T12:26:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>人工神经网络</title>
+        <pubTime>2017-04-26T14:09:27.000Z</pubTime>
+        
+        <tag>神经网络</tag>
+         
+        <tag>机器学习</tag>
+         
+        <tag>优化问题</tag>
+         
+        <tag>优化算法</tag>
+         
+        <tag>模拟退火算法</tag>
+         
+        <tag>遗传算法</tag>
+         
+        <tag>Python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/02/learning_matlab/setup_yourself_a_remote_matlab_computation_server/</loc>
+    <lastmod>2017-10-01T12:26:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>建立你自己的 Matlab 远程计算服务器</title>
+        <pubTime>2017-03-02T01:44:40.000Z</pubTime>
+        
+        <tag>Matlab</tag>
+         
+        <tag>Server</tag>
+         
+        <tag>Science</tag>
+         
+        <tag>Computation</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/10/01/notes/update_high_sierra/</loc>
+    <lastmod>2017-10-01T12:25:17.372Z</lastmod>
+    <data>
+        <display>
+        <title>升级 macOS High Sierra 失败怎么办？😰</title>
+        <pubTime>2017-10-01T11:17:30.533Z</pubTime>
+        
+        <tag>macOS</tag>
+         
+        <tag>OS X</tag>
+         
+        <tag>Sierra</tag>
+         
+        <tag>High Sierra</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/27/learning_macos_command/disable_spotlight_in_macos/</loc>
+    <lastmod>2017-10-01T11:16:33.590Z</lastmod>
+    <data>
+        <display>
+        <title>关闭 macOS 的 Spotlight 功能</title>
+        <pubTime>2017-03-27T07:17:44.000Z</pubTime>
+        
+        <tag>macOS</tag>
+         
+        <tag>Spotlight</tag>
+         
+        <tag>OS X</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/05/09/learning_data_analysis_with_python/about_pandas/</loc>
+    <lastmod>2017-06-21T08:06:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>Python 中的数据挖掘库 Pandas 的常用操作和容易出现误解的地方</title>
+        <pubTime>2017-05-09T03:15:56.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Pandas</tag>
+         
+        <tag>列名</tag>
+         
+        <tag>删除列</tag>
+         
+        <tag>删除行</tag>
+         
+        <tag>切片</tag>
+         
+        <tag>时间</tag>
+         
+        <tag>index</tag>
+         
+        <tag>DataFrame</tag>
+         
+        <tag>Series</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/04/09/learning_data_analysis_with_python/about_data_preprocessing/</loc>
+    <lastmod>2017-05-31T01:00:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>数据分析——数据预处理</title>
+        <pubTime>2017-04-09T01:40:53.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>异常值</tag>
+         
+        <tag>缺失值</tag>
+         
+        <tag>噪声</tag>
+         
+        <tag>小波</tag>
+         
+        <tag>降噪</tag>
+         
+        <tag>Wavelet</tag>
+         
+        <tag>Grubbs</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/23/learning_bash/redirect_gcc_error_output_to_file/</loc>
+    <lastmod>2017-04-05T06:54:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>把 Gcc / G++ 的错误重定向输出到文件</title>
+        <pubTime>2017-03-23T05:19:34.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Shell</tag>
+         
+        <tag>GNU</tag>
+         
+        <tag>GCC</tag>
+         
+        <tag>G++</tag>
+         
+        <tag>Redirect</tag>
+         
+        <tag>log</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/20/learning_bash/determined_which_command_your_are_running/</loc>
+    <lastmod>2017-04-05T06:53:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Which 命令查看当前执行的命令所在路径</title>
+        <pubTime>2017-03-20T02:43:01.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Shell</tag>
+         
+        <tag>Command</tag>
+         
+        <tag>Path</tag>
+         
+        <tag>which</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/04/02/notes/about_working/</loc>
+    <lastmod>2017-04-02T13:05:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于长时间伏案工作和学习的经验</title>
+        <pubTime>2017-04-02T12:37:00.000Z</pubTime>
+        
+        <tag>Working</tag>
+         
+        <tag>Experience</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/20/learning_mysql/difference_date_datetime_timestamp/</loc>
+    <lastmod>2017-03-20T08:15:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>MySQL 中 DATE, DATETIME 和 TIMESTAMP 的异同</title>
+        <pubTime>2017-03-20T03:10:15.000Z</pubTime>
+        
+        <tag>MySQL</tag>
+         
+        <tag>DATE</tag>
+         
+        <tag>DATETIME</tag>
+         
+        <tag>TIMESTAMP</tag>
+         
+        <tag>Difference</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/11/learning_matlab/caculate_bit_plane_picture/</loc>
+    <lastmod>2017-03-11T05:17:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Matlab 高效计算位平面图</title>
+        <pubTime>2017-03-11T02:05:57.000Z</pubTime>
+        
+        <tag>Matlab</tag>
+         
+        <tag>Bit-plane</tag>
+         
+        <tag>Digital</tag>
+         
+        <tag>Image</tag>
+         
+        <tag>Processing</tag>
+         
+        <tag>Parallel</tag>
+         
+        <tag>parfor</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/03/version_controller/setup_svn_server/</loc>
+    <lastmod>2017-03-11T02:05:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>搭建你自己的 SVN 服务器</title>
+        <pubTime>2017-03-03T15:00:39.000Z</pubTime>
+        
+        <tag>Server</tag>
+         
+        <tag>Tutorial</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>服务器</tag>
+         
+        <tag>教程</tag>
+         
+        <tag>配置</tag>
+         
+        <tag>SVN</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/02/28/version_controller/setup_git_server/</loc>
+    <lastmod>2017-03-03T15:01:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>搭建自己的 Git 服务器教程</title>
+        <pubTime>2017-02-28T10:37:41.000Z</pubTime>
+        
+        <tag>Server</tag>
+         
+        <tag>Git</tag>
+         
+        <tag>Tutorial</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>服务器</tag>
+         
+        <tag>教程</tag>
+         
+        <tag>配置</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/02/22/learning_python/list_uniqify_and_benchmark/</loc>
+    <lastmod>2017-03-02T02:53:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ten Ways to Uniqify a List in Python</title>
+        <pubTime>2017-02-22T08:25:41.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>List</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/02/14/learning_Rx/driver/</loc>
+    <lastmod>2017-03-02T02:48:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>Unit - Driver 介绍及示例</title>
+        <pubTime>2017-02-14T08:16:48.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>Swift</tag>
+         
+        <tag>RxSwift</tag>
+         
+        <tag>响应式</tag>
+         
+        <tag>开发</tag>
+         
+        <tag>Unit</tag>
+         
+        <tag>Driver</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/02/14/learning_Rx/units-concept-in-rxswift/</loc>
+    <lastmod>2017-03-02T02:40:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>ReactiveX 中 Unit 的概念（RxSwift为例）</title>
+        <pubTime>2017-02-14T08:11:40.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>Swift</tag>
+         
+        <tag>RxSwift</tag>
+         
+        <tag>响应式</tag>
+         
+        <tag>开发</tag>
+         
+        <tag>Unit</tag>
+         
+        <tag>Driver</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/25/learning_Rx/Reactive-Programming/</loc>
+    <lastmod>2017-02-14T08:11:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>手把手教你Rx响应式开发 - 响应式应用开发极简入门教程</title>
+        <pubTime>2017-01-25T07:47:23.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>Swift</tag>
+         
+        <tag>RxSwift</tag>
+         
+        <tag>响应式</tag>
+         
+        <tag>开发</tag>
+         
+        <tag>入门</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/02/12/learning_swift/enum_struct_class_in_swift/</loc>
+    <lastmod>2017-02-12T09:54:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>Learning Enum, Structure and Class in Swift Programming Language</title>
+        <pubTime>2017-02-12T09:50:36.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>Swift</tag>
+         
+        <tag>Difference</tag>
+         
+        <tag>Language</tag>
+         
+        <tag>Enum</tag>
+         
+        <tag>Struct</tag>
+         
+        <tag>Class</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/29/learning_swift/autoclosure/</loc>
+    <lastmod>2017-02-04T08:07:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>Autoclosure and Lazy Evaluation</title>
+        <pubTime>2017-01-29T12:18:31.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>Swift</tag>
+         
+        <tag>autoclosure</tag>
+         
+        <tag>lazy evaluation</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/02/02/learning_swift/map_reduce_filter/</loc>
+    <lastmod>2017-02-03T05:56:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>An Introduction to Map(), flatMap(), Reduce() and Filter() in Swift</title>
+        <pubTime>2017-02-02T06:26:48.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>Swift</tag>
+         
+        <tag>Language</tag>
+         
+        <tag>map</tag>
+         
+        <tag>reduce</tag>
+         
+        <tag>filter</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/31/learning_swift/LLDB_Usage/</loc>
+    <lastmod>2017-01-31T14:07:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>LLDB Tutorial</title>
+        <pubTime>2017-01-31T12:02:09.000Z</pubTime>
+        
+        <tag>LLDB</tag>
+         
+        <tag>GDB</tag>
+         
+        <tag>Debug</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/28/how_to_build_a_blog/blog_with_github_pages/</loc>
+    <lastmod>2017-01-30T11:15:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用 GitHub Pages 搭建博客指南</title>
+        <pubTime>2017-01-28T05:18:35.000Z</pubTime>
+        
+        <tag>GitHub</tag>
+         
+        <tag>Pages</tag>
+         
+        <tag>blog</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/29/learning_iOS/ARC_Rules/</loc>
+    <lastmod>2017-01-29T03:30:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>ARC Rules</title>
+        <pubTime>2017-01-29T02:19:41.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>ARC</tag>
+         
+        <tag>Rules</tag>
+         
+        <tag>Objective C</tag>
+         
+        <tag>Coming soon...</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/15/learning_iOS/debugPrint/</loc>
+    <lastmod>2017-01-29T02:27:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>Debug Print in iOS Programming</title>
+        <pubTime>2017-01-15T02:29:44.000Z</pubTime>
+        
+        <tag>Coming soon...</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/04/learning_iOS/coordinate-system/</loc>
+    <lastmod>2017-01-29T02:27:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>Coordinate System</title>
+        <pubTime>2017-01-03T17:12:31.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>Coordinate</tag>
+         
+        <tag>System</tag>
+         
+        <tag>坐标系统</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</loc>
+    <lastmod>2017-01-29T02:27:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于 SequenceType</title>
+        <pubTime>2017-01-25T07:47:23.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>Coming soon...</tag>
+         
+        <tag>Sequence</tag>
+         
+        <tag>type</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/04/learning_iOS/UITableView/</loc>
+    <lastmod>2017-01-29T02:27:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>UITableView</title>
+        <pubTime>2017-01-03T17:07:32.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>UITableView</tag>
+         
+        <tag>ObjC</tag>
+         
+        <tag>Delegate</tag>
+         
+        <tag>DataSource</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/04/learning_iOS/keyboard-dissmissing/</loc>
+    <lastmod>2017-01-29T02:27:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS 关闭键盘方式的小结</title>
+        <pubTime>2017-01-03T17:04:40.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>Objective C</tag>
+         
+        <tag>keyboard</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/15/learning_iOS/get-type-of-instance/</loc>
+    <lastmod>2017-01-29T02:27:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift 中如何获取实例类型</title>
+        <pubTime>2017-01-15T02:17:03.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>Swift</tag>
+         
+        <tag>type</tag>
+         
+        <tag>language</tag>
+         
+        <tag>instance</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/04/learning_iOS/UIAlertController/</loc>
+    <lastmod>2017-01-29T02:27:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于UIAlertController</title>
+        <pubTime>2017-01-03T17:09:49.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>Objective C</tag>
+         
+        <tag>UIAlertController</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/04/learning_iOS/Block-in-Objc/</loc>
+    <lastmod>2017-01-29T02:27:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>Block 简介</title>
+        <pubTime>2017-01-03T17:13:54.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>Objective C</tag>
+         
+        <tag>Block</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/01/27/PictureProcessing/50gray_buffing/</loc>
+    <lastmod>2017-01-28T16:22:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>中性灰磨皮以及细节增强</title>
+        <pubTime>2017-01-27T14:32:36.000Z</pubTime>
+        
+        <tag>Photoshop</tag>
+         
+        <tag>修图</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>

@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.superyoung.win/2017/07/23/learning_cpp/effective_cpp/</loc>
+    <loc>http://blog.superyoung.win/2017/04/26/learning_data_analysis_with_python/about_ann/</loc>
     
-    <lastmod>2017-09-05T14:30:01.000Z</lastmod>
+    <lastmod>2017-10-01T12:26:53.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.superyoung.win/2017/04/26/learning_data_analysis_with_python/about_ann/</loc>
+    <loc>http://blog.superyoung.win/2017/03/02/learning_matlab/setup_yourself_a_remote_matlab_computation_server/</loc>
     
-    <lastmod>2017-09-05T14:27:55.000Z</lastmod>
+    <lastmod>2017-10-01T12:26:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.superyoung.win/2017/10/01/notes/update_high_sierra/</loc>
+    
+    <lastmod>2017-10-01T12:25:17.372Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/27/learning_macos_command/disable_spotlight_in_macos/</loc>
+    
+    <lastmod>2017-10-01T11:16:33.590Z</lastmod>
     
   </url>
   
@@ -44,13 +58,6 @@
   </url>
   
   <url>
-    <loc>http://blog.superyoung.win/2017/03/27/learning_macos_command/disable_spotlight_in_macos/</loc>
-    
-    <lastmod>2017-04-05T06:52:03.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.superyoung.win/2017/04/02/notes/about_working/</loc>
     
     <lastmod>2017-04-02T13:05:13.000Z</lastmod>
@@ -65,7 +72,7 @@
   </url>
   
   <url>
-    <loc>http://blog.superyoung.win/2017/03/11/matlab/caculate_bit_plane_picture/</loc>
+    <loc>http://blog.superyoung.win/2017/03/11/learning_matlab/caculate_bit_plane_picture/</loc>
     
     <lastmod>2017-03-11T05:17:49.000Z</lastmod>
     
@@ -103,13 +110,6 @@
     <loc>http://blog.superyoung.win/2017/02/14/learning_Rx/units-concept-in-rxswift/</loc>
     
     <lastmod>2017-03-02T02:40:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.superyoung.win/2017/03/02/matlab/setup_yourself_a_remote_matlab_computation_server/</loc>
-    
-    <lastmod>2017-03-02T02:11:58.000Z</lastmod>
     
   </url>
   
