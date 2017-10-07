@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.superyoung.win/"/>
-  <updated>2017-10-01T12:25:17.372Z</updated>
+  <updated>2017-10-07T08:17:08.000Z</updated>
   <id>http://blog.superyoung.win/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用 Cython 把 Python 文件编译成可执行文件</title>
+    <link href="http://blog.superyoung.win/2017/10/07/learning_python/compile_executable_with_cython/"/>
+    <id>http://blog.superyoung.win/2017/10/07/learning_python/compile_executable_with_cython/</id>
+    <published>2017-10-07T07:44:40.841Z</published>
+    <updated>2017-10-07T08:17:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>macOS 预装的 python 版本为 2.7，在这里会展示如何把 3.4 版本的 python 代码编译成可执行文件<br><a id="more"></a></p><h2 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h2><ol><li>安装 cython，一般可以使用 <code>sudo pip install -U cython</code> 来安装</li><li>写好 python 代码，保存成 main.py 文件</li><li><code>cython --embed main.py</code><br>这时会生成一个 .c 文件，也就是转换后的 c 代码</li><li><p>使用 which 命令找到当前使用的 python 的路径，比如说我的 python3 安装在</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">MBA:~ ysy$ which python3</div><div class="line">/Library/Frameworks/Python.framework/Versions/3.4/bin/python3</div></pre></td></tr></table></figure><p>也就是说<code>头</code>和<code>动态链接库</code>分别在 <code>/Library/Frameworks/Python.framework/Versions/3.4/Headers</code> 和 <code>/Library/Frameworks/Python.framework/Versions/3.4/lib</code> 这里，记录下这两个路径。推荐使用环境变量：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export PYTHON_LIB=/Library/Frameworks/Python.framework/Versions/3.4/lib</div><div class="line">export C_INCLUDE_PATH=/Library/Frameworks/Python.framework/Versions/3.4/Headers</div></pre></td></tr></table></figure></li><li><p>使用 <code>gcc</code> 编译成可执行文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gcc -I $C_INCLUDE_PATH -L $PYTHON_LIB -lpython3.4m -o a main.c</div></pre></td></tr></table></figure><p>解释一下， <code>-I</code> 是指定预编译头文件的位置；<code>-L</code> 是指定动态链接库的位置；<code>-l</code> 是指定动态链接库名。</p></li></ol><h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><ol><li>注意三个参数标记 <code>-I</code> <code>-L</code> <code>-l</code>，他们和紧跟在后的参数之间是可以没有空格的。</li><li>库名和库的文件名之间的关系满足：<code>文件名 = &#39;lib&#39; + 库名 + &#39;.so&#39;</code>，可以自行 <code>ls -alh $PYTHON_LIB</code> 验证。</li><li>其实这个编译成可执行文件不太符合 cython 的初衷，cython 的初衷是为了把 python 代码编译成库，用来加速 python 代码调用的。当然，有时候因为自己不想写多个 py 文件，直接编译成可执行代码来用用也无妨。</li><li>其他问题可以参考 <a href="http://docs.cython.org" target="_blank" rel="external">Cython’s Documentation</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;macOS 预装的 python 版本为 2.7，在这里会展示如何把 3.4 版本的 python 代码编译成可执行文件&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>升级 macOS High Sierra 失败怎么办？😰</title>
@@ -575,34 +593,6 @@
       <category term="GDB" scheme="http://blog.superyoung.win/tags/GDB/"/>
     
       <category term="Debug" scheme="http://blog.superyoung.win/tags/Debug/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Autoclosure and Lazy Evaluation</title>
-    <link href="http://blog.superyoung.win/2017/01/29/learning_swift/autoclosure/"/>
-    <id>http://blog.superyoung.win/2017/01/29/learning_swift/autoclosure/</id>
-    <published>2017-01-29T12:18:31.000Z</published>
-    <updated>2017-02-04T08:07:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>A note about how to use <code>@autoclosure</code> in Swift programming language</p><a id="more"></a><h2 id="A-short-explain-to-autoclosure"><a href="#A-short-explain-to-autoclosure" class="headerlink" title="A short explain to @autoclosure"></a>A short explain to <code>@autoclosure</code></h2><p>What <code>@autoclosure</code> have done is to wrap a expressionn to a closure.</p><h2 id="for-example"><a href="#for-example" class="headerlink" title="for example"></a>for example</h2><p>We define a function as below:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">printIfTrue</span><span class="params">(<span class="number">_</span> clo: <span class="params">()</span></span></span>-&gt;<span class="type">Bool</span> )&#123;</div><div class="line">    <span class="built_in">print</span>(clo())</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>We can call the function like this:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue( &#123; <span class="keyword">return</span> <span class="number">2</span>&gt;<span class="number">1</span> &#125; )</div></pre></td></tr></table></figure><p></p><p>OR like this:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue&#123; <span class="keyword">return</span> <span class="number">2</span>&gt;<span class="number">1</span> &#125;</div></pre></td></tr></table></figure><p></p><p>OR even ignore the key word <code>return</code>:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue&#123; <span class="number">2</span>&gt;<span class="number">1</span> &#125;</div></pre></td></tr></table></figure><p></p><p>But if you want a clearer syntax like:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printIfTrue( <span class="number">2</span>&gt;<span class="number">1</span> )</div></pre></td></tr></table></figure><p></p><p>Then you must use <code>@autoclosure</code>, like:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">printIfTrue</span><span class="params">(<span class="number">_</span> clo: @autoclosure <span class="params">()</span></span></span>-&gt;<span class="type">Bool</span>)&#123;</div><div class="line">    <span class="built_in">print</span>(clo())</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>Is these all it can do? Well, Yes, and No. What it can do depends on you, just go on and have a look:</p><h2 id="Lazy-evaluation"><a href="#Lazy-evaluation" class="headerlink" title="Lazy evaluation"></a>Lazy evaluation</h2><p>Let’s define two similar function and try to compare their speed:<br>The first function:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">logicalAnd</span><span class="params">(<span class="number">_</span> <span class="keyword">left</span>: @autoclosure <span class="params">()</span></span></span> -&gt; <span class="type">Bool</span>, <span class="number">_</span> <span class="keyword">right</span>: <span class="meta">@autoclosure</span> () -&gt; <span class="type">Bool</span>) -&gt; <span class="type">Bool</span>&#123;</div><div class="line">    <span class="keyword">if</span> <span class="keyword">left</span>()&#123;</div><div class="line">        <span class="keyword">if</span> <span class="keyword">right</span>()&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>The second function:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">logicalAnd</span><span class="params">(<span class="number">_</span> <span class="keyword">left</span>: Bool, <span class="number">_</span> <span class="keyword">right</span>: Bool)</span></span> -&gt; <span class="type">Bool</span>&#123;</div><div class="line">    <span class="keyword">if</span> <span class="keyword">left</span>&#123;</div><div class="line">        <span class="keyword">if</span> <span class="keyword">right</span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>It’s same to call these two functions:<br></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">logicalAnd(<span class="literal">true</span>, <span class="literal">true</span>)      <span class="comment">//return true</span></div><div class="line">logicalAnd(<span class="number">2</span>&gt;<span class="number">1</span>, <span class="number">2</span>&gt;<span class="number">1</span>)        <span class="comment">//return true</span></div></pre></td></tr></table></figure><p></p><p>You might have noticed that the difference between them is only the type of parameter.</p><p>And because of that, the first function is faster than the second one.</p><p>The first function can do <code>lazy evaluation</code> to the right parameter, and if the parameter needs long time calculation, its advantage will show.</p><p>While the second one? It must determine the parameter before the function is called, in other way, it cannot do <code>lazy evaluation</code> and will cost longer time.</p><p>So that is what most interesting thing of <code>@autoclosure</code>.</p><p>And the operator <code>??</code>, <code>&amp;&amp;</code>, <code>||</code> in standard lib of Swift is also do the same.</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;A note about how to use &lt;code&gt;@autoclosure&lt;/code&gt; in Swift programming language&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="http://blog.superyoung.win/tags/Programming/"/>
-    
-      <category term="iOS" scheme="http://blog.superyoung.win/tags/iOS/"/>
-    
-      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
-    
-      <category term="autoclosure" scheme="http://blog.superyoung.win/tags/autoclosure/"/>
-    
-      <category term="lazy evaluation" scheme="http://blog.superyoung.win/tags/lazy-evaluation/"/>
     
   </entry>
   
