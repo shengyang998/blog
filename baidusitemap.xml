@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://blog.superyoung.win/2017/10/28/learning_emacs/start_server/</loc>
+    <lastmod>2017-10-28T05:05:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>Setting Up Emacs Server to Speeding Up Your Emacs</title>
+        <pubTime>2017-10-28T04:58:57.510Z</pubTime>
+        
+        <tag>Emacs</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/05/09/learning_data_analysis_with_python/about_pandas/</loc>
+    <lastmod>2017-10-28T05:05:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Python 中的数据挖掘库 Pandas 的常用操作和容易出现误解的地方</title>
+        <pubTime>2017-05-09T03:15:56.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Pandas</tag>
+         
+        <tag>DataFrame</tag>
+         
+        <tag>Series</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.superyoung.win/2017/10/07/learning_python/compile_executable_with_cython/</loc>
     <lastmod>2017-10-07T08:17:08.000Z</lastmod>
     <data>
@@ -106,41 +146,6 @@
         <tag>Spotlight</tag>
          
         <tag>OS X</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.superyoung.win/2017/05/09/learning_data_analysis_with_python/about_pandas/</loc>
-    <lastmod>2017-06-21T08:06:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python 中的数据挖掘库 Pandas 的常用操作和容易出现误解的地方</title>
-        <pubTime>2017-05-09T03:15:56.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Pandas</tag>
-         
-        <tag>列名</tag>
-         
-        <tag>删除列</tag>
-         
-        <tag>删除行</tag>
-         
-        <tag>切片</tag>
-         
-        <tag>时间</tag>
-         
-        <tag>index</tag>
-         
-        <tag>DataFrame</tag>
-         
-        <tag>Series</tag>
          
          
            
