@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.superyoung.win/"/>
-  <updated>2017-10-28T05:05:12.000Z</updated>
+  <updated>2017-10-28T11:47:28.596Z</updated>
   <id>http://blog.superyoung.win/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Setting Up Emacs Server to Speeding Up Your Emacs</title>
+    <title>Setting Up Emacs Server to Speed Up Your Emacs</title>
     <link href="http://blog.superyoung.win/2017/10/28/learning_emacs/start_server/"/>
     <id>http://blog.superyoung.win/2017/10/28/learning_emacs/start_server/</id>
     <published>2017-10-28T04:58:57.510Z</published>
-    <updated>2017-10-28T05:05:12.000Z</updated>
+    <updated>2017-10-28T11:47:28.596Z</updated>
     
     <content type="html"><![CDATA[<p>This article describe how to start the Emacs Server for reducing file opening time cost in the future use.<br><a id="more"></a></p><h2 id="0x00-Introduction"><a href="#0x00-Introduction" class="headerlink" title="0x00 Introduction"></a>0x00 Introduction</h2><p>I have a lot of package installed so that when I start emacs, it will take about 10s to start over. And that is why I decide to use emacs’ server and client mode to speed up the startup procedure.</p><h2 id="0x01-Set-up-start-server-with-a-executable-shell-file"><a href="#0x01-Set-up-start-server-with-a-executable-shell-file" class="headerlink" title="0x01 Set up start server with a executable shell file"></a>0x01 Set up start server with a executable shell file</h2><p>in <code>start_emacs_server.sh</code></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"Starting Emacs Server..."</span></div><div class="line">/Applications/Emacs.app/Contents/MacOS/Emacs-x86_64-10_9 --daemon</div><div class="line"><span class="built_in">echo</span> <span class="string">"Done."</span></div></pre></td></tr></table></figure><h2 id="0x02-set-up-env-variables"><a href="#0x02-set-up-env-variables" class="headerlink" title="0x02 set up env variables"></a>0x02 set up env variables</h2><p>in <code>~/.bash_profile</code></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">alias</span> em=<span class="string">'$HOME/emacs.sh'</span></div><div class="line"><span class="built_in">alias</span> emacsclient=<span class="string">'/Applications/Emacs.app/Contents/MacOS/bin-x86_64-10_9/emacsclient'</span></div></pre></td></tr></table></figure><h2 id="0x03-set-up-emacsclient-command"><a href="#0x03-set-up-emacsclient-command" class="headerlink" title="0x03 set up emacsclient command"></a>0x03 set up emacsclient command</h2><p>in <code>emacs.sh</code></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">/Applications/Emacs.app/Contents/MacOS/bin-x86_64-10_9/emacsclient -n -c <span class="_">-a</span> <span class="string">""</span> -- <span class="string">"<span class="variable">$@</span>"</span></div></pre></td></tr></table></figure><p>Now you can use<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">em [filename]</div></pre></td></tr></table></figure><p></p><p>to use emacs to open a file with the current emacs server</p><h2 id="0x04-One-last-thing"><a href="#0x04-One-last-thing" class="headerlink" title="0x04 One last thing:"></a>0x04 One last thing:</h2><p>remember to set the server autostart at login</p><p><img src="/images/emacs/emacs_login_autostart.png" alt="p"></p>]]></content>
     
