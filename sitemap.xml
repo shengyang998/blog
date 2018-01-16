@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.superyoung.win/2017/03/02/learning_matlab/setup_yourself_a_remote_matlab_computation_server/</loc>
+    
+    <lastmod>2018-01-16T04:01:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/11/learning_matlab/caculate_bit_plane_picture/</loc>
+    
+    <lastmod>2018-01-16T03:50:19.696Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.superyoung.win/2017/10/28/learning_emacs/start_server/</loc>
     
     <lastmod>2017-10-28T11:47:28.596Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>http://blog.superyoung.win/2017/04/26/learning_data_analysis_with_python/about_ann/</loc>
     
     <lastmod>2017-10-01T12:26:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.superyoung.win/2017/03/02/learning_matlab/setup_yourself_a_remote_matlab_computation_server/</loc>
-    
-    <lastmod>2017-10-01T12:26:16.000Z</lastmod>
     
   </url>
   
@@ -82,13 +89,6 @@
     <loc>http://blog.superyoung.win/2017/03/20/learning_mysql/difference_date_datetime_timestamp/</loc>
     
     <lastmod>2017-03-20T08:15:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.superyoung.win/2017/03/11/learning_matlab/caculate_bit_plane_picture/</loc>
-    
-    <lastmod>2017-03-11T05:17:49.000Z</lastmod>
     
   </url>
   
