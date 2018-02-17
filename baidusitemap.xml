@@ -187,6 +187,8 @@
         <title>人工神经网络</title>
         <pubTime>2017-04-26T14:09:27.000Z</pubTime>
         
+        <tag>Python</tag>
+         
         <tag>神经网络</tag>
          
         <tag>机器学习</tag>
@@ -198,8 +200,6 @@
         <tag>模拟退火算法</tag>
          
         <tag>遗传算法</tag>
-         
-        <tag>Python</tag>
          
          
            
@@ -370,8 +370,6 @@
         
         <tag>Server</tag>
          
-        <tag>SVN</tag>
-         
         <tag>Tutorial</tag>
          
         <tag>Guide</tag>
@@ -381,6 +379,8 @@
         <tag>教程</tag>
          
         <tag>配置</tag>
+         
+        <tag>SVN</tag>
          
          
            
@@ -399,6 +399,8 @@
         
         <tag>Server</tag>
          
+        <tag>Git</tag>
+         
         <tag>Tutorial</tag>
          
         <tag>Guide</tag>
@@ -408,8 +410,6 @@
         <tag>教程</tag>
          
         <tag>配置</tag>
-         
-        <tag>Git</tag>
          
          
            
@@ -617,11 +617,11 @@
          
         <tag>iOS</tag>
          
+        <tag>Objective C</tag>
+         
         <tag>ARC</tag>
          
         <tag>Rules</tag>
-         
-        <tag>Objective C</tag>
          
         <tag>Coming soon...</tag>
          
@@ -811,9 +811,9 @@
          
         <tag>iOS</tag>
          
-        <tag>Objective C</tag>
-         
         <tag>Block</tag>
+         
+        <tag>Objective C</tag>
          
          
            

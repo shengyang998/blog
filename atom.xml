@@ -144,6 +144,8 @@
     </summary>
     
     
+      <category term="Python" scheme="http://blog.superyoung.win/tags/Python/"/>
+    
       <category term="神经网络" scheme="http://blog.superyoung.win/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
     
       <category term="机器学习" scheme="http://blog.superyoung.win/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
@@ -155,8 +157,6 @@
       <category term="模拟退火算法" scheme="http://blog.superyoung.win/tags/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95/"/>
     
       <category term="遗传算法" scheme="http://blog.superyoung.win/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="Python" scheme="http://blog.superyoung.win/tags/Python/"/>
     
   </entry>
   
@@ -378,8 +378,6 @@
     
       <category term="Server" scheme="http://blog.superyoung.win/tags/Server/"/>
     
-      <category term="SVN" scheme="http://blog.superyoung.win/tags/SVN/"/>
-    
       <category term="Tutorial" scheme="http://blog.superyoung.win/tags/Tutorial/"/>
     
       <category term="Guide" scheme="http://blog.superyoung.win/tags/Guide/"/>
@@ -389,6 +387,8 @@
       <category term="教程" scheme="http://blog.superyoung.win/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="配置" scheme="http://blog.superyoung.win/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="SVN" scheme="http://blog.superyoung.win/tags/SVN/"/>
     
   </entry>
   
@@ -436,6 +436,8 @@
     
       <category term="Server" scheme="http://blog.superyoung.win/tags/Server/"/>
     
+      <category term="Git" scheme="http://blog.superyoung.win/tags/Git/"/>
+    
       <category term="Tutorial" scheme="http://blog.superyoung.win/tags/Tutorial/"/>
     
       <category term="Guide" scheme="http://blog.superyoung.win/tags/Guide/"/>
@@ -445,8 +447,6 @@
       <category term="教程" scheme="http://blog.superyoung.win/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="配置" scheme="http://blog.superyoung.win/tags/%E9%85%8D%E7%BD%AE/"/>
-    
-      <category term="Git" scheme="http://blog.superyoung.win/tags/Git/"/>
     
   </entry>
   
