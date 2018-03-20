@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.superyoung.win/2018/03/20/pat/advanced_level/1141/</loc>
+    
+    <lastmod>2018-03-20T15:57:12.742Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.superyoung.win/2018/01/25/notes/install_tensorflow_from_source_for_macos/</loc>
     
     <lastmod>2018-02-12T06:23:09.617Z</lastmod>
@@ -184,14 +191,14 @@
   </url>
   
   <url>
-    <loc>http://blog.superyoung.win/2017/01/04/learning_iOS/coordinate-system/</loc>
+    <loc>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</loc>
     
     <lastmod>2017-01-29T02:27:33.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</loc>
+    <loc>http://blog.superyoung.win/2017/01/04/learning_iOS/coordinate-system/</loc>
     
     <lastmod>2017-01-29T02:27:33.000Z</lastmod>
     
