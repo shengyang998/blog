@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://blog.superyoung.win/2018/04/03/notes/why_number_should_start_at_zero/</loc>
+    <lastmod>2018-04-04T06:12:20.976Z</lastmod>
+    <data>
+        <display>
+        <title>为什么 Python 的 Range 要设计成左开右闭区间？为什么数组下标要从零开始？</title>
+        <pubTime>2018-04-03T15:24:16.124Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.superyoung.win/2017/03/20/learning_mysql/difference_date_datetime_timestamp/</loc>
     <lastmod>2018-03-21T02:31:50.215Z</lastmod>
     <data>
