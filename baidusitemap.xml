@@ -4,6 +4,194 @@
 
     
   <url>
+    <loc>http://blog.superyoung.win/2018/07/29/learning_clean_code/clean_code/</loc>
+    <lastmod>2018-12-27T10:57:27.814Z</lastmod>
+    <data>
+        <display>
+        <title>《代码整洁之道》笔记</title>
+        <pubTime>2018-07-29T15:32:15.663Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>Clean Code</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/27/learning_macos_command/disable_spotlight_in_macos/</loc>
+    <lastmod>2018-10-16T07:52:36.031Z</lastmod>
+    <data>
+        <display>
+        <title>关闭 macOS 的 Spotlight 功能</title>
+        <pubTime>2017-03-27T07:17:44.000Z</pubTime>
+        
+        <tag>macOS</tag>
+         
+        <tag>Spotlight</tag>
+         
+        <tag>OS X</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/20/learning_bash/determined_which_command_your_are_running/</loc>
+    <lastmod>2018-10-16T07:44:35.769Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Which 命令查看当前执行的命令所在路径</title>
+        <pubTime>2017-03-20T02:43:01.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Shell</tag>
+         
+        <tag>Command</tag>
+         
+        <tag>Path</tag>
+         
+        <tag>which</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/03/23/learning_bash/redirect_gcc_error_output_to_file/</loc>
+    <lastmod>2018-10-16T07:38:23.796Z</lastmod>
+    <data>
+        <display>
+        <title>在 Shell 中把错误信息重定向输出到文件</title>
+        <pubTime>2017-03-23T05:19:34.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Shell</tag>
+         
+        <tag>GNU</tag>
+         
+        <tag>GCC</tag>
+         
+        <tag>G++</tag>
+         
+        <tag>Redirect</tag>
+         
+        <tag>log</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/10/07/learning_python/compile_executable_with_cython/</loc>
+    <lastmod>2018-10-16T07:32:28.592Z</lastmod>
+    <data>
+        <display>
+        <title>用 Cython 把 Python 文件编译成可执行文件</title>
+        <pubTime>2017-10-07T07:44:40.841Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Cython</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2018/09/02/reading_out_of_control/reading_out_of_control/</loc>
+    <lastmod>2018-09-02T13:49:01.020Z</lastmod>
+    <data>
+        <display>
+        <title>《失控》笔记</title>
+        <pubTime>2018-09-02T13:44:07.893Z</pubTime>
+        
+        <tag>智能</tag>
+         
+        <tag>复杂系统</tag>
+         
+        <tag>失控</tag>
+         
+        <tag>Kevin Kelly</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/04/09/learning_data_analysis_with_python/about_data_preprocessing/</loc>
+    <lastmod>2018-09-02T13:21:57.484Z</lastmod>
+    <data>
+        <display>
+        <title>数据分析——数据预处理</title>
+        <pubTime>2017-04-09T01:40:53.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>异常值</tag>
+         
+        <tag>缺失值</tag>
+         
+        <tag>噪声</tag>
+         
+        <tag>小波</tag>
+         
+        <tag>降噪</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/04/26/learning_data_analysis_with_python/about_ann/</loc>
+    <lastmod>2018-09-02T13:20:41.244Z</lastmod>
+    <data>
+        <display>
+        <title>人工神经网络</title>
+        <pubTime>2017-04-26T14:09:27.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>神经网络</tag>
+         
+        <tag>机器学习</tag>
+         
+        <tag>优化</tag>
+         
+        <tag>ReLU</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.superyoung.win/2017/01/28/how_to_build_a_blog/blog_with_github_pages/</loc>
     <lastmod>2018-04-19T08:43:27.291Z</lastmod>
     <data>
@@ -67,35 +255,6 @@
 
     
   <url>
-    <loc>http://blog.superyoung.win/2017/04/26/learning_data_analysis_with_python/about_ann/</loc>
-    <lastmod>2018-04-19T08:02:59.219Z</lastmod>
-    <data>
-        <display>
-        <title>人工神经网络</title>
-        <pubTime>2017-04-26T14:09:27.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>神经网络</tag>
-         
-        <tag>机器学习</tag>
-         
-        <tag>优化问题</tag>
-         
-        <tag>优化算法</tag>
-         
-        <tag>模拟退火算法</tag>
-         
-        <tag>遗传算法</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.superyoung.win/2017/03/11/learning_matlab/caculate_bit_plane_picture/</loc>
     <lastmod>2018-04-19T08:01:35.966Z</lastmod>
     <data>
@@ -125,28 +284,14 @@
 
     
   <url>
-    <loc>http://blog.superyoung.win/2017/04/09/learning_data_analysis_with_python/about_data_preprocessing/</loc>
-    <lastmod>2018-04-19T07:57:19.733Z</lastmod>
+    <loc>http://blog.superyoung.win/2018/03/20/pat/advanced_level/1141/</loc>
+    <lastmod>2018-04-19T08:01:32.586Z</lastmod>
     <data>
         <display>
-        <title>数据分析——数据预处理</title>
-        <pubTime>2017-04-09T01:40:53.000Z</pubTime>
+        <title>PAT 1141 Python C++ 解题</title>
+        <pubTime>2018-03-20T15:02:54.036Z</pubTime>
         
-        <tag>Python</tag>
-         
-        <tag>异常值</tag>
-         
-        <tag>缺失值</tag>
-         
-        <tag>噪声</tag>
-         
-        <tag>小波</tag>
-         
-        <tag>降噪</tag>
-         
-        <tag>Wavelet</tag>
-         
-        <tag>Grubbs</tag>
+        <tag>PAT</tag>
          
          
            
@@ -164,23 +309,6 @@
         <pubTime>2018-04-03T15:24:16.124Z</pubTime>
         
         <tag>Programming</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.superyoung.win/2018/03/20/pat/advanced_level/1141/</loc>
-    <lastmod>2018-04-04T11:21:50.499Z</lastmod>
-    <data>
-        <display>
-        <title>PAT 1141 Python C++ 解题</title>
-        <pubTime>2018-03-20T15:02:54.036Z</pubTime>
-        
-        <tag>PAT</tag>
          
          
            
@@ -215,66 +343,6 @@
 
     
   <url>
-    <loc>http://blog.superyoung.win/2017/02/14/learning_Rx/driver/</loc>
-    <lastmod>2018-03-21T02:16:56.308Z</lastmod>
-    <data>
-        <display>
-        <title>Unit - Driver 介绍及示例</title>
-        <pubTime>2017-02-14T08:16:48.000Z</pubTime>
-        
-        <tag>Programming</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>Swift</tag>
-         
-        <tag>RxSwift</tag>
-         
-        <tag>Unit</tag>
-         
-        <tag>Driver</tag>
-         
-        <tag>响应式</tag>
-         
-        <tag>开发</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.superyoung.win/2017/01/25/learning_Rx/Reactive-Programming/</loc>
-    <lastmod>2018-03-21T02:03:46.260Z</lastmod>
-    <data>
-        <display>
-        <title>手把手教你Rx响应式开发 - 响应式应用开发极简入门教程</title>
-        <pubTime>2017-01-25T07:47:23.000Z</pubTime>
-        
-        <tag>Programming</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>Swift</tag>
-         
-        <tag>RxSwift</tag>
-         
-        <tag>响应式</tag>
-         
-        <tag>开发</tag>
-         
-        <tag>入门</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.superyoung.win/2018/01/25/notes/install_tensorflow_from_source_for_macos/</loc>
     <lastmod>2018-02-12T06:23:09.617Z</lastmod>
     <data>
@@ -285,27 +353,6 @@
         <tag>Installation</tag>
          
         <tag>TenserFlow</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.superyoung.win/2017/03/27/learning_macos_command/disable_spotlight_in_macos/</loc>
-    <lastmod>2018-02-12T04:44:41.204Z</lastmod>
-    <data>
-        <display>
-        <title>关闭 macOS 的 Spotlight 功能</title>
-        <pubTime>2017-03-27T07:17:44.000Z</pubTime>
-        
-        <tag>macOS</tag>
-         
-        <tag>Spotlight</tag>
-         
-        <tag>OS X</tag>
          
          
            
@@ -338,21 +385,6 @@
 
     
   <url>
-    <loc>http://blog.superyoung.win/2017/10/07/learning_python/compile_executable_with_cython/</loc>
-    <lastmod>2017-10-07T08:17:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>用 Cython 把 Python 文件编译成可执行文件</title>
-        <pubTime>2017-10-07T07:44:40.841Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.superyoung.win/2017/10/01/notes/update_high_sierra/</loc>
     <lastmod>2017-10-01T12:25:17.372Z</lastmod>
     <data>
@@ -367,60 +399,6 @@
         <tag>Sierra</tag>
          
         <tag>High Sierra</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.superyoung.win/2017/03/23/learning_bash/redirect_gcc_error_output_to_file/</loc>
-    <lastmod>2017-04-05T06:54:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>把 Gcc / G++ 的错误重定向输出到文件</title>
-        <pubTime>2017-03-23T05:19:34.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>Shell</tag>
-         
-        <tag>GNU</tag>
-         
-        <tag>GCC</tag>
-         
-        <tag>G++</tag>
-         
-        <tag>Redirect</tag>
-         
-        <tag>log</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.superyoung.win/2017/03/20/learning_bash/determined_which_command_your_are_running/</loc>
-    <lastmod>2017-04-05T06:53:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用 Which 命令查看当前执行的命令所在路径</title>
-        <pubTime>2017-03-20T02:43:01.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>Shell</tag>
-         
-        <tag>Command</tag>
-         
-        <tag>Path</tag>
-         
-        <tag>which</tag>
          
          
            
@@ -543,9 +521,9 @@
         <title>Autoclosure and Lazy Evaluation</title>
         <pubTime>2017-01-29T12:18:31.000Z</pubTime>
         
-        <tag>Programming</tag>
-         
         <tag>iOS</tag>
+         
+        <tag>Programming</tag>
          
         <tag>Swift</tag>
          
@@ -616,15 +594,15 @@
         <title>ARC Rules</title>
         <pubTime>2017-01-29T02:19:41.000Z</pubTime>
         
-        <tag>Programming</tag>
-         
         <tag>iOS</tag>
          
-        <tag>Objective C</tag>
+        <tag>Programming</tag>
          
         <tag>ARC</tag>
          
         <tag>Rules</tag>
+         
+        <tag>Objective C</tag>
          
         <tag>Coming soon...</tag>
          
@@ -653,22 +631,22 @@
 
     
   <url>
-    <loc>http://blog.superyoung.win/2017/01/04/learning_iOS/coordinate-system/</loc>
+    <loc>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</loc>
     <lastmod>2017-01-29T02:27:33.000Z</lastmod>
     <data>
         <display>
-        <title>Coordinate System</title>
-        <pubTime>2017-01-03T17:12:31.000Z</pubTime>
+        <title>关于 SequenceType</title>
+        <pubTime>2017-01-25T07:47:23.000Z</pubTime>
         
-        <tag>Programming</tag>
-         
         <tag>iOS</tag>
          
-        <tag>Coordinate</tag>
+        <tag>Programming</tag>
          
-        <tag>System</tag>
+        <tag>Coming soon...</tag>
          
-        <tag>坐标系统</tag>
+        <tag>Sequence</tag>
+         
+        <tag>type</tag>
          
          
            
@@ -678,22 +656,22 @@
 
     
   <url>
-    <loc>http://blog.superyoung.win/2017/01/25/learning_iOS/SequenceType/</loc>
+    <loc>http://blog.superyoung.win/2017/01/04/learning_iOS/coordinate-system/</loc>
     <lastmod>2017-01-29T02:27:33.000Z</lastmod>
     <data>
         <display>
-        <title>关于 SequenceType</title>
-        <pubTime>2017-01-25T07:47:23.000Z</pubTime>
+        <title>Coordinate System</title>
+        <pubTime>2017-01-03T17:12:31.000Z</pubTime>
         
-        <tag>Programming</tag>
-         
         <tag>iOS</tag>
          
-        <tag>Coming soon...</tag>
+        <tag>Programming</tag>
          
-        <tag>Sequence</tag>
+        <tag>Coordinate</tag>
          
-        <tag>type</tag>
+        <tag>System</tag>
+         
+        <tag>坐标系统</tag>
          
          
            
@@ -710,9 +688,9 @@
         <title>UITableView</title>
         <pubTime>2017-01-03T17:07:32.000Z</pubTime>
         
-        <tag>Programming</tag>
-         
         <tag>iOS</tag>
+         
+        <tag>Programming</tag>
          
         <tag>UITableView</tag>
          
@@ -737,9 +715,9 @@
         <title>iOS 关闭键盘方式的小结</title>
         <pubTime>2017-01-03T17:04:40.000Z</pubTime>
         
-        <tag>Programming</tag>
-         
         <tag>iOS</tag>
+         
+        <tag>Programming</tag>
          
         <tag>Objective C</tag>
          
@@ -760,9 +738,9 @@
         <title>Swift 中如何获取实例类型</title>
         <pubTime>2017-01-15T02:17:03.000Z</pubTime>
         
-        <tag>Programming</tag>
-         
         <tag>iOS</tag>
+         
+        <tag>Programming</tag>
          
         <tag>Swift</tag>
          
@@ -787,9 +765,9 @@
         <title>关于UIAlertController</title>
         <pubTime>2017-01-03T17:09:49.000Z</pubTime>
         
-        <tag>Programming</tag>
-         
         <tag>iOS</tag>
+         
+        <tag>Programming</tag>
          
         <tag>Objective C</tag>
          
@@ -810,13 +788,13 @@
         <title>Block 简介</title>
         <pubTime>2017-01-03T17:13:54.000Z</pubTime>
         
-        <tag>Programming</tag>
-         
         <tag>iOS</tag>
          
-        <tag>Block</tag>
+        <tag>Programming</tag>
          
         <tag>Objective C</tag>
+         
+        <tag>Block</tag>
          
          
            
