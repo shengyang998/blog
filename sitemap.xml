@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.superyoung.win/2019/04/04/learning_iOS/retain_cycle/</loc>
+    
+    <lastmod>2019-04-06T10:22:39.807Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.superyoung.win/2017/02/03/learning_swift/map_reduce_filter/</loc>
+    
+    <lastmod>2019-04-04T05:57:07.738Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.superyoung.win/2017/01/29/learning_iOS/ARC_Rules/</loc>
     
     <lastmod>2019-01-25T09:57:51.585Z</lastmod>
@@ -166,13 +180,6 @@
     <loc>http://blog.superyoung.win/2017/01/29/learning_swift/autoclosure/</loc>
     
     <lastmod>2017-02-04T08:07:12.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.superyoung.win/2017/02/02/learning_swift/map_reduce_filter/</loc>
-    
-    <lastmod>2017-02-03T05:56:18.000Z</lastmod>
     
   </url>
   
