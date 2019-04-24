@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.superyoung.win/"/>
-  <updated>2019-04-06T10:28:14.981Z</updated>
+  <updated>2019-04-24T02:27:01.059Z</updated>
   <id>http://blog.superyoung.win/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【译】 Apple Swift API 设计指南 Swift API Design Guidelines</title>
+    <link href="http://blog.superyoung.win/2019/04/24/learning_swift/api_design_guidelines/"/>
+    <id>http://blog.superyoung.win/2019/04/24/learning_swift/api_design_guidelines/</id>
+    <published>2019-04-24T02:26:46.556Z</published>
+    <updated>2019-04-24T02:27:01.059Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://swift.org/documentation/api-design-guidelines/" target="_blank" rel="noopener">Swift 语言 API 设计指南</a>的中文翻译</p><a id="more"></a><h3 id="基础原则"><a href="#基础原则" class="headerlink" title="基础原则"></a>基础原则</h3><ul><li>使用时的清晰度是第一要义。评估一个设计时，仅仅读声明是不够的，要检查用例来确保它在上下文中看起来清晰。</li><li>清晰度比简洁更重要。虽然 swift 语言可以写的很简洁，但是以最小字节数来写最短的代码永远不会是开发的目标。Swift 语言中的简洁性来自于强大的类型系统的副作用，和其他一些特性，这些特性能够减少样板代码。</li><li>给每一个声明写文档注释。写文档注释会对设计产生巨大的影响，所以不要推迟。</li></ul><blockquote><p>如果你不能以简洁的语言描述 API 功能的话，说明 API 设计很可能有问题。</p></blockquote><h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><h4 id="促进清晰地使用"><a href="#促进清晰地使用" class="headerlink" title="促进清晰地使用"></a>促进清晰地使用</h4><ul><li>包含所有需要的词来避免阅读代码的人产生歧义。</li><li>去掉多余的词，每个词都要有突出的信息。</li><li>给变量、参数和关联类型命名的时候要基于它们的角色，而不是基于它们的类型。</li><li>补偿弱类型信息以阐明参数的作用。</li></ul><h4 id="力争流畅地使用"><a href="#力争流畅地使用" class="headerlink" title="力争流畅地使用"></a>力争流畅地使用</h4><ul><li>使用方法和函数名，最好能让使用方形成有语法的英语惯用语。</li><li>工厂方法使用 make 开头。</li><li>初始化器和工厂方法的第一个参数不应该形成以基本名称开头的短语，e.g. x.makeWidget(cogCount: 47)</li><li>基于函数和方法的副作用来命名：<ul><li>没有副作用的应该用<code>名词</code>，e.g. x.distance(to: y), i.successor().</li><li>有副作用的应该用<code>动词</code>，e.g., print(x), x.sort(), x.append(y).</li><li>始终如一地创建 mutating 和 non-mutating 方法对。一个 mutating 的方法常常有一个 non-mutating 的语义相近的变体。那个 non-mutating 变体返回一个新的值而不是直接更改当前实体<ul><li>如果一个运算是用动词来描述的，使用动词的 <code>ed</code> 或者 <code>ing</code> 后缀形式来命名它 non-mutating 的对应者。</li><li>如果一个运算是用名词来描述的，那个名词给 non-mutating 方法命名。而使用 <code>form</code> 前缀来给 mutating 对应者来命名，e.g. y.union(z) =&gt; y.formUnion(z)</li></ul></li><li>如果是 non-mutating 的话，使用 Boolean 方法和属性应该读作断言一样，e.g. x.isEmpty, line1.intersects(line2).</li><li>描述一个对象是什么的协议应该用名词</li><li>描述一个对象能做什么的协议应该用 able, ible 或者 ing 后缀，e.g. Equatable, ProgressReporting.</li><li>其他类型，属性，变量和常量的命名应该使用名词。</li></ul></li></ul><h4 id="正确使用术语"><a href="#正确使用术语" class="headerlink" title="正确使用术语"></a>正确使用术语</h4><blockquote><p><code>Term of Art</code>: 一个在特定领域或专业有着精确、特定含义的单词或词汇。</p></blockquote><ul><li>如果一个常用词能表述的话，避免使用复杂的词语。例如，如果 skin 能够达到要求的话，不要使用 epidermis。Terms of Art 是必须的交流工具，但是应该用来抓住至关重要的含义，而不使用术语的话，那个含义可能会丢失。</li><li>如果你使用术语的话，保持使用既定含义。</li><li>避免缩写。缩写，特别是那些不标准的缩写，是一种有效的 terms-of-art，因为理解依赖于正确地解译。</li></ul><blockquote><p>你所使用的所有缩写的含义都应该很容易地在互联网上找到。</p></blockquote><ul><li>拥抱先例。不要以牺牲与现有文化的一致性为代价来为初学者优化术语。</li></ul><h3 id="惯例"><a href="#惯例" class="headerlink" title="惯例"></a>惯例</h3><h4 id="通用惯例"><a href="#通用惯例" class="headerlink" title="通用惯例"></a>通用惯例</h4><ul><li>给任何计算属性注释其运算复杂性。人们总是假定属性是没有明显的计算量的。</li><li>尽量使用方法或者属性而不是自有函数。自有函数只在特殊情况下使用。</li><li>类型和协议名使用大写开头的驼峰命名，其他的都使用小写开头的驼峰命名。</li><li>方法可以使用相同的 base name，如果他们有相似的含义或者当它们操作在不同清晰的领域。</li></ul><h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">move</span><span class="params">(from start: Point, to end: Point)</span></span></span><br></pre></td></tr></table></figure><ul><li>选择参数名来写文档，即使参数名不出现在使用方的方法或者函数上，它们对于解释非常有帮助</li><li>使用默认参数，当它能够简化常用情况时。任何使用单一常用值的参数是默认值的候选。</li><li>把默认参数放到参数列表的最后。没有默认值的参数通常对于方法的语义来说更重要，并且可以在方法被调用时，提供一个稳定的初始模式。</li></ul><h4 id="参数标签"><a href="#参数标签" class="headerlink" title="参数标签"></a>参数标签</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">move</span><span class="params">(from start: Point, to end: Point)</span></span></span><br><span class="line">x.move(from: x, to: y)</span><br></pre></td></tr></table></figure><ul><li>如果不能用于区分的话，移除标签，e.g. min(number1, number2), zip(sequence1, sequence2)</li><li>在对值做类型转换的初始化器上，移除第一个标签。</li><li>当第一个参数形成部分的介词短语的时候，使用参数标签。参数标签应该以介词开始，e.g. x.removeBoxes(havingLength: 12).</li><li>否则，如果第一个参数形成语法短语的话，丢掉标签，但是给方法名后面加一个先行词。</li><li>对其他任何情况的参数加上标签。</li></ul><h3 id="特别指南"><a href="#特别指南" class="headerlink" title="特别指南"></a>特别指南</h3><ul><li>给元组成员和闭包参数加标签，当它们出现在你的 API 上的时候。</li><li>小心无约束的多态类型，e.g. Any, AnyObject 和其他无约束的泛型参数。注意避免在重载的时候产生歧义。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://swift.org/documentation/api-design-guidelines/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Swift 语言 API 设计指南&lt;/a&gt;的中文翻译&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Swift" scheme="http://blog.superyoung.win/tags/Swift/"/>
+    
+      <category term="Apple" scheme="http://blog.superyoung.win/tags/Apple/"/>
+    
+      <category term="API" scheme="http://blog.superyoung.win/tags/API/"/>
+    
+      <category term="Design" scheme="http://blog.superyoung.win/tags/Design/"/>
+    
+      <category term="Guidelines" scheme="http://blog.superyoung.win/tags/Guidelines/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS 循环引用</title>
@@ -499,38 +527,6 @@
       <category term="Science" scheme="http://blog.superyoung.win/tags/Science/"/>
     
       <category term="Computation" scheme="http://blog.superyoung.win/tags/Computation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建自己的 Git 服务器教程</title>
-    <link href="http://blog.superyoung.win/2017/02/28/version_controller/setup_git_server/"/>
-    <id>http://blog.superyoung.win/2017/02/28/version_controller/setup_git_server/</id>
-    <published>2017-02-28T10:37:41.000Z</published>
-    <updated>2017-03-03T15:01:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本教程关于如何搭建自己的 Git 服务器，使用 Keynote 制作<br><a id="more"></a></p><p>废话不多说，教程在此：<a href="/images/set_up_git_server/index.html">传送门</a></p><p><img src="/images/setup_git_server/00.png" alt="图1"><br><img src="/images/setup_git_server/01.png" alt="图2"><br><img src="/images/setup_git_server/02.png" alt="图3"><br><img src="/images/setup_git_server/03.png" alt="图4"><br><img src="/images/setup_git_server/04.png" alt="图5"><br><img src="/images/setup_git_server/05.png" alt="图6"><br><img src="/images/setup_git_server/06.png" alt="图7"><br><img src="/images/setup_git_server/07.png" alt="图8"><br><img src="/images/setup_git_server/08.png" alt="图9"><br><img src="/images/setup_git_server/09.png" alt="图10"><br><img src="/images/setup_git_server/10.png" alt="图10"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本教程关于如何搭建自己的 Git 服务器，使用 Keynote 制作&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Server" scheme="http://blog.superyoung.win/tags/Server/"/>
-    
-      <category term="Git" scheme="http://blog.superyoung.win/tags/Git/"/>
-    
-      <category term="Tutorial" scheme="http://blog.superyoung.win/tags/Tutorial/"/>
-    
-      <category term="Guide" scheme="http://blog.superyoung.win/tags/Guide/"/>
-    
-      <category term="服务器" scheme="http://blog.superyoung.win/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="教程" scheme="http://blog.superyoung.win/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="配置" scheme="http://blog.superyoung.win/tags/%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   

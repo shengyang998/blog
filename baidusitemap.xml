@@ -4,6 +4,60 @@
 
     
   <url>
+    <loc>http://blog.superyoung.win/2019/04/24/learning_swift/api_design_guidelines/</loc>
+    <lastmod>2019-04-24T02:27:01.059Z</lastmod>
+    <data>
+        <display>
+        <title>【译】 Apple Swift API 设计指南 Swift API Design Guidelines</title>
+        <pubTime>2019-04-24T02:26:46.556Z</pubTime>
+        
+        <tag>Swift</tag>
+         
+        <tag>Apple</tag>
+         
+        <tag>API</tag>
+         
+        <tag>Design</tag>
+         
+        <tag>Guidelines</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.superyoung.win/2017/02/12/learning_swift/enum_struct_class_in_swift/</loc>
+    <lastmod>2019-04-08T01:57:16.223Z</lastmod>
+    <data>
+        <display>
+        <title>Learning Enum, Structure and Class in Swift Programming Language</title>
+        <pubTime>2017-02-12T09:54:50.000Z</pubTime>
+        
+        <tag>Programming</tag>
+         
+        <tag>Swift</tag>
+         
+        <tag>Difference</tag>
+         
+        <tag>Language</tag>
+         
+        <tag>Enum</tag>
+         
+        <tag>Struct</tag>
+         
+        <tag>Class</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.superyoung.win/2019/04/04/learning_iOS/retain_cycle/</loc>
     <lastmod>2019-04-06T10:28:14.981Z</lastmod>
     <data>
@@ -553,35 +607,6 @@
         <tag>教程</tag>
          
         <tag>配置</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.superyoung.win/2017/02/12/learning_swift/enum_struct_class_in_swift/</loc>
-    <lastmod>2017-02-12T09:54:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>Learning Enum, Structure and Class in Swift Programming Language</title>
-        <pubTime>2017-02-12T09:50:36.000Z</pubTime>
-        
-        <tag>Programming</tag>
-         
-        <tag>Swift</tag>
-         
-        <tag>Difference</tag>
-         
-        <tag>Language</tag>
-         
-        <tag>Enum</tag>
-         
-        <tag>Struct</tag>
-         
-        <tag>Class</tag>
          
          
            
